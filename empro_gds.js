@@ -741,31 +741,6 @@ function getFieldsLabels(isPosLeft){
 	return selector;
 }
 
-function propertyNotFoundClicked(){
-	console.log('js function property not found');
-        $("#dform_widget_txt_c_addressnumber").attr("readonly", false);
-        $("#dform_widget_txt_c_addressline1").attr("readonly", false);
-        $("#dform_widget_txt_c_town").attr("readonly", false);
-        $("#dform_widget_txt_c_postcode").attr("readonly", false);
-        
-        if (!KDF.getVal('txt_c_addressline1')) {
-            KDF.setVal('txt_c_addressnumber','');
-            KDF.setVal('txt_c_addressline1','');
-            KDF.setVal('txt_c_town','');
-            KDF.setVal('txt_c_postcode','');
-            KDF.hideWidget('ahtm_cancel_edit_manual_createindividual');
-        } else {
-            KDF.showWidget('ahtm_cancel_edit_manual_createindividual');
-        }
-        
-        KDF.showWidget('txt_c_addressnumber');
-        KDF.showWidget('txt_c_addressline1');
-        KDF.showWidget('txt_c_town');
-        KDF.showWidget('txt_c_postcode');
-        KDF.showWidget('but_continue_individual_address');
-        KDF.hideWidget('but_property_notfound');
-}
-
 //KS: IE compatability for .isInteger
 Number.isInteger = Number.isInteger || function(value) {
     return typeof value === "number" && 
