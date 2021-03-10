@@ -1,3 +1,6 @@
+var update_individual_result =false;
+var create_individual_result =false;
+
 function initFormConfig(event, kdf){
 	if ($('.txta-gov').is(':visible')) {
 
@@ -95,6 +98,22 @@ function onCreateIndividualNewCACalled(event, kdf, response, action){
 	    console.log('person is retrieved');
 	}
 }	
+
+/*update value of create_individual_result*/
+var setCreateIndividualResult = function(val){
+        create_individual_result = val;
+    if (create_individual_result){
+         KDF.gotoNextPage();
+    };
+};
+
+/*update value of update_individual_result*/
+var setUpdateIndividualResult = function(val){
+    update_individual_result = val;
+    if (update_individual_result){
+        updateIndividualResult();
+    };
+};
 
 function onKDFOptionSelected(field, label, val){
 	if (field === 'rad_identifyc'){
