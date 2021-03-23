@@ -216,6 +216,15 @@ Need to deside on new generic button - the continue should be promanant - maybe 
 .btn-continue:focus{
     box-shadow: inset 0 -2px 0 #003618, 0 0 0 3px #FFBF47 !important;
 }
+
+.accordion_label::before {
+  content: "\25bc";
+}
+
+.accordion_label.closed::before {
+  content: "\25b6";
+}
+
 /*KS: If not used by mobile - normal sized button*/
 @media (max-width: 768px){
     .btn-gov,.btn-gov:hover,.btn-continue,.btn-continue:hover,.btn-orange,.btn-orange:hover  {
