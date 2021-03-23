@@ -281,9 +281,6 @@ function applyNewStyle(){
 	
 	//KS: needs to be applied after styles are added
 	commonRegex();
-
-	/*add in accordion for customer search widget. The widget name must be cs_customer_search*/
-	$('#dform_widget_cs_customer_search_searchcontainer').wrap('<details></details>')
 	
 	//KS: trigger: '_style_styleApplied, [elementSelectorsUsed, hadDefaultsInArray]'
 	$(formName()).trigger('_style_styleApplied',[elementsToUpdate, (hasDefaultsInArguments) ? arguments[0] : false]);
