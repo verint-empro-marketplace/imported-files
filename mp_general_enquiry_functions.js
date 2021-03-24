@@ -40,7 +40,7 @@ function initFormConfig(event, kdf){
             KDF.gotoNextPage();
     });
     
-    if (KDF.getVal('txt_access') === 'agent') {
+    if (KDF.kdf().access === 'agent') {
         if (KDF.getVal('txt_customerID')) {
         KDF.showSection('area_customer_name');
         KDF.showSection('area_customer_contacts');
@@ -49,7 +49,7 @@ function initFormConfig(event, kdf){
         KDF.showWidget('hrd_customerdetails');
         KDF.setVal('customerID',KDF.getVal('txt_customerID'));
         }
-    } else if (KDF.getVal('txt_access') === 'citizen') {
+    } else if (KDF.kdf().access === 'citizen') {
         KDF.showWidget('but_submit_citizen_details');
         KDF.showWidget('eml_subscriber');
         
@@ -119,19 +119,19 @@ function onKDFOptionSelected(field, label, val){
 	if (field === 'rad_identifyc'){
          if (label == 'yes') {
              
-            if (KDF.getVal('txt_access') === 'citizen') {
+            if (KDF.kdf().access === 'citizen') {
                   KDF.showWidget('eml_subscriber');
                   KDF.showWidget('but_submit_citizen_details');
-            } else if (KDF.getVal('txt_access') === 'agent') {
+            } else if (KDF.kdf().access === 'agent') {
               KDF.showWidget('but_continue_citizen_details');
               KDF.hideWidget('but_submit_citizen_details');
             } 
             not_associated = false;
          } else if (label === 'no') {
-            if (KDF.getVal('txt_access') === 'citizen') {
+            if (KDF.kdf().access === 'citizen') {
                   KDF.showWidget('but_submit_citizen_details');
                   KDF.hideWidget('eml_subscriber');
-            } else if (KDF.getVal('txt_access') === 'agent') {
+            } else if (KDF.kdf().access === 'agent') {
               KDF.hideWidget('but_continue_citizen_details');
               KDF.showWidget('but_submit_citizen_details');
             }
