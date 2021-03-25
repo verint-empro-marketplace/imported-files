@@ -1165,7 +1165,7 @@ KS: Custom gov multi-checkbox - Start
 }
 
 .box-confirmation{
-    background: rgb(213, 43, 30);
+    background: #007aff;
     margin-bottom: 6px;
 }
 
@@ -1720,8 +1720,8 @@ background-color: lightblue;
 
 .btn-back {
 	background-color: #FFFFFF !important;
-	border-color: #CCCCCC !important;
-	color: #333333 !important;
+	border-color: #00823b !important;
+	color: #00823b !important;
 	text-decoration: none !important;
 }
 
