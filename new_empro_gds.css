@@ -57,7 +57,7 @@ KS: searches - Start
 }
 .cs-gov fieldset, .ss-gov fieldset, .ps-gov fieldset, .os-gov fieldset, .search-gov fieldset {
     border: none !important;
-    border-left: 5px solid rgb(213, 43, 30) !important;
+    border-left: 5px solid #007aff !important;
     border-radius: 0 !important;
     
 }
@@ -821,7 +821,7 @@ KS: Custom gov radio buttons - Start
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: rgb(213, 43, 30) !important;;
+  background: #007aff !important;
 }
 /*KS: Customizes the help text */
 .rad-gov > div > fieldset .helptext {
@@ -1461,8 +1461,8 @@ abbr{
     font-size: 0.8rem !important;
 }
 .btn-continue, .btn-continue:hover, .btn-continue:focus{
-    background-color: rgb(213, 43, 30) !important;
-    border: 2px solid rgb(213, 43, 30) !important;
+    background-color: #00823b !important;
+    border: 2px solid #00823b !important;
     border-radius: 4.5rem !important;
     color: #00529b !important;
     cursor: pointer !important;
@@ -1479,8 +1479,8 @@ abbr{
     box-shadow: none !important;
     font-size: 0.8rem !important;
     
-    background-color: rgb(213, 43, 30) !important;
-    border-color: rgb(213, 43, 30) !important;
+    background-color: #00823b !important;
+    border-color: #00823b !important;
     color: #fff !important;
 }
 
