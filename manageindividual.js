@@ -540,3 +540,4 @@ function clearCustomerInformation() {
     KDF.setVal('eml_cust_info_email', '');
     KDF.setVal('tel_cust_info_phone', '');
     KDF.setVal('txta_cust_info_address', '');
+}
