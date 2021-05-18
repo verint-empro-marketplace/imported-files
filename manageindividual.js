@@ -401,6 +401,8 @@ function do_KDF_Custom_Individual(event, kdf, response, action) {
 				KDF.setVal('txt_customer_id', response.data.txt_customerID);
 				KDF.setCustomerID(response.data.txt_customerID, true, false); /*set Reporter*/
 				KDF.setVal('le_associated_obj_id',response.data.txt_customerID);
+				console.log('associated obj id : ');
+				console.log(KDF.getVal('le_associated_obj_id'));
 				KDF.customdata('person-retrieve-new', individualTemplateIdentifier + 'create-individual', true, true, { 'person_search_results': KDF.getVal('txt_customer_id') });
 			}
 		}
