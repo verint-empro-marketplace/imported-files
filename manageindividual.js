@@ -222,10 +222,6 @@ function do_KDF_Ready_Individual(event, kdf) {
 					'txt_c_postcode': KDF.getVal('txt_c_postcode'),
 					'txt_c_uprn': KDF.getVal('txt_c_uprn')
 				});	
-				//send notification email from process
-				KDF.setVal('eml_cust_info_email',KDF.getVal('eml_c_email'));
-				console.log('eml_cust_info_email : ');
-				console.log(KDF.getVal('eml_cust_info_email'));
 			}
         
     });
@@ -405,9 +401,11 @@ function do_KDF_Custom_Individual(event, kdf, response, action) {
 				KDF.setVal('txt_customer_id', response.data.txt_customerID);
 				KDF.setCustomerID(response.data.txt_customerID, true, false); /*set Reporter*/
 				KDF.setVal('le_associated_obj_id',response.data.txt_customerID);
-				console.log('associated obj id : ');
-				console.log(KDF.getVal('le_associated_obj_id'));
 				KDF.customdata('person-retrieve-new', individualTemplateIdentifier + 'create-individual', true, true, { 'person_search_results': KDF.getVal('txt_customer_id') });
+				//send notification email from process
+				KDF.setVal('eml_cust_info_email',KDF.getVal('eml_c_email'));
+				console.log('eml_cust_info_email : ');
+				console.log(KDF.getVal('eml_cust_info_email'));
 			}
 		}
 	}
