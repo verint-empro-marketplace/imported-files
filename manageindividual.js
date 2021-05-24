@@ -224,6 +224,8 @@ function do_KDF_Ready_Individual(event, kdf) {
 				});	
 				//send notification email from process
 				KDF.setVal('eml_cust_info_email',KDF.getVal('eml_c_email'));
+				console.log('eml_cust_info_email : ');
+				console.log(KDF.getVal('eml_cust_info_email'));
 			}
         
     });
