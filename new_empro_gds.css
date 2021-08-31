@@ -1414,7 +1414,6 @@ abbr{
     text-decoration-line: none;
 }
 
-/*To match edinburgh portal*/
 /* latin-ext */
 @font-face {
   font-family: 'Roboto';
@@ -1601,7 +1600,7 @@ abbr{
 	left: -10px;
 }
 /*CPE overrite - END*/
-/*Edinburgh portal adaption END*/
+
 /*To fix font issue on IE based on this answer https://stackoverflow.com/a/14506177 and https://stackoverflow.com/q/14207425*/
 /*
 @font-face {
