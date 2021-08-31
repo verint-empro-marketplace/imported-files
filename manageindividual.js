@@ -487,7 +487,7 @@ function do_KDF_optionSelected_Individual(event, kdf, field, label, val) {
 			KDF.setVal('txt_cust_info_town', KDF.getVal('txt_logic_town'));
 			KDF.setVal('txt_cust_info_postcode', KDF.getVal('txt_logic_postcode'));
 
-    		var address = KDF.getVal('txt_logic_streetnumber') + ', ' + KDF.getVal('txt_logic_streetname') + ', ' + KDF.getVal('txt_logic_town') + ', ENFIELD, ' + KDF.getVal('txt_logic_postcode');
+    		var address = KDF.getVal('txt_logic_streetnumber') + ', ' + KDF.getVal('txt_logic_streetname') + ', ' + KDF.getVal('txt_logic_town') + ', TOWN, ' + KDF.getVal('txt_logic_postcode');
     		KDF.setVal('txta_cust_info_address', address);
 
             if (KDF.getVal('txt_cust_info_first_name') !== '') {
