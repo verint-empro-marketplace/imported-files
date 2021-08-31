@@ -477,27 +477,3 @@ function submitCitizenDetails()
     
     KDF.gotoNextPage();
 }	
-
-function createDynamicURL()
-{
-    //The variable to be returned
-    var URL;
-    
-    if (kdf.access==='agent') {
-        URL = 'http://win-vfa56rd7v6n:9081/form/launch/edinburgh_gen_enquiry';
-        
-        if (KDF.getVal('txt_customerID')) {
-            URL = URL + '?customerid=' + KDF.getVal('txt_customerID');
-        }
-        
-    } else if (kdf.access==='citizen') {
-        URL = 'http://win-vfa56rd7v6n:9081/form/auto/edinburgh_gen_enquiry';
-    }
-
-    return URL;
-}
-
-function RedirectURL()
-{
-    window.location= createDynamicURL();
-}
