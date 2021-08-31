@@ -40,7 +40,7 @@ $('#dform_widget_ps_existing_customer_resultholder').on('show', function(){
 $('#cancel_edit_manually_customerdetails').click(function(){
         KDF.setVal('num_p_streetnumber',KDF.getVal('txt_temp_streetnumber_customerdetails'));
         KDF.setVal('txt_p_streetname',KDF.getVal('txt_temp_streetname_customerdetails'));
-        KDF.setVal('txt_p_town','EDINBURGH');
+        KDF.setVal('txt_p_town','');
         KDF.setVal('txt_p_postcode',KDF.getVal('txt_temp_postcode_customerdetails'));
         
         $("#dform_widget_num_p_streetnumber").attr("readonly", true);
@@ -95,7 +95,7 @@ $('#dform_widget_button_but_property_notfound_customer').click(function(){
 $('#cancel_edit_manually_customerdetails').click(function(){
 	KDF.setVal('num_p_streetnumber',KDF.getVal('txt_temp_streetnumber_customerdetails'));
 	KDF.setVal('txt_p_streetname',KDF.getVal('txt_temp_streetname_customerdetails'));
-	KDF.setVal('txt_p_town','EDINBURGH');
+	KDF.setVal('txt_p_town','');
 	KDF.setVal('txt_p_postcode',KDF.getVal('txt_temp_postcode_customerdetails'));
 	
 	$("#dform_widget_num_p_streetnumber").attr("readonly", true);
