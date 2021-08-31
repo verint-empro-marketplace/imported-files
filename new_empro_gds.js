@@ -83,7 +83,6 @@ function commonRegex() {
 }
 
 function defineDefaultStyle() {
-	/*CEC Accessibility Issue Fixing*/
 	replaceHeader('header1','h1');
 	replaceHeader('header2','h2');
 	replaceHeader('header3','h3');
@@ -790,7 +789,6 @@ function highlightRequired() {
 		/*isEligible:function(element){return element.find('abbr[title="required"]').length < 1},
 		apply:function(element){return '<abbr title="required" style="color: '+requiredColorCheck(element)+';"> *</abbr>'},*/
 		
-		/*CEC Accessibility Issue Fixing*/
 		isEligible:function(element){return element.find('span[title="required"]').length < 1},
 		apply:function(element){return '<span title="required" style="color: '+requiredColorCheck(element)+';"> *</span>'},
 	};
@@ -867,11 +865,6 @@ Number.isInteger = Number.isInteger || function(value) {
 =====================================
 **/
 
-/** 
-=====================================
-		CEC Accessibility - START
-=====================================
-**/
 function replaceHeader(className,tag) {
 	$('.' + className).each(function() {
         var id = $(this).attr('id');
@@ -914,10 +907,3 @@ function addAutoComplete() {
 		$('[id*="street_name"], [id*="address_name"]').attr("autocomplete","address-line1 street-address"); 
 	}
 }
-
-
-/** 
-=====================================
-		CEC Accessibility - END
-=====================================
-**/
