@@ -1,3 +1,8 @@
+var hideclass = 'fileuploadobject';
+var ps_property_customer = false;
+var ps_property_individual = false;
+var cs_customer_search = false;
+
 /* When right arrow of CS is clicked, then customer details will be closed */
 $(document).on('click','.dform_widget_search_closeresults',function(){
 	var activeCustomerDetails =  $('#dform_page_provide_details').attr('data-active');
