@@ -3,6 +3,7 @@ var ps_property_customer = false;
 var ps_property_individual = false;
 var cs_customer_search = false;
 var ps_property_search = false;
+var editaddressflag = 0;
 
 /* When right arrow of CS is clicked, then customer details will be closed */
 $(document).on('click','.dform_widget_search_closeresults',function(){
@@ -110,6 +111,53 @@ function do_KDF_optionSelected(event, kdf, field, label, val) {
         cs_customer_search = false;
     }	
 }	
+
+function do_KDF_Complete(event, kdf){
+    KDF.showWidget('html_pleasewait');
+    KDF.showWidget('ahtm_cool_loading_gif');
+    
+    $('#dform_successMessage').addClass(hideclass); 
+	var name_before;
+	var name_after;
+	var email_before;
+	var email_after;
+	var address_before;
+	var address_after;
+    
+    setTimeout(function(){
+        KDF.customdata('update-individual-new', 'create', true, true, {
+                'customerID':KDF.getVal('txt_customer_id'),
+                'txt_first_name':KDF.getVal('txt_firstname'),
+                'txt_last_name':KDF.getVal('txt_lastname'),
+                'email':KDF.getVal('txt_emailaddress'),
+                'phone':KDF.getVal('tel_phone_number'),
+                'num_p_streetnumber':KDF.getVal('num_p_streetnumber'),
+                'txt_p_streetname':KDF.getVal('txt_p_streetname'),
+                'txt_p_town':KDF.getVal('txt_p_town'),
+                'txt_p_postcode':KDF.getVal('txt_p_postcode'),
+                'txt_p_uprn':KDF.getVal('txt_p_uprn')
+        });
+        
+	//compare citizen details
+        if ( (KDF.getVal('txt_firstnamePH') !== KDF.getVal('txt_firstname')) || (KDF.getVal('txt_lastnamePH') !== KDF.getVal('txt_lastname')) ) {
+            name_before = KDF.getVal('txt_firstnamePH') + ' ' + KDF.getVal('txt_lastnamePH');
+            name_after = KDF.getVal('txt_firstname') + ' ' + KDF.getVal('txt_lastname');
+        } 
+        
+        if ( KDF.getVal('email') !== KDF.getVal('txt_emailaddress') ) {
+            email_before = KDF.getVal('email');
+            email_after = KDF.getVal('txt_emailaddress');
+        } 
+        
+        if (editaddressflag === 1) {
+            address_before = KDF.getVal('txt_fullstreetadd');
+            address_after = KDF.getVal('txta_homeaddress_edit');
+        }
+        email_after = KDF.getVal('txt_emailaddress');
+    	KDF.setVal('txt_caseid', KDF.kdf().saveresponse.caseid);
+    	KDF.showSection('box_complete');
+    }, 4000);
+}
 
 $(document).on('keypress','#dform_widget_cs_customerdetails_txt_forename',function() {
 	if (event.keyCode == 13) {
