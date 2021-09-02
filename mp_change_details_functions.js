@@ -86,6 +86,33 @@ function hideCustomerDetails() {
     KDF.hideWidget('but_individual_address');
 }
 
+function do_KDF_objectDataLoaded(event, kdf, response, type, id){
+    if (type === 'customer') {
+	if (cs_customer_search) {
+            if (KDF.getVal('cs_customer_search_id')) {
+                KDF.setVal('num_p_streetnumber',KDF.getVal('txt_r_streetnumber'));
+                KDF.setVal('txt_p_streetname',KDF.getVal('txt_r_streetname'));    
+                KDF.setVal('txt_p_town',KDF.getVal('txt_r_town'));    
+                KDF.setVal('txt_p_postcode',KDF.getVal('txt_r_postcode'));
+               
+                KDF.showWidget('but_continue_selectindividual');
+                KDF.showWidget('but_individual_address');
+            }
+	}
+	    KDF.setVal('txt_customer_id',id);
+    }
+    else if (type === 'property') {
+        if (ps_property_customer) {
+            $("#dform_widget_num_p_streetnumber").attr("readonly", true);
+            $("#dform_widget_txt_p_streetname").attr("readonly", true);
+            $("#dform_widget_txt_p_town").attr("readonly", true);
+            $("#dform_widget_txt_p_postcode").attr("readonly", true);
+            KDF.hideWidget('ahtm_cancel_edit_manual_customerdetails');
+            KDF.showWidget('but_property_notfound_customer');
+        } 
+    }	
+}	
+
 function do_KDF_optionSelected(event, kdf, field, label, val) {
     if (field == 'ps_youraddress_id') {
 		KDF.showSection('area_youraddress');
