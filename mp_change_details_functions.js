@@ -2,6 +2,7 @@ var hideclass = 'fileuploadobject';
 var ps_property_customer = false;
 var ps_property_individual = false;
 var cs_customer_search = false;
+var ps_property_search = false;
 
 /* When right arrow of CS is clicked, then customer details will be closed */
 $(document).on('click','.dform_widget_search_closeresults',function(){
@@ -83,6 +84,32 @@ function hideCustomerDetails() {
     KDF.hideWidget('but_continue_selectindividual');
     KDF.hideWidget('but_individual_address');
 }
+
+function do_KDF_optionSelected(event, kdf, field, label, val) {
+    if (field == 'ps_youraddress_id') {
+		KDF.showSection('area_youraddress');
+		KDF.showWidget('but_submit');
+    }
+	else if (field == 'cs_customer_search_id'){ /*show or hide widget when label of CS is changed*/
+        ps_property_search = false;
+        ps_property_customer = false;
+        ps_property_individual = false;
+        cs_customer_search = true;
+        
+        if(label == '') {
+            hideCustomerDetails();
+        } else {
+            KDF.setVal('customerID',val);
+            showCustomerDetails();;
+        }
+    } 
+	else if (field == 'ps_existing_customer_id') {
+        ps_property_search = false;
+        ps_property_customer = true;
+        ps_property_individual = false;
+        cs_customer_search = false;
+    }	
+}	
 
 $(document).on('keypress','#dform_widget_cs_customerdetails_txt_forename',function() {
 	if (event.keyCode == 13) {
