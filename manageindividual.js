@@ -3,8 +3,7 @@
 var individualTemplateIdentifier = 'individual_template_';
 
 function do_KDF_Ready_Individual(event, kdf) {
-    console.log('do_KDF_Ready_Individual');
-	
+
 	var form_name = kdf.name;
 	addAccordion();	
 	KDF.showSection('area_customer_information');
@@ -158,7 +157,7 @@ function do_KDF_Ready_Individual(event, kdf) {
     });
 
     $('#dform_widget_cs_customer_search_resultholder').on('show', function () {
-        console.log('About to show but_individual_not_found widget on SHOW');
+
         $('#dform_widget_txta_cust_info_address').prop('readonly', true);
 
         KDF.showWidget('but_individual_not_found');
@@ -166,7 +165,7 @@ function do_KDF_Ready_Individual(event, kdf) {
 
 
     $('#dform_widget_cs_customer_search_resultholder').on('hide', function () {
-        console.log('About to hide but_individual_not_found widget on HIDE');
+
         $('#dform_widget_txta_cust_info_address').prop('readonly', false);
         clearCustomerInformation();
         KDF.hideWidget('but_individual_not_found');
@@ -176,22 +175,20 @@ function do_KDF_Ready_Individual(event, kdf) {
     });
 
     $('#dform_widget_ps_create_individual_resultholder').on('show', function () {
-        console.log('ps_create_individual_resultholder on show event');
+
         KDF.showWidget('txt_c_addressnumber');
         KDF.showWidget('txt_c_addressline1');
         KDF.showWidget('txt_c_town');
         KDF.showWidget('txt_c_postcode');
-        //KDF.showWidget('but_continue_individual_address');
         KDF.showWidget('but_property_not_found');
     });
 
     $('#dform_widget_ps_create_individual_resultholder').on('hide', function () {
-        console.log('ps_create_individual_resultholder on hide event');
+
         KDF.hideWidget('txt_c_addressnumber');
         KDF.hideWidget('txt_c_addressline1');
         KDF.hideWidget('txt_c_town');
         KDF.hideWidget('txt_c_postcode');
-        //KDF.hideWidget('but_continue_individual_address');
         KDF.hideWidget('ahtm_edit_manual_createindividual');
         KDF.hideWidget('but_property_not_found');
         KDF.hideWidget('ahtm_cancel_edit_manual_createindividual');
@@ -199,9 +196,7 @@ function do_KDF_Ready_Individual(event, kdf) {
 
     /* create individual when button continue is clicked*/
     $('#dform_widget_button_but_continue_individual_address').click(function () {
-        console.log('dform_widget_button_but_continue_individual_address clicked');
-        
-        
+
 			if (($('input[name=txt_c_addressnumber]').prop('required') && KDF.getVal('txt_c_addressnumber') == '') || 
 				($('input[name=txt_c_addressline1]').prop('required') && KDF.getVal('txt_c_addressline1') == '') || 
 				($('input[name=txt_c_town]').prop('required') && KDF.getVal('txt_c_town') == '') || 
@@ -323,21 +318,15 @@ function do_KDF_Ready_Individual(event, kdf) {
     });
 }//end do_KDF_Ready_Individual
 
-function do_KDF_Custom_Individual(event, kdf, response, action) {
-    //if (typeof response.actionedby == 'undefined' || response.actionedby == '') { response.actionedby = 'na'; }
-    //console.log('actionedby= ' + response.actionedby);
-	
+function do_KDF_Custom_Individual(event, kdf, response, action) {	
 	var isIndividualTemplate = false;
 	
 	if (response.actionedby.indexOf(individualTemplateIdentifier) === 0) {isIndividualTemplate = true;}
-	console.log('is Individual template ? ', isIndividualTemplate);
 	
 	if (isIndividualTemplate) {		
 		var actionedBySource = response.actionedby.replace(individualTemplateIdentifier, '');
-		console.log('Actioned by source :', actionedBySource);
 		
 		if (action === 'person-retrieve-new' && actionedBySource === 'KDF_Ready') {
-			console.log('person-retrieve-new show update address button');
 			KDF.showWidget('but_cust_info_update_address');
 			//Ensure the First Name and Last Name are read-only, aunthenticated citizen
 			if (KDF.kdf().access === 'citizen') {
@@ -355,10 +344,6 @@ function do_KDF_Custom_Individual(event, kdf, response, action) {
 				$("#dform_widget_txt_cust_info_town").attr("readonly", true);
 				$("#dform_widget_txt_cust_info_postcode").attr("readonly", true);
 
-// 				KDF.setVal('txt_cust_info_street_number', KDF.getVal('txt_logic_streetnumber'));
-// 				KDF.setVal('txt_cust_info_street_name', KDF.getVal('txt_logic_streetname'));
-// 				KDF.setVal('txt_cust_info_town', KDF.getVal('txt_logic_town'));
-// 				KDF.setVal('txt_cust_info_postcode', KDF.getVal('txt_logic_postcode'));
 			}
 			
 			KDF.setVal('txt_cust_info_uprn', KDF.getVal('txt_logic_uprn'));
@@ -372,12 +357,10 @@ function do_KDF_Custom_Individual(event, kdf, response, action) {
 			$('#dform_widget_txta_cust_info_address').prop('readonly', true);
 		}
 		else if (action === 'person-retrieve-new' && actionedBySource == 'update-individual') {
-			console.log('custom action point 2');
 			KDF.gotoNextPage();
 
 		}
 		else if (action === 'person-retrieve-new' && actionedBySource == 'create-individual') {
-			console.log('custom action point 3');
 			KDF.setCustomerID(KDF.getVal('txt_customer_id'), true, false); /*set Reporter*/
 			KDF.gotoNextPage();
 
@@ -386,16 +369,13 @@ function do_KDF_Custom_Individual(event, kdf, response, action) {
 			KDF.setVal('txt_cust_info_uprn', KDF.getVal('txt_logic_uprn'));
 		}
 		else if (action === 'update-individual-new') {
-			console.log('custom action point 4');
 			KDF.showSuccess('Individual Details Updated');
 			KDF.customdata('person-retrieve-new', individualTemplateIdentifier + 'update-individual', true, true, { 'person_search_results': KDF.getVal('txt_customer_id') });
 			KDF.showInfo('Individual Details Updated');
 
 		}
 		else if (action == 'create-individual-new') {
-			console.log('custom action point 5');
 			if (response.data.txt_customerID !== undefined) {
-				console.log('custom action point 5a');
 				KDF.showSuccess('Individual Details Created');
 				KDF.showInfo('Individual Details Created');
 				KDF.setVal('txt_customer_id', response.data.txt_customerID);
@@ -404,17 +384,12 @@ function do_KDF_Custom_Individual(event, kdf, response, action) {
 				KDF.customdata('person-retrieve-new', individualTemplateIdentifier + 'create-individual', true, true, { 'person_search_results': KDF.getVal('txt_customer_id') });
 				//send notification email from process
 				KDF.setVal('eml_cust_info_email',KDF.getVal('eml_c_email'));
-				console.log('eml_cust_info_email : ');
-				console.log(KDF.getVal('eml_cust_info_email'));
 			}
 		}
 	}
 }//end do_KDF_Custom_Individual()
 
 function do_KDF_objectdataLoaded_Individual(event, kdf, response, type, id) {
-    console.log('do_KDF_objectdataLoaded_Individual type: ' + type);
-    console.log('do_KDF_objectdataLoaded_Individual id: ' + id);
-    console.log('do_KDF_objectdataLoaded_Individual response: ', response);
     if (type === 'customer' && kdf.widgetresponse.actionedby === 'cs_customer_search') {
         KDF.setVal('txt_customer_id', id);
     	KDF.setVal('txt_cust_info_street_number', response["profile-AddressNumber"]);
