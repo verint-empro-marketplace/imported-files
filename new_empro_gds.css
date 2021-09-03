@@ -4,51 +4,8 @@
 }
 
 /*
-#dform_successMessage {
-    display: none !important;
-}
-*/
-
-/*KS
-Colours being used:
-    Error red (darkest) warning notice border:
-        #b10e1e
-    Error red (darker):
-        #b03535
-    Error red lighter
-        #d45252
-    Main color (box blue)
-        #00529b
-    Highlight yellow
-        #FFBF47, #ffbf47
-    Softer white:
-        #e8f0de
-    Soft grey (read-only)
-        #DDD
-    Info notice background:
-        #bde5f8
-    Darker blue (Info notice border and icon):
-        #00529b, #00529b
-    Box green, green button:
-        #00823b
-    Darker green for highlights:
-        #00682e
-    Dark green for borders:
-        #003618	
-    Orange button, box orange
-        #CE4C03
-    Darker orange for highlights:
-        #9D3703
-    Dark Orange for borders
-        #bc5114
-    White text:
-        white, #fff, #FFF
-*/
-
-
-/*
 -----------------------------------------------
-KS: searches - Start
+searches - Start
 -----------------------------------------------
 */
 .cs-gov, .ss-gov, .ps-gov, .os-gov, .search-gov{
@@ -71,9 +28,7 @@ KS: searches - Start
     font-size: 1.25rem !important;
     background-color: #007aff !important;
 }
-/*.cs-gov button, .ss-gov button, .ps-gov button, .os-gov button, .search-gov button {
-    border: none !important;
-}*/
+
 .search-gov .dform_widgeterror{
     box-shadow: none !important;
     border-color: #b03535 !important;
@@ -89,7 +44,7 @@ KS: searches - Start
 
 /*
 -----------------------------------------------
-KS: area Start
+area Start
 -----------------------------------------------
 */
 .area-gov{
@@ -109,7 +64,7 @@ KS: area Start
     color: white !important;
 }
 
-/*KS: area end
+/*area end
 -----------------------------------------------*/
 
 
@@ -144,8 +99,7 @@ KS: area Start
 
 /*
 -----------------------------------------------
-KS: btn Start
-Need to deside on new generic button - the continue should be promanant - maybe have the basic be blue
+btn Start
 -----------------------------------------------
 */
 .btn-gov, .btn-gov:hover, .btn-orange, .btn-orange:hover,.btn-continue, .btn-continue:hover, .btn-green,.btn-green:hover {
@@ -207,7 +161,7 @@ Need to deside on new generic button - the continue should be promanant - maybe 
 
 /*btn-continue---------------------------------*/
 
-/*KS: Customizes the help text */
+/*Customizes the help text */
 .btn-continue{
     box-shadow: inset 0 -2px 0 #003618 !important;
     background: #00823b!important;
@@ -219,7 +173,7 @@ Need to deside on new generic button - the continue should be promanant - maybe 
 .btn-continue:focus{
     box-shadow: inset 0 -2px 0 #003618, 0 0 0 3px #FFBF47 !important;
 }
-/*KS: If not used by mobile - normal sized button*/
+/*If not used by mobile - normal sized button*/
 @media (max-width: 768px){
     .btn-gov,.btn-gov:hover,.btn-continue,.btn-continue:hover,.btn-orange,.btn-orange:hover  {
         width: 100% !important;
@@ -268,51 +222,51 @@ Need to deside on new generic button - the continue should be promanant - maybe 
     background: #FFBF47 !important;
 }
 
-/*KS: btn end
+/*btn end
 -----------------------------------------------*/
 
 
 
 /*
 -----------------------------------------------
-KS: sel Start
+sel Start
 -----------------------------------------------
 */
 
-/*KS: Title*/
+/*Title*/
 .sel-gov > div > label  {
   font-size: 1rem;
   line-height: 1.2 !important;
   font-weight:bold!important;
 }
-/*KS: Customizes the help text */
+/*Customizes the help text */
 .sel-gov > div .helptext {
     font-size: 1rem;
     margin-bottom: 18px;
     margin-top: 5px;
 }
-/*KS: Make the input more noticable*/
+/*Make the input more noticable*/
 .sel-gov select{
     border: 2px solid black !important;
     /*font-size: 20px !important;*/
 }
-/*KS: style when field is focused - and only when readable*/
+/*style when field is focused - and only when readable*/
 .sel-gov  select:focus:not([readonly]){
     box-shadow: 0 0 0 3px #FFBF47 !important;
     /*border-color: black !important;*/
 }
-/*KS: style when field with error is focused*/
+/*style when field with error is focused*/
 .sel-gov  select.dform_fielderror:focus{
     box-shadow: 0 0 0 3px #FFBF47 !important;
     border-color: #d45252 !important;
 }
-/*KS: change border to red when it has an error*/
+/*change border to red when it has an error*/
 .sel-gov  .dform_fielderror{
     box-shadow: /*0 0 1px 1px #d45252*/ none !important;
     border: solid 2px #d45252 !important;
     outline: none;
 }
-/*KS: The error text when field is invalid*/
+/*The error text when field is invalid*/
 .sel-gov  .dform_validationMessage{
     padding-bottom: 24px !important;
     font-size: 1rem !important;
@@ -326,13 +280,13 @@ KS: sel Start
     width:100% !important;
 }
 
-/*KS: sel end
+/*sel end
 -----------------------------------------------*/
 
 
 /*
 -----------------------------------------------
-KS: file-gov Start
+file-gov Start
 -----------------------------------------------
 */
 .file-gov > div > label {
@@ -350,7 +304,7 @@ KS: file-gov Start
     position: absolute;
     font-weight: bold !important;
     
-    /*KS: for between label and button - for mobile*/
+    /*for between label and button - for mobile*/
     top: -27px;
     
 
@@ -365,7 +319,7 @@ KS: file-gov Start
 
 .file-gov .dform_filenames span{
     display: inline-block;
-    /*KS: removed to be up to WCAG2AAA
+    /*removed to be up to WCAG2AAA
     color: #00529b !important;
     padding: 2px;
     margin: 2px;
@@ -373,27 +327,22 @@ KS: file-gov Start
     margin-right: 2px !important;
     border: 2px solid #00529b;*/
 }
-/*KS: removes the >> before file names*/
-/*.file-gov .dform_filenames span:before{
-    content: "" !important;
-}
-*/
 
-/*KS: darken when hover-able */
+/*darken when hover-able */
 .file-gov  input:hover ~ .file-gov-icon{
     background: #00529b !important; /*Darkened Varint blue*/
 }
-/*KS: darken when hover-able */
+/*darken when hover-able */
 .file-gov  input:focus ~ .file-gov-icon{
     background: #00529b !important; /*Darkened Varint blue*/
     box-shadow: inset 0 -2px 0 #00529b, 0 0 0 3px #FFBF47 !important;
 }
-/*KS depreciated: style when field with error is focused*/
+/*depreciated: style when field with error is focused*/
 .file-gov  input.dform_fielderror:focus ~ .file-gov-icon{
     box-shadow: inset 0 -2px 0 #00529b, 0px 0.2px 0px 2px #d45252, 0px 0.2px 0px 5px #FFBF47 !important;
     border-color: #d45252 !important;
 }
-/*KS depreciated: change border to red when it has an error*/
+/*depreciated: change border to red when it has an error*/
 .file-gov  .dform_fielderror ~ .file-gov-icon{
     box-shadow: inset 0 -2px 0 #00529b, 0px 0.2px 0px 2px #d45252;
     outline: none;
@@ -407,7 +356,7 @@ KS: file-gov Start
   top: 0.6px;
   cursor: pointer;
   
-  /*KS: GOV button*/
+  /*GOV button*/
   color: #fff;
   box-shadow: inset 0 -2px 0 #00529b; /*Dark blue*/
   border: none;
@@ -416,7 +365,7 @@ KS: file-gov Start
   background: #00529b; /*Verint blue*/
   
   
-  /*KS: too subtle to notice change: -webkit-transition: background 0.5s ease-out; -moz-transition: background 0.5s ease-out;   -o-transition: background 0.5s ease-out;    transition: background 0.5s ease-out;*/
+  /*too subtle to notice change: -webkit-transition: background 0.5s ease-out; -moz-transition: background 0.5s ease-out;   -o-transition: background 0.5s ease-out;    transition: background 0.5s ease-out;*/
   
   
 }
@@ -459,10 +408,6 @@ KS: file-gov Start
 
 
 @media (min-width: 769px){
-    /*.file-gov .dform_validationMessage{
-        top: 8px;
-        left: 165px;
-    }*/
     .file-gov input, .file-gov-icon{
         width:188px !important;
     }
@@ -470,7 +415,7 @@ KS: file-gov Start
 
 /*File-progress--------------------------------*/
 
-/*KS: made progress bar opt-in since it's rarely needed*/
+/*made progress bar opt-in since it's rarely needed*/
 .file-progress .dform_fileupload_progressbar{
     visibility: visible;
     height: 22px !important;
@@ -489,21 +434,21 @@ KS: file-gov Start
     height: 0px !important;
 }
 
-/*KS: file end
+/*file end
 -----------------------------------------------*/
 
 
 /*
 -----------------------------------------------
-KS: spr Start
+spr Start
 -----------------------------------------------
 */
-/*KS: removes the default break to allow better control over sizing*/
+/*removes the default break to allow better control over sizing*/
 .spr-xxxs br,.spr-xxs br,.spr-xs br,.spr-s br,.spr-m br,.spr-l br,.spr-xl br,.spr-xxl br,.spr-xxxl br,.spr-n br, .spr-none br
 {   
     display: none;
 }
-/*KS: Resizes the space depending on selected class */
+/*Resizes the space depending on selected class */
 .spr-xxxs{padding-top:0.25em;}
 .spr-xxs {padding-top:0.5em;}
 .spr-xs  {padding-top:1em;}
@@ -515,97 +460,96 @@ KS: spr Start
 .spr-xxxl{padding-top:7em;}
 .spr-n,.spr-none{padding-top:0;}
 
-/*KS: spr end
+/*spr end
 -----------------------------------------------*/
 
 
 
 /*
 -----------------------------------------------
-KS: txt (and text like fields) Start
+txt (and text like fields) Start
 -----------------------------------------------
 */
 
-/*KS: Title*/
+/*Title*/
 .txt-gov > div > label,.dt-gov > div > label,.eml-gov > div > label,.num-gov > div > label,.pas-gov > div > label,.tel-gov > div > label,.time-gov > div > label,.field-gov > div > label{
   font-size: 1rem;
   line-height: 1.2 !important;
   font-weight:bold!important;
 }
-/*KS: Customizes the help text */
+/*Customizes the help text */
 .txt-gov > div .helptext,.dt-gov > div .helptext,.eml-gov > div .helptext,.num-gov > div .helptext,.pas-gov > div .helptext,.tel-gov > div .helptext,.time-gov > div .helptext,.field-gov > div .helptext{
     font-size: 1rem;
     /*margin-bottom: 18px;
     margin-top: 5px;*/
 }
-/*KS: Make the input more noticable*/
+/*Make the input more noticable*/
 .txt-gov input,.dt-gov input,.eml-gov input,.num-gov input,.pas-gov input,.tel-gov input,.time-gov input,.field-gov input{
     border: 2px solid black !important;
 }
 .txt-gov input:focus,.dt-gov input:focus,.eml-gov input:focus,.num-gov input:focus,.pas-gov input:focus,.tel-gov input:focus,.time-gov input:focus,.field-gov input:focus{
     box-shadow: 0px 0.2px 3px 0px #d45252 !important;
 }
-/*KS: style when field is focused - and only when readable*/
+/*style when field is focused - and only when readable*/
 .txt-gov  input:focus:not([readonly]),.dt-gov  input:focus:not([readonly]),.eml-gov  input:focus:not([readonly]),.num-gov  input:focus:not([readonly]),.pas-gov  input:focus:not([readonly]),.tel-gov  input:focus:not([readonly]),.time-gov  input:focus:not([readonly]),.field-gov  input:focus:not([readonly]){
     /*box-shadow: 0 0 0 3px #FFBF47 !important;*/
     border-color: #FFBF47 !important;
 }
-/*KS: style when field with error is focused*/
+/*style when field with error is focused*/
 .txt-gov  input.dform_fielderror:focus,.dt-gov  input.dform_fielderror:focus,.eml-gov  input.dform_fielderror:focus,.num-gov  input.dform_fielderror:focus,.pas-gov  input.dform_fielderror:focus,.tel-gov  input.dform_fielderror:focus,.time-gov  input.dform_fielderror:focus,.field-gov  input.dform_fielderror:focus{
     box-shadow: 0 0 0px 3px #FFBF47 !important;
     border-color: #d45252 !important;
 }
-/*KS: change border to red when it has an error*/
+/*change border to red when it has an error*/
 .txt-gov  .dform_fielderror,.dt-gov  .dform_fielderror,.eml-gov  .dform_fielderror,.num-gov  .dform_fielderror,.pas-gov  .dform_fielderror,.tel-gov  .dform_fielderror,.time-gov  .dform_fielderror,.field-gov  .dform_fielderror{
     box-shadow: /*0 0 1px 1px #d45252*/ none !important;
     border: solid 2px #d45252 !important;
     outline: none;
 }
-/*KS: The error text when field is invalid*/
+/*The error text when field is invalid*/
 .txt-gov  .dform_validationMessage,.dt-gov  .dform_validationMessage,.eml-gov  .dform_validationMessage,.num-gov  .dform_validationMessage,.pas-gov  .dform_validationMessage,.tel-gov  .dform_validationMessage,.time-gov  .dform_validationMessage,.field-gov  .dform_validationMessage{
     padding-bottom: 6px !important;
     font-size: 1rem !important;
     font-weight: bold !important;
 }
 .txt-no-min-height div:first-child,.dt-no-min-height div:first-child,.eml-no-min-height div:first-child,.num-no-min-height div:first-child,.pas-no-min-height div:first-child,.tel-no-min-height div:first-child,.time-no-min-height div:first-child,.field-no-min-height div:first-child{
-    /*KS: bob wanted there to be no left margin by default - need to develop for each label % to implement*/
     min-height: 0 !important;
 }
 .txt-min-height div:first-child,.dt-min-height div:first-child,.eml-min-height div:first-child,.num-min-height div:first-child,.pas-min-height div:first-child,.tel-min-height div:first-child,.time-min-height div:first-child,.field-min-height div:first-child{
-    /*KS: but I added this just incase you want that functionality again*/
+    
     min-height: 1px !important;
 }
 .txt-gov input[readonly],.dt-gov input[readonly],.eml-gov input[readonly],.num-gov input[readonly],.pas-gov input[readonly],.tel-gov input[readonly],.time-gov input[readonly],.field-gov input[readonly],.sel-gov select[disabled] {
     border-color: #DDD !important;
     background: #DDD;
 }
-/*KS: txt (and text like fields) end
+/*txt (and text like fields) end
 -----------------------------------------------*/
 
 /*
 -----------------------------------------------
-KS: txta Start
+txta Start
 -----------------------------------------------
 */
 
-/*KS: Title*/
+/*Title*/
 .txta-gov > div > label {
   font-size: 1rem;
   line-height: 1.2 !important;
   font-weight:bold!important;
 }
-/*KS: Customizes the help text */
+/*Customizes the help text */
 .txta-gov > div .helptext {
     font-size: 1rem;
     /*margin-bottom: 18px;
     margin-top: 5px;*/
 }
-/*KS: Make the input more noticable*/
+/*Make the input more noticable*/
 .txta-gov textarea{
     border: 2px solid black !important;
     font-family: "Open sans", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
 }
-/*KS: style when field is focused - and when readable*/
+/*style when field is focused - and when readable*/
 .txta-gov textarea:focus:not([readonly]){
     /*box-shadow: 0 0 0 3px #FFBF47 !important;*/
     border-color: #FFBF47 !important;
@@ -613,18 +557,18 @@ KS: txta Start
 .txta-gov textarea:focus{
     box-shadow: 0px 0.2px 3px 0px #d45252 !important;
 }
-/*KS: style when field with error is focused*/
+/*style when field with error is focused*/
 .txta-gov textarea.dform_fielderror:focus{
     box-shadow: 0 0 0px 3px #FFBF47 !important;
     border-color: #d45252 !important;
 }
-/*KS: change border to red when it has an error*/
+/*change border to red when it has an error*/
 .txta-gov .dform_fielderror{
     box-shadow: /*0 0 1px 1px #d45252*/ none !important;
     border: solid 2px #d45252 !important;
     outline: none;
 }
-/*KS: The error text when field is invalid*/
+/*The error text when field is invalid*/
 .txta-gov .dform_validationMessage{
     padding-bottom: 6px !important;
     font-size: 1rem !important;
@@ -644,12 +588,12 @@ KS: txta Start
 }
 
 
-/*KS: txta end
+/*txta end
 -----------------------------------------------*/
 
 /*
 -----------------------------------------------
-KS: warning notice - Start
+warning notice - Start
 -----------------------------------------------
 */
 .warning-notice {
@@ -697,12 +641,12 @@ KS: warning notice - Start
   border-width: 0 5px 0 0;
 }
 
-/*KS: warning notice - End
+/*warning notice - End
 -----------------------------------------------*/
 
 /*
 -----------------------------------------------
-KS: Info notice - Start
+Info notice - Start
 -----------------------------------------------
 */
 .info-notice {
@@ -754,17 +698,17 @@ KS: Info notice - Start
   border-width: 0 5px 0 0;
 }
 
-/*KS: Info notice - End
+/*Info notice - End
 -----------------------------------------------*/
 
 
 /*
 -----------------------------------------------
-KS: Custom gov radio buttons - Start
+Custom gov radio buttons - Start
 -----------------------------------------------
 */
 
-/*KS: Span for each radio button*/
+/*Span for each radio button*/
 .rad-gov > div > fieldset > span  {
   display: block;
   position: relative;
@@ -777,12 +721,12 @@ KS: Custom gov radio buttons - Start
   -ms-user-select: none;
   user-select: none;
 }
-/*KS: Removes default border */
+/*Removes default border */
 .rad-gov .radiogroup{
     border: none !important;
     padding-left: 0px !important;
 }
-/*KS: The main clickable element - it's the width of the area */
+/*The main clickable element - it's the width of the area */
 .rad-gov > div > fieldset > span  input {
   position: absolute;
   opacity: 0;
@@ -792,7 +736,7 @@ KS: Custom gov radio buttons - Start
   z-index:1 !important;
   cursor: pointer;
 }
-/*KS: The actual unchecked button */
+/*The actual unchecked button */
 .rad-check {
   position: absolute;
   top: 0;
@@ -804,17 +748,17 @@ KS: Custom gov radio buttons - Start
   /*border: 3px solid #00529b;Inconsistint sizing between host and VOF*/
   box-shadow: inset 0 0 0 3px #007aff !important;
 }
-/*KS: Create the indicator (the dot/circle - hidden when not checked) */
+/*Create the indicator (the dot/circle - hidden when not checked) */
 .rad-check:after {
   content: "";
   position: absolute;
   display: none;
 }
-/*KS: Show the indicator (dot/circle) when checked */
+/*Show the indicator (dot/circle) when checked */
 .rad-gov > div > fieldset > span  input:checked ~ .rad-check:after {
   display: block;
 }
-/*KS: Style the indicator (dot/circle) */
+/*Style the indicator (dot/circle) */
 .rad-gov > div > fieldset > span  .rad-check:after {
   top: 4px;
   left: 4px;
@@ -823,26 +767,26 @@ KS: Custom gov radio buttons - Start
   border-radius: 50%;
   background: #007aff !important;
 }
-/*KS: Customizes the help text */
+/*Customizes the help text */
 .rad-gov > div > fieldset .helptext {
     font-size: 1rem;
     margin-bottom: 16px;
 }
-/*KS: Customizes the title/legend */
+/*Customizes the title/legend */
 .rad-gov legend {
     font-size: 1rem;
     line-height: 1.2 !important;
     margin-bottom: 0px !important;
 }
-/*KS: Style to remove legend*/
+/*Style to remove legend*/
 .no-legend legend {
     font-size: 0px !important;
 }
-/*KS: add red border to input that are required/have an error*/
+/*add red border to input that are required/have an error*/
 .rad-gov  input[type="radio"].dform_fielderror ~ span{
     box-shadow: inset 0 0 0 3px #d45252;
 }
-/*KS: The error text when field is invalid*/
+/*The error text when field is invalid*/
 .rad-gov  .dform_validationMessage{
     padding-bottom: 24px !important;
     font-size: 1rem !important;
@@ -856,7 +800,7 @@ KS: Custom gov radio buttons - Start
     margin: 0 !important;
     padding-bottom: 0 !important;
 }
-/*KS quick fix to avoid changing all radio items*/
+/*quick fix to avoid changing all radio items*/
 .rad-gov label{
     text-transform: inherit;
 }
@@ -873,17 +817,17 @@ KS: Custom gov radio buttons - Start
     text-transform: lowercase;
 }
 
-/*KS: Custom gov radio buttons - End
+/*Custom gov radio buttons - End
 -----------------------------------------------*/
 
 
 /*
 -----------------------------------------------
-KS: gov checkbox Start
+gov checkbox Start
 -----------------------------------------------
 */
 
-/*KS: Div for the checkbox */
+/*Div for the checkbox */
 .chk-gov > div  {
   display: block;
   position: relative;
@@ -895,7 +839,7 @@ KS: gov checkbox Start
   -ms-user-select: none;
   user-select: none;
 }
-/*KS: The main clickable element - it's the width of the area */
+/*The main clickable element - it's the width of the area */
 .chk-gov > div  input {
   position: absolute;
   opacity: 0;
@@ -905,7 +849,7 @@ KS: gov checkbox Start
   z-index:1 !important;
   cursor: pointer;
 }
-/*KS: The actual unchecked check box */
+/*The actual unchecked check box */
 .chk-check {
   position: absolute;
   top: 0;
@@ -915,21 +859,21 @@ KS: gov checkbox Start
   border: 3px solid #00529b;
   border-radius: 15%;
 }
-/*KS: When the checkbox is checked, add a blue background */
+/*When the checkbox is checked, add a blue background */
 .chk-gov > div  input:checked ~ .chk-check {
   background-color: #00529b;
 }
-/*KS: Create the indicator (the dot/circle - hidden when not checked) */
+/*Create the indicator (the dot/circle - hidden when not checked) */
 .chk-check:after {
   content: "";
   position: absolute;
   display: none;
 }
-/*KS: Show the indicator (dot/circle) when checked */
+/*Show the indicator (dot/circle) when checked */
 .chk-gov > div  input:checked ~ .chk-check:after {
   display: block;
 }
-/*KS: Style the indicator (dot/circle) */
+/*Style the indicator (dot/circle) */
 .chk-gov > div  .chk-check:after {
   left: 6.5px;
   top: 1px;
@@ -941,46 +885,43 @@ KS: gov checkbox Start
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-/*KS: Customizes the helptext */
+/*Customizes the helptext */
 .chk-gov > div .helptext {
     font-size: 1rem;
     position: absolute;
     top: 32px;
     left:0px;
 }
-/*KS: Removes the title/legend */
+/*Removes the title/legend */
 .no-legend > div > label {
     font-size: 0px !important;
 }
-/*KS: Checkbox error message is dirrent*/
+/*Checkbox error message is dirrent*/
 .chk-gov  .dform_validationMessage{
     position: absolute;
     top: -22px;
     left: 0px;
     font-size: 1rem !important;
     font-weight: bold !important;
-    /*padding-bottom: 24px !important;*/
 }
-/*KS: add red border to input that are required/have an error*/
+/*add red border to input that are required/have an error*/
 .chk-gov  input[type="checkbox"].dform_fielderror ~ span{
     border-color: #d45252;
-    /*box-shadow: 0 0 3px 3px #d45252 !important;*/
 }
 .chk-gov > div  input:focus ~ .chk-check{
-    /*border: 3px solid red !important;*/
     box-shadow: 0 0 0 3px #FFBF47;
 }
-/*KS: gov checkbox end
+/*gov checkbox end
 -----------------------------------------------*/
 
 
 /* 
 -----------------------------------------------
-KS: Custom gov multi-checkbox - Start
+Custom gov multi-checkbox - Start
 -----------------------------------------------
 */
 
-/*KS: Span for each checkbox*/
+/*Span for each checkbox*/
 .mchk-gov > div > fieldset > span  {
   display: block;
   position: relative;
@@ -993,12 +934,12 @@ KS: Custom gov multi-checkbox - Start
   -ms-user-select: none;
   user-select: none;
 }
-/*KS: Removes default border */
+/*Removes default border */
 .mchk-gov .checkboxgroup{
     border: none !important;
     padding-left: 0px !important;
 }
-/*KS: The main clickable element - it's the width of the area */
+/*The main clickable element - it's the width of the area */
 .mchk-gov > div > fieldset > span  input {
   position: absolute;
   opacity: 0;
@@ -1008,7 +949,7 @@ KS: Custom gov multi-checkbox - Start
   z-index:1 !important;
   cursor: pointer;
 }
-/*KS: The actual unchecked button */
+/*The actual unchecked button */
 .mchk-check {
   position: absolute;
   top: 0;
@@ -1019,21 +960,21 @@ KS: Custom gov multi-checkbox - Start
   border-radius: 15%;
   border: 3px solid #00529b;
 }
-/*KS: When checked, it fills background*/
+/*When checked, it fills background*/
 .mchk-gov > div > fieldset > span  input:checked ~ .mchk-check {
     background-color: #00529b;
 }
-/*KS: Create the indicator (the dot/circle - hidden when not checked) */
+/*Create the indicator (the dot/circle - hidden when not checked) */
 .mchk-check:after {
   content: "";
   position: absolute;
   display: none;
 }
-/*KS: Show the indicator (dot/circle) when checked */
+/*Show the indicator (dot/circle) when checked */
 .mchk-gov > div > fieldset > span  input:checked ~ .mchk-check:after {
   display: block;
 }
-/*KS: Style the indicator (dot/circle) */
+/*Style the indicator (dot/circle) */
 .mchk-gov > div > fieldset > span  .mchk-check:after {
   left: 7px;
   top: -2px;
@@ -1045,34 +986,32 @@ KS: Custom gov multi-checkbox - Start
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-/*KS: Customizes the help text */
+/*Customizes the help text */
 .mchk-gov > div > fieldset .helptext {
     font-size: 1rem;
     margin-bottom: 16px;
 }
-/*KS: Customizes the title/legend */
+/*Customizes the title/legend */
 .mchk-gov legend {
     font-size: 1rem;
     line-height: 1.2 !important;
     margin-bottom: 0 !important;
 }
-/*KS: Style to remove legend*/
+/*Style to remove legend*/
 .no-legend legend {
     font-size: 0 !important;
 }
-/*KS: add red border to input that are required/have an error*/
+/*add red border to input that are required/have an error*/
 .mchk-gov input[type="checkbox"].dform_fielderror ~ span{
     border-color: #d45252;
-    /*box-shadow: 0 0 3px 3px #d45252 !important;*/
 }
-/*KS: The error text when field is invalid*/
+/*The error text when field is invalid*/
 .mchk-gov .dform_validationMessage{
     padding-bottom: 24px !important;
     font-size: 1rem !important;
     font-weight: bold !important;
 }
 .mchk-gov > div > fieldset > span  input:focus ~ .mchk-check{
-    /*border: 3px solid red !important;*/
     box-shadow: 0 0 0 3px #FFBF47;
 }
 .mchk-gov > div > fieldset{
@@ -1080,11 +1019,11 @@ KS: Custom gov multi-checkbox - Start
     padding-bottom: 0 !important;
 }
 
-/*KS quick fix to avoid changing all mchk items*/
+/*quick fix to avoid changing all mchk items*/
 .mchk-gov label{
     text-transform: lowercase;
 }
-/*KS: Custom gov multi-checkbox - End
+/*Custom gov multi-checkbox - End
 -----------------------------------------------*/
 
 
@@ -1095,7 +1034,6 @@ KS: Custom gov multi-checkbox - Start
     width: fit-content !important;
     width: intrinsic !important;
     width: -moz-max-content !important;
-    /*display: inline-block;*/
 }
 .text-align-right > .one,.text-align-right > .two,.text-align-right > .three,.text-align-right > .four,.text-align-right > .five,.text-align-right > .six,.text-align-right > .seven,.text-align-right > .eight,.text-align-right > .nine,.text-align-right > .ten,.text-align-right > .eleven,.text-align-right > legend{
     text-align: right !important;
@@ -1107,7 +1045,7 @@ KS: Custom gov multi-checkbox - Start
     text-align: left !important;
 }
 
-/*KS: Customizes the help text */
+/*Customizes the help text */
 .text-align-left .helptext,.text-align-center .helptext,.text-align-right .helptext,.text-align-left {
     margin-bottom: 10px !important;
     text-align: left;
@@ -1260,7 +1198,7 @@ KS: Custom gov multi-checkbox - Start
 .btn-margin-75,.chk-margin-75,.margin-75{margin-left:77.85%!important;}
 .btn-margin-83,.chk-margin-83,.margin-83{margin-left:86.5% !important;}
 .btn-margin-91,.chk-margin-91,.margin-91{margin-left:95.15%!important;}
-.btn-margin-0, .chk-margin-0 ,.margin-0 {margin-left:0     !important;}/*KS: ensures removing margin always takes piority*/
+.btn-margin-0, .chk-margin-0 ,.margin-0 {margin-left:0     !important;}
 @media (max-width: 768px){
 .btn-margin-8, .btn-margin-16, .btn-margin-25, .btn-margin-33, .btn-margin-41, .btn-margin-50, .btn-margin-58, .btn-margin-66, .btn-margin-75, .btn-margin-83, .btn-margin-91,.btn-margin-0, .chk-margin-8, .chk-margin-16, .chk-margin-25, .chk-margin-33, .chk-margin-41, .chk-margin-50, .chk-margin-58, .chk-margin-66, .chk-margin-75, .chk-margin-83, .chk-margin-91, .chk-margin-0, .margin-8, .margin-16, .margin-25, .margin-33, .margin-41, .margin-50, .margin-58, .margin-66, .margin-75, .margin-83, .margin-91, .margin-0{
         margin-left:0 !important;
@@ -1276,7 +1214,7 @@ KS: Custom gov multi-checkbox - Start
 .visibility-hidden{visibility: hidden;}
 .visibility-visible{visibility: visible;}
 
-/*KS - for use in optional rule - to make all lables right aligned*/
+/*for use in optional rule - to make all lables right aligned*/
 .text-align-right-label div:first-child{
     text-align: right;
 }
@@ -1316,17 +1254,17 @@ KS: Custom gov multi-checkbox - Start
     font-size: 2rem !important;
     line-height: 1.17 !important;
 }
-/*KS for search button on same line as search text - i.e. text and button on same line*/
+/*for search button on same line as search text - i.e. text and button on same line*/
 .txt-btn-inline > button{float:left;}
 .txt-btn-inline [type='text'] {float:left; margin-right: 0.3rem !important;}
 
-/*KS to hide the div that has the JSON.stringify(response)*/
+/*to hide the div that has the JSON.stringify(response)*/
 .assetResultJson{
     display:none;
 }
 
 
-/*KS - Code from open source*/
+/*Code from open source*/
 .lds-spinner {
   color: official;
   display: inline-block;
@@ -1564,7 +1502,7 @@ abbr{
     text-transform: none !important;
 }
 #dform_container .header1, #dform_container .header2, #dform_container .header3, #dform_container .header4, #dform_container .header5 , #dform_container .header6, #dform_container h1, #dform_container h2, #dform_container h3, #dform_container h4, #dform_container h5 , #dform_container h6{
-    /*KS: David wants header to be more consistant with text labels*/
+    
     font-weight: bold;
     letter-spacing: initial;
     text-transform: initial;
@@ -1600,17 +1538,6 @@ abbr{
 	left: -10px;
 }
 /*CPE overrite - END*/
-
-/*To fix font issue on IE based on this answer https://stackoverflow.com/a/14506177 and https://stackoverflow.com/q/14207425*/
-/*
-@font-face {
-    font-family: 'SpartaIcons';
-    font-style: normal;
-    font-weight: all;
-    src: url('/dformresources/themes/fonts/SpartaIcons/spartaicons-webfont.eot');/*IE only accepts one src - the ? makes ie think the rest of the fontface is a query*/
-    src: url('/dformresources/themes/fonts/SpartaIcons/spartaicons-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/dformresources/themes/fonts/SpartaIcons/spartaicons-webfont.woff') format("woff");
-}*/
 
 var {
   font-style: normal !important;
@@ -1788,7 +1715,7 @@ background-color: lightblue;
 .lbe-file-gov  input:hover ~ .file-gov-icon{
     background: #00529b !important; /*Darkened Varint blue*/
 }
-/*KS: darken when hover-able */
+/*darken when hover-able */
 .lbe-file-gov  input:focus ~ .file-gov-icon{
     background: #00529b !important; /*Darkened Varint blue*/
     box-shadow: inset 0 -2px 0 #00529b, 0 0 0 3px #FFBF47 !important;
