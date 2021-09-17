@@ -241,7 +241,7 @@ function do_KDF_optionSelected(event, kdf, field, label, val) {
 
 function do_KDF_Complete(event, kdf){
     KDF.showWidget('html_pleasewait');
-    KDF.showWidget('ahtm_cool_loading_gif');
+    KDF.showWidget('loading_gif');
     
     $('#dform_successMessage').addClass(hideclass); 
 	var name_before;
