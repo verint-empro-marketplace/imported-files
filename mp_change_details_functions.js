@@ -173,6 +173,49 @@ function do_KDF_ready(event, kdf){
         
         KDF.gotoNextPage();
     });
+	
+    $('#dform_widget_ps_existing_customer_resultholder').on('show', function () {
+        KDF.showWidget('but_property_notfound_customer');
+    });
+
+    $('#dform_widget_ps_existing_customer_resultholder').on('hide', function () {
+        KDF.hideWidget('but_property_notfound_customer');
+    });
+
+    $('#dform_widget_button_but_property_notfound_customer').click(function () {
+        $("#dform_widget_num_p_streetnumber").attr("readonly", false);
+        $("#dform_widget_txt_p_streetname").attr("readonly", false);
+        $("#dform_widget_txt_p_town").attr("readonly", false);
+        $("#dform_widget_txt_p_postcode").attr("readonly", false);
+
+        if (!KDF.getVal('txt_p_streetname')) {
+            KDF.setVal('num_p_streetnumber', '');
+            KDF.setVal('txt_p_streetname', '');
+            KDF.setVal('txt_p_town', '');
+            KDF.setVal('txt_p_postcode', '');
+            KDF.hideWidget('ahtm_cancel_edit_manual_customerdetails');
+        } else {
+            KDF.showWidget('ahtm_cancel_edit_manual_customerdetails');
+        }
+
+        KDF.hideWidget('but_property_notfound_customer');
+
+    });
+    
+    $('#cancel_edit_manually_customerdetails').click(function () {
+        KDF.setVal('num_p_streetnumber', KDF.getVal('txt_temp_streetnumber_customerdetails'));
+        KDF.setVal('txt_p_streetname', KDF.getVal('txt_temp_streetname_customerdetails'));
+        KDF.setVal('txt_p_town', KDF.getVal('txt_temp_town_customerdetails'));
+        KDF.setVal('txt_p_postcode', KDF.getVal('txt_temp_postcode_customerdetails'));
+
+        $("#dform_widget_num_p_streetnumber").attr("readonly", true);
+        $("#dform_widget_txt_p_streetname").attr("readonly", true);
+        $("#dform_widget_txt_p_town").attr("readonly", true);
+        $("#dform_widget_txt_p_postcode").attr("readonly", true);
+        KDF.hideWidget('ahtm_cancel_edit_manual_customerdetails');
+        KDF.showWidget('but_property_notfound_customer');
+
+    });
 
     /*jquery trigger based on display value*/
     (function ($) {
