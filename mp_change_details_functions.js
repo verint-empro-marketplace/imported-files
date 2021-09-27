@@ -4,7 +4,6 @@ var ps_property_individual = false;
 var cs_customer_search = false;
 var ps_property_search = false;
 var editaddressflag=0;
-var fullname_final=[];
 
 /* When right arrow of CS is clicked, then customer details will be closed */
 $(document).on('click','.dform_widget_search_closeresults',function(){
@@ -104,12 +103,7 @@ function do_KDF_ready(event, kdf){
     });
         
     $('#dform_widget_button_but_submit_main').click(function () {
-        fullname_final = KDF.getVal('txt_fullname').split(" ");
         KDF.gotoPage('complete');
-    });
-    
-     $('#dform_widget_button_but_continue').click(function () {
-        fullname_final = KDF.getVal('txt_fullname').split(" ");
     });
     
     $('#dform_widget_button_but_continue_customer_address').click(function() {
@@ -215,18 +209,7 @@ function do_KDF_ready(event, kdf){
         KDF.hideWidget('ahtm_cancel_edit_manual_customerdetails');
         KDF.showWidget('but_property_notfound_customer');
 
-    });
-
-    /*jquery trigger based on display value*/
-    (function ($) {
-        $.each(['show', 'hide'], function (i, ev) {
-            var el = $.fn[ev];
-            $.fn[ev] = function () {
-                this.trigger(ev);
-                return el.apply(this, arguments);
-            };
-        });
-    })(jQuery);	
+    });	
 }	
 
 function do_KDF_objectDataLoaded(event, kdf, response, type, id){
