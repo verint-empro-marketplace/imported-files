@@ -102,6 +102,8 @@ function do_KDF_Ready_Individual(event, kdf) {
 					'txt_first_name': KDF.getVal('txt_cust_info_first_name'),
 					'txt_last_name': KDF.getVal('txt_cust_info_last_name'),
 					'phone': KDF.getVal('tel_cust_info_phone'),
+					'c_tax_id': KDF.getVal('c_tax_id'),
+					'utilities_id': KDF.getVal('utilities_id'),
 					'email': KDF.getVal('eml_cust_info_email')
 				});
             }
