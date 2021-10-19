@@ -147,6 +147,8 @@ function do_KDF_Ready_Individual(event, kdf) {
 					'txt_last_name': KDF.getVal('txt_cust_info_last_name'),
 					'phone': KDF.getVal('tel_cust_info_phone'),
 					'email': KDF.getVal('eml_cust_info_email'),
+					'c_tax_id': KDF.getVal('c_tax_id'),
+					'utilities_id': KDF.getVal('utilities_id'),
 					'num_p_streetnumber': KDF.getVal('num_p_streetnumber'),
 					'txt_p_streetname': KDF.getVal('txt_p_streetname'),
 					'txt_p_town': KDF.getVal('txt_p_town'),
