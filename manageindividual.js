@@ -97,8 +97,6 @@ function do_KDF_Ready_Individual(event, kdf) {
         
         if (KDF.kdf().access === 'agent' && custDetailsCheck() && remainAnonymous !== 'true') {
             if (KDF.check('.dform_section_area_customer_information') === 0) {
-		    console.log('c_tax_id 1 :'+KDF.getVal('c_tax_id'))
-		    console.log('utilities_id 1 :'+KDF.getVal('utilities_id'))
             	KDF.customdata('update-individual-new', individualTemplateIdentifier + 'no-address-update', true, true, {
 					'customerID': KDF.getVal('txt_customer_id'),
 					'txt_first_name': KDF.getVal('txt_cust_info_first_name'),
@@ -145,8 +143,6 @@ function do_KDF_Ready_Individual(event, kdf) {
     $('#dform_widget_button_but_continue_customer_address').click(function () {
         if (KDF.kdf().access === 'agent' && custAddresssCheck() || custDetailsCheck()) {
             if (KDF.check('.dform_section_area_customer_details_address') === 0) {
-		    console.log('c_tax_id 2 :'+KDF.getVal('c_tax_id'))
-		    console.log('utilities_id 2 :'+KDF.getVal('utilities_id'))
                 KDF.customdata('update-individual-new', individualTemplateIdentifier + 'create', true, true, {
 					'customerID': KDF.getVal('txt_customer_id'),
 					'txt_first_name': KDF.getVal('txt_cust_info_first_name'),
