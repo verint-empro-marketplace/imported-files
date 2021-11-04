@@ -132,23 +132,6 @@ function do_KDF_Ready_Individual(event, kdf) {
     		KDF.gotoNextPage();
         }
     });
-
-	$('#dform_widget_button_but_submit_citizen_details').off('click').on('click', function() {
-	    KDF.gotoPage('page_summary_page');
-	});
-
-	$('#dform_widget_button_but_continue_feedback_details').off('click').on('click', function () {
-	    if (KDF.getVal('rad_is_anonymous') === 'true') {
-		KDF.gotoPage('page_summary_page');
-	    }
-	    else{
-		KDF.gotoNextPage();
-	    }
-	});    
-
-	$('#dform_widget_button_but_summary_submit').off('click').on('click', function () {
-	    KDF.gotoNextPage();
-	});
 	
     // Button "Continue" on Customer details - address page click event.
     $('#dform_widget_button_but_continue_customer_address').click(function () {
