@@ -46,10 +46,6 @@ function do_KDF_Ready_Individual(event, kdf) {
 		KDF.setVal('txt_cust_info_town', KDF.getVal('txt_logic_town'));
 		KDF.setVal('txt_cust_info_postcode', KDF.getVal('txt_logic_postcode'));
 		
-		//Custom fields start 
-		//$("#dform_widget_txt_ctax").attr("readonly", false);
-		//Custom fields end
-		
 		if (KDF.kdf().authenticated) {
 			KDF.customdata('person-retrieve-new', individualTemplateIdentifier + 'KDF_Ready', true, true, { 'person_search_results': KDF.kdf().profileData.customerid });
 			
@@ -102,8 +98,6 @@ function do_KDF_Ready_Individual(event, kdf) {
 					'txt_first_name': KDF.getVal('txt_cust_info_first_name'),
 					'txt_last_name': KDF.getVal('txt_cust_info_last_name'),
 					'phone': KDF.getVal('tel_cust_info_phone'),
-					'ctaxID': KDF.getVal('c_tax_id'),
-					'utilitiesID': KDF.getVal('utilities_id'),
 					'email': KDF.getVal('eml_cust_info_email')
 				});
             }
@@ -139,6 +133,23 @@ function do_KDF_Ready_Individual(event, kdf) {
         }
     });
 
+	$('#dform_widget_button_but_submit_citizen_details').off('click').on('click', function() {
+	    KDF.gotoPage('page_summary_page');
+	});
+
+	$('#dform_widget_button_but_continue_feedback_details').off('click').on('click', function () {
+	    if (KDF.getVal('rad_is_anonymous') === 'true') {
+		KDF.gotoPage('page_summary_page');
+	    }
+	    else{
+		KDF.gotoNextPage();
+	    }
+	});    
+
+	$('#dform_widget_button_but_summary_submit').off('click').on('click', function () {
+	    KDF.gotoNextPage();
+	});
+	
     // Button "Continue" on Customer details - address page click event.
     $('#dform_widget_button_but_continue_customer_address').click(function () {
         if (KDF.kdf().access === 'agent' && custAddresssCheck() || custDetailsCheck()) {
@@ -148,8 +159,6 @@ function do_KDF_Ready_Individual(event, kdf) {
 					'txt_first_name': KDF.getVal('txt_cust_info_first_name'),
 					'txt_last_name': KDF.getVal('txt_cust_info_last_name'),
 					'phone': KDF.getVal('tel_cust_info_phone'),
-					'email': KDF.getVal('eml_cust_info_email'),
-					'ctaxID': KDF.getVal('c_tax_id'),
 					'utilitiesID': KDF.getVal('utilities_id'),
 					'num_p_streetnumber': KDF.getVal('num_p_streetnumber'),
 					'txt_p_streetname': KDF.getVal('txt_p_streetname'),
