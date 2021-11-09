@@ -1,0 +1,1602 @@
+/*KS
+Colours being used:
+    Error red (darkest) warning notice border:
+        #b10e1e
+    Error red (darker):
+        #b03535
+    Error red lighter
+        #d45252
+    Main color (box blue)
+        #00823b
+    Highlight yellow
+        #FFBF47, #ffbf47
+    Softer white:
+        #e8f0de
+    Soft grey (read-only)
+        #DDD
+    Info notice background:
+        #007AFF
+    Darker blue (Info notice border and icon):
+        #5c2c55, #5c2c55
+    Box green, green button:
+        #00823b
+    Darker green for highlights:
+        #00682e
+    Dark green for borders:
+        #003618	
+    Orange button, box orange
+        #CE4C03
+    Darker orange for highlights:
+        #9D3703
+    Dark Orange for borders
+        #bc5114
+    White text:
+        white, #fff, #FFF
+*/
+
+
+/*
+-----------------------------------------------
+KS: searches - Start
+-----------------------------------------------
+*/
+.cs-gov, .ss-gov, .ps-gov, .os-gov, .search-gov{
+    padding: 0px 0px 0px 5px !important;
+	font-size:1rem;
+}
+.cs-gov fieldset, .ss-gov fieldset, .ps-gov fieldset, .os-gov fieldset, .search-gov fieldset {
+    border: none !important;
+    border-left: 5px solid #007AFF !important;
+    border-radius: 0 !important;
+    
+}
+.cs-gov legend, .ss-gov legend, .ps-gov legend, .os-gov legend, .search-gov legend {
+    position: relative !important;
+    left: -15px !important;
+    padding-left: 20px !important;
+    font-weight: bold !important;
+    background: #007aff !important;
+    color: white !important;
+	font-size: 1.25rem !important;
+    
+}
+/*.cs-gov button, .ss-gov button, .ps-gov button, .os-gov button, .search-gov button {
+    border: none !important;
+}*/
+.search-gov .dform_widgeterror{
+    box-shadow: none !important;
+    border-color: #b03535 !important;
+}
+.search-gov .dform_widgeterror > legend{
+    background: #b03535 !important;
+}
+.search-gov .dform_validationMessage{
+    font-size: 1rem !important;
+    font-weight: bold !important;
+}
+
+
+/*
+-----------------------------------------------
+KS: area Start
+-----------------------------------------------
+*/
+.area-gov{
+    padding: 0px 0px 0px 5px !important;
+}
+.area-gov > fieldset{
+    border: none !important;
+    border-radius: 0 !important;
+    border-left: 5px solid #007AFF !important;
+}
+.area-gov > fieldset > legend{
+    position: relative !important;
+    left: -15px !important;
+    padding-left: 20px !important;
+    font-weight: bold !important;
+    background: #007aff !important;
+    color: white !important;
+}
+
+/*KS: area end
+-----------------------------------------------*/
+
+
+.area-no-group > fieldset, .cs-no-group fieldset, .ss-no-group fieldset, .ps-no-group fieldset, .os-no-group fieldset, .search-no-group fieldset{
+    border-left: 0 !important;
+}
+.area-no-group > fieldset > legend, .cs-no-group legend, .ss-no-group legend, .ps-no-group legend, .os-no-group legend, .search-no-group legend{
+    left: 0 !important;
+    padding-left: 0 !important;
+    color: #007aff !important;
+    background: none !important;
+}
+
+@media (max-width: 768px){
+    .area-gov > fieldset, .cs-gov fieldset, .ss-gov fieldset, .ps-gov fieldset, .os-gov fieldset, .search-gov fieldset 
+    {
+        padding-left: 5px !important;
+    }
+    .area-gov > fieldset > legend, .cs-gov legend, .ss-gov legend, .ps-gov legend, .os-gov legend, .search-gov legend{
+        left: -10px !important;
+        padding-left: 20px !important;
+    }
+    .area-no-group > fieldset, .cs-no-group fieldset, .ss-no-group fieldset, .ps-no-group fieldset, .os-no-group fieldset, .search-no-group fieldset{
+        border-left: 0 !important;
+    }
+    .area-no-group > fieldset > legend, .cs-no-group legend, .ss-no-group legend, .ps-no-group legend, .os-no-group legend, .search-no-group legend{
+        left: 0 !important;
+        padding-left: 0 !important;
+        background: none !important;
+    }
+}
+
+/*
+-----------------------------------------------
+KS: btn Start
+Need to deside on new generic button - the continue should be promanant - maybe have the basic be blue
+-----------------------------------------------
+*/
+.btn-gov, #dform_container button, .btn-gov:hover, .btn-orange, .btn-orange:hover, .btn-continue, .btn-continue:hover,.btn-green,.btn-green:hover {
+    color: #fff !important;
+    border: none !important;
+    border-radius: 0px !important;
+    outline-offset: -1px;
+    width: auto !important;
+    white-space: nowrap;
+    padding: 0.3em 0.6em !important;
+    font-size: 1rem !important;
+    font-weight: bold !important;
+    margin-right: 3px !important;
+}
+
+/*btn-gov------------------------------------*/
+.btn-gov{
+    box-shadow: inset 0 -2px 0 /*#003618*/ #5c2c55 !important;
+    background: /*#00823b*/ #00823b!important;
+}
+.btn-gov:hover{
+    box-shadow: inset 0 -2px 0 /*#003618*/ #00529B !important;
+    background: /*#00682e*/ #006be0!important;
+    
+}
+.btn-gov:focus{
+    box-shadow: inset 0 -2px 0 /*#003618*/ #00529B, 0 0 0 3px #FFBF47 !important;
+}
+
+  
+/*btn-orange----------------------------------*/
+.btn-orange{
+    box-shadow: inset 0 -2px 0 /*#003618*/ #bc5114 !important;
+    background: /*#00823b*/ #FA6E1E!important;
+}
+.btn-orange:hover{
+    box-shadow: inset 0 -2px 0 /*#003618*/ #bc5114 !important;
+    background: /*#00682e*/ #d35b17!important;
+    
+}
+.btn-orange:focus{
+    box-shadow: inset 0 -2px 0 /*#003618*/ #bc5114, 0 0 0 3px #FFBF47 !important;
+}
+
+/*btn-green---------------------------------*/
+.btn-green{
+    box-shadow: inset 0 -2px 0 #003618 !important;
+    background: #00823b!important;
+}
+.btn-green:hover{
+    box-shadow: inset 0 -2px 0 #003618 !important;
+    background: #00682e!important;
+}
+.btn-green:focus{
+    box-shadow: inset 0 -2px 0 #003618, 0 0 0 3px #FFBF47 !important;
+}
+/*KS: If not used by mobile - normal sized button*/
+@media (max-width: 768px){
+    .btn-gov,.btn-gov:hover,.btn-continue,.btn-continue:hover,.btn-orange,.btn-orange:hover,.btn-green,.btn-green:hover  {
+        width: 100% !important;
+    }
+}  
+
+/*btn-continue---------------------------------*/
+
+/*KS: Customizes the help text */
+.btn-continue{
+    box-shadow: inset 0 -2px 0 #003618 !important;
+    background: #00823b!important;
+}
+.btn-continue:hover{
+    box-shadow: inset 0 -2px 0 #003618 !important;
+    background: #00682e!important;
+}
+.btn-continue:focus{
+    box-shadow: inset 0 -2px 0 #003618, 0 0 0 3px #FFBF47 !important;
+}
+
+.accordion_label::before {
+  content: "\25bc";
+}
+
+.accordion_label.closed::before {
+  content: "\25b6";
+}
+
+/*KS: If not used by mobile - normal sized button*/
+@media (max-width: 768px){
+    .btn-gov,.btn-gov:hover,.btn-continue,.btn-continue:hover,.btn-orange,.btn-orange:hover  {
+        width: 100% !important;
+    }
+}  
+
+/*btn-bold------------------------------------*/
+
+.btn-bold{
+    font-weight: bold !important;
+}
+
+
+/*btn-back------------------------------------*/
+
+.btn-back{
+    background: none !important;
+    border: none !important;
+    color: black !important;
+    cursor: pointer !important;
+    text-decoration: underline !important;
+    box-shadow: none !important;
+    border-color: rgba(0,0,0,0) !important;
+    outline: none !important;
+    padding: 2.5px 5px 2px 5px!important;
+}
+.btn-back:focus{
+    background: #FFBF47 !important;
+}
+
+/*btn-link------------------------------------*/
+.btn-link{
+    color:#00823b!important;
+    background: none !important;
+    border: none !important;
+    cursor: pointer !important;
+    text-decoration: underline !important;
+    box-shadow: none !important;
+    border-color: rgba(0,0,0,0) !important;
+    outline: none !important;
+    padding: 2.5px 5px 2px 5px!important;
+    font-size: 1rem !important;
+    font-weight: bold !important;
+}
+.btn-link:focus{
+    background: #FFBF47 !important;
+}
+
+/*KS: btn end
+-----------------------------------------------*/
+
+
+
+/*
+-----------------------------------------------
+KS: sel Start
+-----------------------------------------------
+*/
+
+/*KS: Title*/
+.sel-gov > div > label  {
+  font-size: 1rem;
+  line-height: 1.2 !important;
+  font-weight:bold!important;
+}
+/*KS: Customizes the help text */
+.sel-gov > div .helptext {
+    font-size: 1rem;
+    margin-bottom: 18px;
+    margin-top: 5px;
+}
+/*KS: Make the input more noticable*/
+.sel-gov select{
+    border: 2px solid black !important;
+    /*font-size: 20px !important;*/
+}
+/*KS: style when field is focused - and only when readable*/
+.sel-gov  select:focus:not([readonly]){
+    box-shadow: 0 0 0 3px #FFBF47 !important;
+    /*border-color: black !important;*/
+}
+/*KS: style when field with error is focused*/
+.sel-gov  select.dform_fielderror:focus{
+    box-shadow: 0 0 0 3px #FFBF47 !important;
+    border-color: #d45252 !important;
+}
+/*KS: change border to red when it has an error*/
+.sel-gov  .dform_fielderror{
+    box-shadow: /*0 0 1px 1px #d45252*/ none !important;
+    border: solid 2px #d45252 !important;
+    outline: none;
+}
+/*KS: The error text when field is invalid*/
+.sel-gov  .dform_validationMessage{
+    padding-bottom: 24px !important;
+    font-size: 1rem !important;
+    font-weight: bold !important;
+}
+
+
+/*sel-fill-------------------------------------*/
+
+.sel-fill select{
+    width:100% !important;
+}
+
+/*KS: sel end
+-----------------------------------------------*/
+
+
+/*
+-----------------------------------------------
+KS: file-gov Start
+-----------------------------------------------
+*/
+.file-gov > div > label {
+    font-size: 1rem;
+    margin-bottom: 24px !important;
+}
+.file-gov > div .helptext{
+  font-size: 1rem;
+}
+.file-gov{
+    font-size: 1rem;
+    
+}
+.file-gov .dform_validationMessage{
+    position: absolute;
+    font-weight: bold !important;
+    
+    /*KS: for between label and button - for mobile*/
+    top: -27px;
+    
+
+}
+.file-gov input{
+    z-index: 2;
+    cursor: pointer;
+    opacity: 0;
+    width: 100% !important;/*Ã­ Â½Ã­Â³Â±*/
+    margin-bottom: 2px !important;
+}
+
+.file-gov .dform_filenames span{
+    display: inline-block;
+    /*KS: removed to be up to WCAG2AAA
+    color: ##007AFF !important;
+    padding: 2px;
+    margin: 2px;
+    border-radius: 5px;
+    margin-right: 2px !important;
+    border: 2px solid #007AFF*/
+}
+/*KS: removes the >> before file names*/
+.file-gov .dform_filenames span:before{
+    content: "" !important;
+}
+
+/*KS: darken when hover-able */
+.file-gov  input:hover ~ .file-gov-icon{
+    background: #006be0 !important; /*Darkened Varint blue*/
+}
+/*KS: darken when hover-able */
+.file-gov  input:focus ~ .file-gov-icon{
+    background: #006be0 !important; /*Darkened Varint blue*/
+    box-shadow: inset 0 -2px 0 #00529B, 0 0 0 3px #FFBF47 !important;
+}
+/*KS depreciated: style when field with error is focused*/
+.file-gov  input.dform_fielderror:focus ~ .file-gov-icon{
+    box-shadow: inset 0 -2px 0 #00529B, 0px 0.2px 0px 2px #d45252, 0px 0.2px 0px 5px #FFBF47 !important;
+    border-color: #d45252 !important;
+}
+/*KS depreciated: change border to red when it has an error*/
+.file-gov  .dform_fielderror ~ .file-gov-icon{
+    box-shadow: inset 0 -2px 0 #00529B, 0px 0.2px 0px 2px #d45252;
+    outline: none;
+}
+.file-gov-icon {
+  pointer-events: none;
+  position: absolute;
+  z-index: 0;
+  height: 42px;
+  width: 100%; /*Ã­ Â½Ã­Â³Â±*/
+  top: 0.6px;
+  cursor: pointer;
+  
+  /*KS: GOV button*/
+  color: #fff;
+  box-shadow: inset 0 -2px 0 #00529B; /*Dark blue*/
+  border: none;
+  border-radius: 0px;
+  outline-offset: -1px;
+  background: #007AFF; /*Verint blue*/
+  
+  
+  /*KS: too subtle to notice change: -webkit-transition: background 0.5s ease-out; -moz-transition: background 0.5s ease-out;   -o-transition: background 0.5s ease-out;    transition: background 0.5s ease-out;*/
+  
+  
+}
+.file-gov-icon-a {
+  position: absolute;
+  cursor: pointer;
+  left: 7px;
+  top: 17px;
+  width: 19px;
+  height: 0px;
+  border: solid #e8f0de;
+  border-width: 0 0 5px 0;
+}
+.file-gov-icon-b {
+  position: absolute;
+  cursor: pointer;
+  left: 14px;
+  top: 10px;
+  width: 0px;
+  height: 19px;
+  border: solid #e8f0de;
+  border-width: 0 5px 0 0;
+}
+.file-gov-text {
+    cursor: pointer;
+  margin-top: 7px;
+  margin-left: 32px;
+  color: #e8f0de !important;
+  font-size: rem;
+  font-weight: bold;
+}
+.file-gov .dform_fileupload_progressbar{
+    visibility: hidden;
+    height: 0px !important;
+    margin: 0px !important;
+    border: 0px !important;
+}
+
+
+@media (min-width: 769px){
+    /*.file-gov .dform_validationMessage{
+        top: 8px;
+        left: 165px;
+    }*/
+    .file-gov input, .file-gov-icon{
+        width:188px !important;
+    }
+}
+
+/*File-progress--------------------------------*/
+
+/*KS: made progress bar opt-in since it's rarely needed*/
+.file-progress .dform_fileupload_progressbar{
+    visibility: visible;
+    height: 22px !important;
+    margin: 5px !important;
+    width: 300px !important;
+    border: 2px solid #007AFF !important;/*Verint blue*/ 
+}
+.file-progress .dform_fileupload_progressbar > div{
+    background: #007AFF !important; /*Verint blue*/
+}
+
+/*File-no-legend-------------------------------*/
+
+.file-no-legend div > label{
+    visibility: hidden !important;
+    height: 0px !important;
+}
+
+/*KS: file end
+-----------------------------------------------*/
+
+
+/*
+-----------------------------------------------
+KS: spr Start
+-----------------------------------------------
+*/
+/*KS: removes the default break to allow better control over sizing*/
+.spr-xxxs br,.spr-xxs br,.spr-xs br,.spr-s br,.spr-m br,.spr-l br,.spr-xl br,.spr-xxl br,.spr-xxxl br,.spr-n br, .spr-none br
+{   
+    display: none;
+}
+/*KS: Resizes the space depending on selected class */
+.spr-xxxs{padding-top:0.25em;}
+.spr-xxs {padding-top:0.5em;}
+.spr-xs  {padding-top:1em;}
+.spr-s   {padding-top:2em;}
+.spr-m   {padding-top:3em;}
+.spr-l   {padding-top:4em;}
+.spr-xl  {padding-top:5em;}
+.spr-xxl {padding-top:6em;}
+.spr-xxxl{padding-top:7em;}
+.spr-n,.spr-none{padding-top:0;}
+
+/*KS: spr end
+-----------------------------------------------*/
+
+
+
+/*
+-----------------------------------------------
+KS: txt (and text like fields) Start
+-----------------------------------------------
+*/
+
+/*KS: Title*/
+.txt-gov > div > label,.dt-gov > div > label,.eml-gov > div > label,.num-gov > div > label,.pas-gov > div > label,.tel-gov > div > label,.time-gov > div > label,.field-gov > div > label{
+  font-size: 1rem;
+  line-height: 1.2 !important;
+  font-weight:bold!important;
+}
+/*KS: Customizes the help text */
+.txt-gov > div .helptext,.dt-gov > div .helptext,.eml-gov > div .helptext,.num-gov > div .helptext,.pas-gov > div .helptext,.tel-gov > div .helptext,.time-gov > div .helptext,.field-gov > div .helptext{
+    font-size: 1rem;
+    /*margin-bottom: 18px;
+    margin-top: 5px;*/
+}
+/*KS: Make the input more noticable*/
+.txt-gov input,.dt-gov input,.eml-gov input,.num-gov input,.pas-gov input,.tel-gov input,.time-gov input,.field-gov input{
+    border: 2px solid black !important;
+}
+.txt-gov input:focus,.dt-gov input:focus,.eml-gov input:focus,.num-gov input:focus,.pas-gov input:focus,.tel-gov input:focus,.time-gov input:focus,.field-gov input:focus{
+    box-shadow: 0px 0.2px 3px 0px #d45252 !important;
+}
+/*KS: style when field is focused - and only when readable*/
+.txt-gov  input:focus:not([readonly]),.dt-gov  input:focus:not([readonly]),.eml-gov  input:focus:not([readonly]),.num-gov  input:focus:not([readonly]),.pas-gov  input:focus:not([readonly]),.tel-gov  input:focus:not([readonly]),.time-gov  input:focus:not([readonly]),.field-gov  input:focus:not([readonly]){
+    /*box-shadow: 0 0 0 3px #FFBF47 !important;*/
+    border-color: #FFBF47 !important;
+}
+/*KS: style when field with error is focused*/
+.txt-gov  input.dform_fielderror:focus,.dt-gov  input.dform_fielderror:focus,.eml-gov  input.dform_fielderror:focus,.num-gov  input.dform_fielderror:focus,.pas-gov  input.dform_fielderror:focus,.tel-gov  input.dform_fielderror:focus,.time-gov  input.dform_fielderror:focus,.field-gov  input.dform_fielderror:focus{
+    box-shadow: 0 0 0px 3px #FFBF47 !important;
+    border-color: #d45252 !important;
+}
+/*KS: change border to red when it has an error*/
+.txt-gov  .dform_fielderror,.dt-gov  .dform_fielderror,.eml-gov  .dform_fielderror,.num-gov  .dform_fielderror,.pas-gov  .dform_fielderror,.tel-gov  .dform_fielderror,.time-gov  .dform_fielderror,.field-gov  .dform_fielderror{
+    box-shadow: /*0 0 1px 1px #d45252*/ none !important;
+    border: solid 2px #d45252 !important;
+    outline: none;
+}
+/*KS: The error text when field is invalid*/
+.txt-gov  .dform_validationMessage,.dt-gov  .dform_validationMessage,.eml-gov  .dform_validationMessage,.num-gov  .dform_validationMessage,.pas-gov  .dform_validationMessage,.tel-gov  .dform_validationMessage,.time-gov  .dform_validationMessage,.field-gov  .dform_validationMessage{
+    padding-bottom: 6px !important;
+    font-size: 1rem !important;
+    font-weight: bold !important;
+}
+.txt-no-min-height div:first-child,.dt-no-min-height div:first-child,.eml-no-min-height div:first-child,.num-no-min-height div:first-child,.pas-no-min-height div:first-child,.tel-no-min-height div:first-child,.time-no-min-height div:first-child,.field-no-min-height div:first-child{
+    /*KS: bob wanted there to be no left margin by default - need to develop for each label % to implement*/
+    min-height: 0 !important;
+}
+.txt-min-height div:first-child,.dt-min-height div:first-child,.eml-min-height div:first-child,.num-min-height div:first-child,.pas-min-height div:first-child,.tel-min-height div:first-child,.time-min-height div:first-child,.field-min-height div:first-child{
+    /*KS: but I added this just incase you want that functionality again*/
+    min-height: 1px !important;
+}
+.txt-gov input[readonly],.dt-gov input[readonly],.eml-gov input[readonly],.num-gov input[readonly],.pas-gov input[readonly],.tel-gov input[readonly],.time-gov input[readonly],.field-gov input[readonly] {
+    border-color: #DDD !important;
+    background: #DDD;
+}
+/*KS: txt (and text like fields) end
+-----------------------------------------------*/
+
+/*
+-----------------------------------------------
+KS: txta Start
+-----------------------------------------------
+*/
+
+/*KS: Title*/
+.txta-gov > div > label {
+  font-size: 1rem;
+  line-height: 1.2 !important;
+  font-weight:bold!important;
+}
+/*KS: Customizes the help text */
+.txta-gov > div .helptext {
+    font-size: 1rem;
+    /*margin-bottom: 18px;
+    margin-top: 5px;*/
+}
+/*KS: Make the input more noticable*/
+.txta-gov textarea{
+    border: 2px solid black !important;
+    font-family: "Open sans", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
+}
+/*KS: style when field is focused - and when readable*/
+.txta-gov textarea:focus:not([readonly]){
+    /*box-shadow: 0 0 0 3px #FFBF47 !important;*/
+    border-color: #FFBF47 !important;
+}
+.txta-gov textarea:focus{
+    box-shadow: 0px 0.2px 3px 0px #d45252 !important;
+}
+/*KS: style when field with error is focused*/
+.txta-gov textarea.dform_fielderror:focus{
+    box-shadow: 0 0 0px 3px #FFBF47 !important;
+    border-color: #d45252 !important;
+}
+/*KS: change border to red when it has an error*/
+.txta-gov .dform_fielderror{
+    box-shadow: /*0 0 1px 1px #d45252*/ none !important;
+    border: solid 2px #d45252 !important;
+    outline: none;
+}
+/*KS: The error text when field is invalid*/
+.txta-gov .dform_validationMessage{
+    padding-bottom: 6px !important;
+    font-size: 1rem !important;
+    font-weight: bold !important;
+}
+.txta-gov textarea[readonly] {
+    border-color: #DDD !important;
+    background: #DDD;
+}
+/*txta-length----------------------------------*/
+
+.txta-length-message{
+    width: 100%;
+    height: 22px;
+    position: relative;
+    top: -6px;
+}
+
+
+/*KS: txta end
+-----------------------------------------------*/
+
+/*
+-----------------------------------------------
+KS: warning notice - Start
+-----------------------------------------------
+*/
+.warning-notice {
+    position: relative;
+    background-color: #FFBABA;
+    padding: 10px 10px 10px 55px;
+    border: solid #b10e1e;
+    border-width: 5px ;
+    margin-bottom: 15px;
+}
+.dform_widget_type_html .warning-notice{
+    padding: 0px 0px 0px 55px;
+}
+.warning-notice-icon {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 38px;
+  width: 38px;
+  background-color: #b10e1e;
+  border-radius: 50%;
+  margin-left: 5px;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.warning-notice-icon-a {
+  position: absolute;
+  left: 17px;
+  top: 6px;
+  width: 0px;
+  height: 19px;
+  border: solid white;
+  border-width: 0 5px 0 0;
+}
+.warning-notice-icon-b {
+  position: absolute;
+  left: 17px;
+  top: 28px;
+  width: 0px;
+  height: 5px;
+  border: solid white;
+  border-width: 0 5px 0 0;
+}
+
+/*KS: warning notice - End
+-----------------------------------------------*/
+
+/*
+-----------------------------------------------
+KS: Info notice - Start
+-----------------------------------------------
+*/
+.info-notice {
+    position: relative;
+    background-color: #BDE5F8;
+    padding: 0px 10px 0px 55px;
+    /*padding-left: 55px;
+    padding-top:10px;
+    padding-bottom:10px;*/
+    border: solid #00529B;
+    border-width: 5px;
+    margin-bottom: 15px;
+}
+
+.dform_widget_type_html .info-notice{
+    padding: 0px 0px 0px 55px;
+}
+.info-notice-icon {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 38px;
+  width: 38px;
+  background-color: #00529B;/*uncheck background*/
+  border-radius: 50%;
+  margin-left: 5px;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.info-notice-icon-a {
+  position: absolute;
+  left: 17px;
+  top: 13px;
+  width: 0px;
+  height: 18px;
+  border: solid white;
+  border-width: 0 5px 0 0;
+}
+.info-notice-icon-b {
+  position: absolute;
+  left: 17px;
+  top: 5px;
+  width: 0px;
+  height: 5px;
+  border: solid white;
+  border-width: 0 5px 0 0;
+}
+
+/*KS: Info notice - End
+-----------------------------------------------*/
+
+
+/*
+-----------------------------------------------
+KS: Custom gov radio buttons - Start
+-----------------------------------------------
+*/
+
+/*KS: Span for each radio button*/
+.rad-gov > div > fieldset > span  {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  /*cursor: pointer;*/
+  font-size: 1rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/*KS: Removes default border */
+.rad-gov .radiogroup{
+    border: none !important;
+    padding-left: 0px !important;
+}
+/*KS: The main clickable element - it's the width of the area */
+.rad-gov > div > fieldset > span  input {
+  position: absolute;
+  opacity: 0;
+  left: 0px !important;
+  width:100% !important;
+  height:100% !important;
+  z-index:1 !important;
+  cursor: pointer;
+}
+/*KS: The actual unchecked button */
+.rad-check {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 28px;
+  width: 28px;
+  background-color: white;/*uncheck background*/
+  border-radius: 75%;
+  /*border: 3px solid #007AFF;Inconsistint sizing between host and VOF*/
+  box-shadow: inset 0 0 0 3px #007AFF;
+}
+/*KS: Create the indicator (the dot/circle - hidden when not checked) */
+.rad-check:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+/*KS: Show the indicator (dot/circle) when checked */
+.rad-gov > div > fieldset > span  input:checked ~ .rad-check:after {
+  display: block;
+}
+/*KS: Style the indicator (dot/circle) */
+.rad-gov > div > fieldset > span  .rad-check:after {
+  top: 6px;
+  left: 6px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #007AFF;
+}
+/*KS: Customizes the help text */
+.rad-gov > div > fieldset .helptext {
+    font-size: 1rem;
+    margin-bottom: 16px;
+}
+/*KS: Customizes the title/legend */
+.rad-gov legend {
+    font-size: 1rem;
+    line-height: 1.2 !important;
+    margin-bottom: 0px !important;
+}
+/*KS: Style to remove legend*/
+.no-legend legend {
+    font-size: 0px !important;
+}
+/*KS: add red border to input that are required/have an error*/
+.rad-gov  input[type="radio"].dform_fielderror ~ span{
+    box-shadow: inset 0 0 0 3px #d45252;
+}
+/*KS: The error text when field is invalid*/
+.rad-gov  .dform_validationMessage{
+    padding-bottom: 24px !important;
+    font-size: 1rem !important;
+    font-weight: bold !important;
+}
+.rad-gov > div > fieldset > span  input:focus ~ .rad-check{
+    /*border: 3px solid red !important;*/
+    box-shadow: 0 0 0 3px #FFBF47, inset 0 0 0 3px #FFBF47;
+}
+.rad-gov > div > fieldset{
+    margin: 0 !important;
+    padding-bottom: 0 !important;
+}
+/*KS quick fix to avoid changing all radio items*/
+.rad-gov label{
+    text-transform: lowercase;
+}
+.rad-gov.rad-uppercase label{
+    text-transform: uppercase;
+}
+.rad-gov.rad-capitalize label{
+    text-transform: capitalize;
+}
+.rad-gov.rad-none label{
+    text-transform: none;
+}
+.rad-gov.rad-lowercase label{
+    text-transform: lowercase;
+}
+
+/*KS: Custom gov radio buttons - End
+-----------------------------------------------*/
+
+
+/*
+-----------------------------------------------
+KS: gov checkbox Start
+-----------------------------------------------
+*/
+
+/*KS: Div for the checkbox */
+.chk-gov > div  {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  font-size: 1rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/*KS: The main clickable element - it's the width of the area */
+.chk-gov > div  input {
+  position: absolute;
+  opacity: 0;
+  left: 0px !important;
+  width:100% !important;
+  height:100% !important;
+  z-index:1 !important;
+  cursor: pointer;
+}
+/*KS: The actual unchecked check box */
+.chk-check {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  border: 3px solid #007AFF;
+  border-radius: 15%;
+}
+/*KS: When the checkbox is checked, add a blue background */
+.chk-gov > div  input:checked ~ .chk-check {
+  background-color: #007AFF;
+}
+/*KS: Create the indicator (the dot/circle - hidden when not checked) */
+.chk-check:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+/*KS: Show the indicator (dot/circle) when checked */
+.chk-gov > div  input:checked ~ .chk-check:after {
+  display: block;
+}
+/*KS: Style the indicator (dot/circle) */
+.chk-gov > div  .chk-check:after {
+  left: 6.5px;
+  top: 1px;
+  width: 3px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 5px 5px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+/*KS: Customizes the helptext */
+.chk-gov > div .helptext {
+    font-size: 1rem;
+    position: absolute;
+    top: 32px;
+    left:0px;
+}
+/*KS: Removes the title/legend */
+.no-legend > div > label {
+    font-size: 0px !important;
+}
+/*KS: Checkbox error message is dirrent*/
+.chk-gov  .dform_validationMessage{
+    position: absolute;
+    top: -22px;
+    left: 0px;
+    font-size: 1rem !important;
+    font-weight: bold !important;
+    /*padding-bottom: 24px !important;*/
+}
+/*KS: add red border to input that are required/have an error*/
+.chk-gov  input[type="checkbox"].dform_fielderror ~ span{
+    border-color: #d45252;
+    /*box-shadow: 0 0 3px 3px #d45252 !important;*/
+}
+.chk-gov > div  input:focus ~ .chk-check{
+    /*border: 3px solid red !important;*/
+    box-shadow: 0 0 0 3px #FFBF47;
+}
+/*KS: gov checkbox end
+-----------------------------------------------*/
+
+
+/* 
+-----------------------------------------------
+KS: Custom gov multi-checkbox - Start
+-----------------------------------------------
+*/
+
+/*KS: Span for each checkbox*/
+.mchk-gov > div > fieldset > span  {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  /*cursor: pointer;*/
+  font-size: 1rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/*KS: Removes default border */
+.mchk-gov .checkboxgroup{
+    border: none !important;
+    padding-left: 0px !important;
+}
+/*KS: The main clickable element - it's the width of the area */
+.mchk-gov > div > fieldset > span  input {
+  position: absolute;
+  opacity: 0;
+  left: 0px !important;
+  width:100% !important;
+  height:100% !important;
+  z-index:1 !important;
+  cursor: pointer;
+}
+/*KS: The actual unchecked button */
+.mchk-check {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 29px;
+  width: 29px;
+  background-color: white;/*uncheck background*/
+  border-radius: 15%;
+  border: 3px solid #007AFF;
+}
+/*KS: When checked, it fills background*/
+.mchk-gov > div > fieldset > span  input:checked ~ .mchk-check {
+    background-color: #007AFF;
+}
+/*KS: Create the indicator (the dot/circle - hidden when not checked) */
+.mchk-check:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+/*KS: Show the indicator (dot/circle) when checked */
+.mchk-gov > div > fieldset > span  input:checked ~ .mchk-check:after {
+  display: block;
+}
+/*KS: Style the indicator (dot/circle) */
+.mchk-gov > div > fieldset > span  .mchk-check:after {
+  left: 7px;
+  top: -2px;
+  width: 10px;
+  height: 20px;
+  border: solid white;
+  border-width: 0 5px 5px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+/*KS: Customizes the help text */
+.mchk-gov > div > fieldset .helptext {
+    font-size: 1rem;
+    margin-bottom: 16px;
+}
+/*KS: Customizes the title/legend */
+.mchk-gov legend {
+    font-size: 1rem;
+    line-height: 1.2 !important;
+    margin-bottom: 0 !important;
+}
+/*KS: Style to remove legend*/
+.no-legend legend {
+    font-size: 0 !important;
+}
+/*KS: add red border to input that are required/have an error*/
+.mchk-gov input[type="checkbox"].dform_fielderror ~ span{
+    border-color: #d45252;
+    /*box-shadow: 0 0 3px 3px #d45252 !important;*/
+}
+/*KS: The error text when field is invalid*/
+.mchk-gov .dform_validationMessage{
+    padding-bottom: 24px !important;
+    font-size: 1rem !important;
+    font-weight: bold !important;
+}
+.mchk-gov > div > fieldset > span  input:focus ~ .mchk-check{
+    /*border: 3px solid red !important;*/
+    box-shadow: 0 0 0 3px #FFBF47;
+}
+.mchk-gov > div > fieldset{
+    margin: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/*KS quick fix to avoid changing all mchk items*/
+.mchk-gov label{
+    text-transform: lowercase;
+}
+/*KS: Custom gov multi-checkbox - End
+-----------------------------------------------*/
+
+
+.margin-auto{
+    margin: auto !important;
+}
+.width-fit-content{
+    width: fit-content !important;
+    width: intrinsic !important;
+    width: -moz-max-content !important;
+    display: inline-block;
+}
+.text-align-right > .one,.text-align-right > .two,.text-align-right > .three,.text-align-right > .four,.text-align-right > .five,.text-align-right > .six,.text-align-right > .seven,.text-align-right > .eight,.text-align-right > .nine,.text-align-right > .ten,.text-align-right > .eleven,.text-align-right > legend{
+    text-align: right !important;
+}
+.text-align-center > .one,.text-align-center > .two,.text-align-center > .three,.text-align-center > .four,.text-align-center > .five,.text-align-center > .six,.text-align-center > .seven,.text-align-center > .eight,.text-align-center > .nine,.text-align-center >.ten,.text-align-center >.eleven,.text-align-center > legend{
+    text-align: center !important;
+}
+.text-align-left > .one,.text-align-left > .two,.text-align-left > .three,.text-align-left > .four,.text-align-left > .five,.text-align-left > .six,.text-align-left > .seven,.text-align-left > .eight,.text-align-left > .nine,.text-align-left > .ten,.text-align-left > .eleven,.text-align-left > legend{
+    text-align: left !important;
+}
+
+/*KS: Customizes the help text */
+.text-align-left .helptext,.text-align-center .helptext,.text-align-right .helptext,.text-align-left {
+    margin-bottom: 10px !important;
+    text-align: left;
+}
+
+.dform_validationMessage,.text-align-center .dform_validationMessage,.text-align-right .dform_validationMessage{
+    padding-bottom: 10px !important;
+    text-align: left;
+}
+
+
+
+@media (max-width: 768px){
+    .text-align-left > .one, .text-align-center > .one, .text-align-right > .one,.text-align-left > .two, .text-align-center > .two, .text-align-right > .two,.text-align-left > .three, .text-align-center > .three, .text-align-right > .three,.text-align-left > .four, .text-align-center > .four, .text-align-right > .four,.text-align-left > .five, .text-align-center > .five, .text-align-right > .five,.text-align-left > .six, .text-align-center > .six, .text-align-right > .six,.text-align-left > .seven, .text-align-center > .seven, .text-align-right > .seven,.text-align-left > .eight, .text-align-center > .eight, .text-align-right > .eight,.text-align-left > .nine, .text-align-center > .nine, .text-align-right > .nine,.text-align-left > .ten, .text-align-center > .ten, .text-align-right > .ten,.text-align-left > .eleven, .text-align-center > .eleven, .text-align-right > .eleven,.text-align-left > legend, .text-align-center > legend, .text-align-right > legend{
+        text-align: left !important;
+    }
+}
+
+@media (max-width: 768px){
+    .field-mob input, .field-mob{
+        width: 100% !important;
+    }
+}
+
+.field-auto .txt-gov input,.field-auto .dt-gov input,.field-auto .eml-gov input,.field-auto .num-gov input,.field-auto .pas-gov input,.field-auto .tel-gov input,.field-auto .time-gov input{
+    width: auto;
+}
+.box-h1 p{
+    color: white !important;
+    font-weight: 700 !important;
+    font-size: 2rem;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+.box-h2 p{
+    font-size: 1.5rem;
+    font-weight: bold !important;
+    color: white !important;
+    margin: 3px;
+    text-align: center;
+}
+.box-green{
+    background: #00823b;
+    margin-bottom: 6px;
+}
+.box-blue{
+    background: #00823b;
+    margin-bottom: 6px;
+}
+.box-orange{
+    background: #CE4C03;
+    margin-bottom: 6px;
+}
+.box-green fieldset, .box-blue fieldset, .box-orange fieldset{
+    border: none !important;
+}
+.box-green legend,.box-blue legend,.box-orange legend{
+    color: white !important;
+    font-weight: 700 !important;
+    font-size: 1.5rem !important;
+    text-align: center;
+}
+
+
+
+[data-type='html'] a[href] {
+    color: blue !important;
+}
+[data-type='html'] a[href]:focus {
+    background-color: #ffbf47;
+    outline: 3px solid #ffbf47 !important;
+}
+[data-type='html'] a[href]:visited {
+    color: purple !important;
+}
+.rad-margin-8-legend, .mchk-margin-8-legend   {float:left;margin-right:3.8%;min-height: 1px;width:4.85%;}
+.rad-margin-16-legend, .mchk-margin-16-legend {float:left;margin-right:3.8%;min-height: 1px;width:13.45%;}
+.rad-margin-25-legend, .mchk-margin-25-legend {float:left;margin-right:3.8%;min-height: 1px;width:22.05%;}
+.rad-margin-33-legend, .mchk-margin-33-legend {float:left;margin-right:3.8%;min-height: 1px;width:30.75%;}
+.rad-margin-41-legend, .mchk-margin-41-legend {float:left;margin-right:3.8%;min-height: 1px;width:39.45%;}
+.rad-margin-50-legend, .mchk-margin-50-legend {float:left;margin-right:3.8%;min-height: 1px;width:48%;}
+.rad-margin-58-legend, .mchk-margin-58-legend {float:left;margin-right:3.8%;min-height: 1px;width:56.75%;}
+.rad-margin-66-legend, .mchk-margin-66-legend {float:left;margin-right:3.8%;min-height: 1px;width:65.4%;}
+.rad-margin-75-legend, .mchk-margin-75-legend {float:left;margin-right:3.8%;min-height: 1px;width:74.05%;}
+.rad-margin-83-legend, .mchk-margin-83-legend {float:left;margin-right:3.8%;min-height: 1px;width:82.7%;}
+.rad-margin-91-legend, .mchk-margin-91-legend {float:left;margin-right:3.8%;min-height: 1px;width:91.35%;}
+
+
+@media (max-width: 768px){
+    .rad-margin-8-legend, .mchk-margin-8-legend,.rad-margin-16-legend, .mchk-margin-16-legend, .rad-margin-25-legend, .mchk-margin-25-legend,
+    .rad-margin-33-legend, .mchk-margin-33-legend, .rad-margin-41-legend, .mchk-margin-41-legend,.rad-margin-50-legend, .mchk-margin-50-legend,
+    .rad-margin-58-legend, .mchk-margin-58-legend,.rad-margin-66-legend, .mchk-margin-66-legend,.rad-margin-75-legend, .mchk-margin-75-legend,
+    .rad-margin-83-legend, .mchk-margin-83-legend,.rad-margin-91-legend, .mchk-margin-91-legend {        
+        width:100% !important;
+        float:none;
+    }
+}
+
+.detail-block-hidden{
+    visibility: hidden;
+    height: 0px;
+}
+.detail-block{
+    border-left: 5px solid #007AFF;
+    padding-left: 10px;
+    position: relative;
+    top: -7px;
+    visibility: hidden;
+    height: 0px;
+}
+.detail-block p{
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+.detail-block-visible{
+    visibility: visible;
+    height: inherit;
+}
+.detail-title > p,.detail-title{
+    font-size: 1.5em;
+    margin: 0px;
+}
+.rad-no-margin legend, .mchk-no-margin legend{
+    float:none;
+    text-align: left !important;
+}
+
+.search-no-results .dform_widget_search_closeresults{
+    /*font-family: sans-serif !important;*/
+    padding: 10px;
+    margin-left: 0 !important;
+}
+
+.btn-margin-8, .chk-margin-8 ,.margin-8 {margin-left:8.65% !important;}
+.btn-margin-16,.chk-margin-16,.margin-16{margin-left:17.24%!important;}
+.btn-margin-25,.chk-margin-25,.margin-25{margin-left:25.85%!important;}
+.btn-margin-33,.chk-margin-33,.margin-33{margin-left:34.55%!important;}
+.btn-margin-41,.chk-margin-41,.margin-41{margin-left:43.25%!important;}
+.btn-margin-50,.chk-margin-50,.margin-50{margin-left:51.8% !important;}
+.btn-margin-58,.chk-margin-58,.margin-58{margin-left:60.55%!important;}
+.btn-margin-66,.chk-margin-66,.margin-66{margin-left:69.2% !important;}
+.btn-margin-75,.chk-margin-75,.margin-75{margin-left:77.85%!important;}
+.btn-margin-83,.chk-margin-83,.margin-83{margin-left:86.5% !important;}
+.btn-margin-91,.chk-margin-91,.margin-91{margin-left:95.15%!important;}
+.btn-margin-0, .chk-margin-0 ,.margin-0 {margin-left:0     !important;}/*KS: ensures removing margin always takes piority*/
+@media (max-width: 768px){
+.btn-margin-8, .btn-margin-16, .btn-margin-25, .btn-margin-33, .btn-margin-41, .btn-margin-50, .btn-margin-58, .btn-margin-66, .btn-margin-75, .btn-margin-83, .btn-margin-91,.btn-margin-0, .chk-margin-8, .chk-margin-16, .chk-margin-25, .chk-margin-33, .chk-margin-41, .chk-margin-50, .chk-margin-58, .chk-margin-66, .chk-margin-75, .chk-margin-83, .chk-margin-91, .chk-margin-0, .margin-8, .margin-16, .margin-25, .margin-33, .margin-41, .margin-50, .margin-58, .margin-66, .margin-75, .margin-83, .margin-91, .margin-0{
+        margin-left:0 !important;
+    }
+}
+
+.detail-block > :first-child{
+    margin-top: 0 !important;
+}
+.detail-block{
+    margin-top: 7px !important;
+}
+.visibility-hidden{visibility: hidden;}
+.visibility-visible{visibility: visible;}
+
+/*KS - for use in optional rule - to make all lables right aligned*/
+.text-align-right-label div:first-child{
+    text-align: right;
+}
+.text-align-center-label div:first-child{
+    text-align: center;
+}
+.text-align-left-label div:first-child{
+    text-align: left;
+}
+.float-left{
+    float:left;    
+}
+.float-right{
+    float:right;
+}
+.margin-left-1em{
+    margin-left:1em;
+}
+.margin-left-0-5em{
+    margin-left:0.5em;
+}
+.margin-left-0-25em{
+    margin-left:0.25em;
+}
+.display-none{
+    display:none !important;   
+}
+.paragraph-normal, .p-n{
+    font-size: 1rem !important;
+    line-height: 1.17 !important;
+}
+.paragraph-medium, .p-m{
+    font-size: 1.5rem !important;
+    line-height: 1.17 !important;
+}
+.paragraph-large, .p-l{
+    font-size: 2rem !important;
+    line-height: 1.17 !important;
+}
+/*KS for search button on same line as search text - i.e. text and button on same line*/
+.txt-btn-inline > button{float:left;}
+.txt-btn-inline [type='text'] {float:left; margin-right: 0.3rem !important;}
+
+/*KS to hide the div that has the JSON.stringify(response)*/
+.assetResultJson{
+    display:none;
+}
+
+
+/*KS - Code from open source*/
+.lds-spinner {
+  color: official;
+  display: inline-block;
+  position: relative;
+  /*width: 128px;
+  height: 128px;*/
+  z-index: 10;
+    width: 90%;
+    height: 70%;
+    transform: translate(50%, 50%);
+    pointer-events: none;
+}
+.lds-spinner div {
+  transform-origin: 64px 64px;
+  animation: lds-spinner 1.2s linear infinite;
+}
+.lds-spinner div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 6px;
+  left: 58px;
+  width: 10px;
+  height: 24px;
+  border-radius: 20%;
+  background: #808080;
+}
+.lds-spinner div:nth-child(1) {
+  transform: rotate(0deg);
+  animation-delay: -1.1s;
+}
+.lds-spinner div:nth-child(2) {
+  transform: rotate(30deg);
+  animation-delay: -1s;
+}
+.lds-spinner div:nth-child(3) {
+  transform: rotate(60deg);
+  animation-delay: -0.9s;
+}
+.lds-spinner div:nth-child(4) {
+  transform: rotate(90deg);
+  animation-delay: -0.8s;
+}
+.lds-spinner div:nth-child(5) {
+  transform: rotate(120deg);
+  animation-delay: -0.7s;
+}
+.lds-spinner div:nth-child(6) {
+  transform: rotate(150deg);
+  animation-delay: -0.6s;
+}
+.lds-spinner div:nth-child(7) {
+  transform: rotate(180deg);
+  animation-delay: -0.5s;
+}
+.lds-spinner div:nth-child(8) {
+  transform: rotate(210deg);
+  animation-delay: -0.4s;
+}
+.lds-spinner div:nth-child(9) {
+  transform: rotate(240deg);
+  animation-delay: -0.3s;
+}
+.lds-spinner div:nth-child(10) {
+  transform: rotate(270deg);
+  animation-delay: -0.2s;
+}
+.lds-spinner div:nth-child(11) {
+  transform: rotate(300deg);
+  animation-delay: -0.1s;
+}
+.lds-spinner div:nth-child(12) {
+  transform: rotate(330deg);
+  animation-delay: 0s;
+}
+@keyframes lds-spinner {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+abbr{
+    text-decoration-line: none;
+}
+
+/*To match edinburgh portal*/
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v19/KFOmCnqEu92Fr1Mu7GxKOzY.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v19/KFOmCnqEu92Fr1Mu4mxK.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+#dform_container {
+    font-family: "Roboto", sans-serif;
+}
+
+#dform_container input, #dform_container select, #dform_container textarea {
+    font-size: 1rem;
+    padding: 8px;
+}
+
+.btn-gov, .btn-back, .btn-gov:hover, .btn-gov:focus, .btn-back:hover, .btn-back:focus, .btn-orange, .btn-orange:focus, .btn-orange:hover{
+    background-color: #fff !important;
+    border: 2px solid #00823b !important;
+    border-radius: 4.5rem !important;
+    color: #00823b !important;
+    cursor: pointer !important;
+    font-family: "Roboto",sans-serif !important;
+    margin: 0 0 .75rem !important;
+    padding: .625rem 1.5rem !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    text-transform: uppercase !important;
+    -webkit-transition: background-color .1s ease-out,border-color .1s ease-out,color .1s ease-out !important;
+    -o-transition: background-color .1s ease-out,border-color .1s ease-out,color .1s ease-out !important;
+    transition: background-color .1s ease-out,border-color .1s ease-out,color .1s ease-out !important;
+    vertical-align: middle !important;
+    box-shadow: none !important;
+    font-size: 0.8rem !important;
+}
+.btn-continue, .btn-continue:hover, .btn-continue:focus{
+    background-color: #fff !important;
+    border: 2px solid #00823b !important;
+    border-radius: 4.5rem !important;
+    color: #00823b !important;
+    cursor: pointer !important;
+    font-family: "Roboto",sans-serif !important;
+    margin: 0 0 .75rem !important;
+    padding: .625rem 1.5rem !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    text-transform: uppercase !important;
+    -webkit-transition: background-color .1s ease-out,border-color .1s ease-out,color .1s ease-out !important;
+    -o-transition: background-color .1s ease-out,border-color .1s ease-out,color .1s ease-out !important;
+    transition: background-color .1s ease-out,border-color .1s ease-out,color .1s ease-out !important;
+    vertical-align: middle !important;
+    box-shadow: none !important;
+    font-size: 0.8rem !important;
+    background-color: #00823b !important;
+    border-color: #00823b !important;
+    color: #fff !important;
+}
+
+.btn-gov:hover, .btn-gov:focus, .btn-back:hover, .btn-back:focus{
+    background-color: #000 !important;
+    border-color: #000 !important;
+    color: #fff !important;
+}
+.btn-continue:hover, .btn-continue:focus{
+    background-color: #000 !important;
+    border-color: #000 !important;
+    color: #fff !important;
+}
+
+
+#GISLegend{
+    position:absolute;
+    right:0;
+    top:-70px;
+}
+#dform_container .templatePicker{
+    border: 0;
+    padding: 0;
+    -o-border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+}
+#dform_container .dojoxGridRowTable {
+    table-layout: fixed;
+    width: 0;
+}
+#dform_container .templatePicker .grid .dojoxGridCell {
+    border: 1px solid #FFFFFF;
+    outline: none;
+    line-height: 1.2;
+}
+#dform_container .dojoxGrid .dojoxGridCell {
+    border: 1px solid;
+    border-color: #EBEADB;
+    border-right-color: #D5CDB5;
+    padding: 0px;
+    text-align: left;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+#dform_container .templatePicker .grid .dojoxGridRowTable tr {
+    vertical-align: top;
+}
+#dform_container .dojoxGrid table {
+    padding: 0;
+}
+#dform_container .dojoxGridContent > div[role="presentation"], #dform_container .dojoxGridRow, #dform_container .dojoxGridContent{
+    width:auto !important;
+}
+#dform_container .dojoxGridRowTable tr:hover td{
+    background-color:unset;
+}
+#dform_container .dojoxGridCell {
+    border: none !important;
+    background-color: unset !important;
+    -o-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 0;
+    cursor: unset;
+}
+#dform_container .dojoxGridRowTable{
+    margin:0;
+}
+
+/*CPE overwite - START*/
+.file-gov-text, #dform_container html, #dform_container button, #dform_container input, #dform_container select, #dform_container textarea, #dform_container a, #dform_container .buttonLink, #dform_container p, #dform_container div, #dform_container label, #dform_container legend {
+    font-family: "Roboto", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    text-shadow: unset;
+    outline: none;
+}
+#dform_container .header1, #dform_container .header2, #dform_container .header3, #dform_container .header4, #dform_container .header5 , #dform_container .header6, #dform_container h1, #dform_container h2, #dform_container h3, #dform_container h4, #dform_container h5 , #dform_container h6{
+    /*KS: David wants header to be more consistant with text labels*/
+    font-weight: bold;
+    letter-spacing: initial;
+    text-transform: initial;
+    line-height: initial;
+}
+
+#dform_container .header1 {
+  font-size:2rem
+}
+
+#dform_container .label, #dform_container label {
+      width: inherit;
+}
+#dform_container .content {
+    background-color: initial;
+    margin-left: initial;
+    margin-right: initial;
+    clear: initial;
+}
+.actionList{
+    display: none;
+}
+
+#dform_container .sizer.content{
+	margin-left: 10px;
+	margin-right: -10px;
+	left: -10px;
+}
+/*CPE overrite - END*/
+/*Edinburgh portal adaption END*/
+/*To fix font issue on IE based on this answer https://stackoverflow.com/a/14506177 and https://stackoverflow.com/q/14207425*/
+@font-face {
+    font-family: 'SpartaIcons';
+    font-style: normal;
+    font-weight: all;
+    src: url('/dformresources/themes/fonts/SpartaIcons/spartaicons-webfont.eot');/*IE only accepts one src - the ? makes ie think the rest of the fontface is a query*/
+    src: url('/dformresources/themes/fonts/SpartaIcons/spartaicons-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/dformresources/themes/fonts/SpartaIcons/spartaicons-webfont.woff') format("woff");
+}
+
+var {
+  font-style: normal !important;
+}
+
+#dform_container .helptext {
+  font-style: normal !important
+}
