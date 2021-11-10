@@ -4,51 +4,50 @@ txt (and text like fields) Start
 -----------------------------------------------
 */
 
-.txt-gov > div > label,.dt-gov > div > label,.eml-gov > div > label,.num-gov > div > label,.pas-gov > div > label,.tel-gov > div > label,.time-gov > div > label,.field-gov > div > label{
+.txt-gov > div > label{
   font-size: 1rem;
-  line-height: 1.2 !important;
-  font-weight:bold!important;
+  line-height: 1.2 ;
+  font-weight:bold;
+  margin-top:1px;
 }
 
-.txt-gov > div .helptext,.dt-gov > div .helptext,.eml-gov > div .helptext,.num-gov > div .helptext,.pas-gov > div .helptext,.tel-gov > div .helptext,.time-gov > div .helptext,.field-gov > div .helptext{
+.txt-gov > div .helptext{
     font-size: 1rem;
-    /*margin-bottom: 18px;
     margin-top: 5px;*/
 }
 
-.txt-gov input,.dt-gov input,.eml-gov input,.num-gov input,.pas-gov input,.tel-gov input,.time-gov input,.field-gov input{
-    border: 2px solid black !important;
+.txt-gov input{
+    border: 2px solid black;
 }
-.txt-gov input:focus,.dt-gov input:focus,.eml-gov input:focus,.num-gov input:focus,.pas-gov input:focus,.tel-gov input:focus,.time-gov input:focus,.field-gov input:focus{
-    box-shadow: 0px 0.2px 3px 0px #d45252 !important;
-}
-
-.txt-gov  input:focus:not([readonly]),.dt-gov  input:focus:not([readonly]),.eml-gov  input:focus:not([readonly]),.num-gov  input:focus:not([readonly]),.pas-gov  input:focus:not([readonly]),.tel-gov  input:focus:not([readonly]),.time-gov  input:focus:not([readonly]),.field-gov  input:focus:not([readonly]){
-    /*box-shadow: 0 0 0 3px #FFBF47 !important;*/
-    border-color: #FFBF47 !important;
+.txt-gov input:focus{
+    box-shadow: 0px 0.2px 3px 0px #d45252;
 }
 
-.txt-gov  input.dform_fielderror:focus,.dt-gov  input.dform_fielderror:focus,.eml-gov  input.dform_fielderror:focus,.num-gov  input.dform_fielderror:focus,.pas-gov  input.dform_fielderror:focus,.tel-gov  input.dform_fielderror:focus,.time-gov  input.dform_fielderror:focus,.field-gov  input.dform_fielderror:focus{
-    box-shadow: 0 0 0px 3px #FFBF47 !important;
-    border-color: #d45252 !important;
+.txt-gov  input:focus:not([readonly]){
+    border-color: #FFBF47;
 }
 
-.txt-gov  .dform_fielderror,.dt-gov  .dform_fielderror,.eml-gov  .dform_fielderror,.num-gov  .dform_fielderror,.pas-gov  .dform_fielderror,.tel-gov  .dform_fielderror,.time-gov  .dform_fielderror,.field-gov  .dform_fielderror{
-    box-shadow: /*0 0 1px 1px #d45252*/ none !important;
-    border: solid 2px #d45252 !important;
+.txt-gov  input.dform_fielderror:focus{
+    box-shadow: 0 0 0px 3px #FFBF47;
+    border-color: #d45252;
+}
+
+.txt-gov  .dform_fielderror{
+    box-shadow: /*0 0 1px 1px #d45252*/ none;
+    border: solid 2px #d45252;
     outline: none;
 }
 
-.txt-gov  .dform_validationMessage,.dt-gov  .dform_validationMessage,.eml-gov  .dform_validationMessage,.num-gov  .dform_validationMessage,.pas-gov  .dform_validationMessage,.tel-gov  .dform_validationMessage,.time-gov  .dform_validationMessage,.field-gov  .dform_validationMessage{
-    padding-bottom: 6px !important;
-    font-size: 1rem !important;
-    font-weight: bold !important;
+.txt-gov  .dform_validationMessage{
+    padding-bottom: 6px;
+    font-size: 1rem;
+    font-weight: bold;
 }
-.txt-gov input[readonly],.dt-gov input[readonly],.eml-gov input[readonly],.num-gov input[readonly],.pas-gov input[readonly],.tel-gov input[readonly],.time-gov input[readonly],.field-gov input[readonly] {
-    border-color: #DDD !important;
+.txt-gov input[readonly]{
+    border-color: #DDD;
     background: #DDD;
 }
-/txt (and text like fields) end
+/txt end
 -----------------------------------------------*/
 
 /*
@@ -59,8 +58,8 @@ txta Start
 
 .txta-gov > div > label {
   font-size: 1rem;
-  line-height: 1.2 !important;
-  font-weight:bold!important;
+  line-height: 1.2;
+  font-weight:bold;
 }
 
 .txta-gov > div .helptext {
@@ -70,36 +69,36 @@ txta Start
 }
 
 .txta-gov textarea{
-    border: 2px solid black !important;
+    border: 2px solid black;
     font-family: "Open sans", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
 }
 
 .txta-gov textarea:focus:not([readonly]){
     /*box-shadow: 0 0 0 3px #FFBF47 !important;*/
-    border-color: #FFBF47 !important;
+    border-color: #FFBF47;
 }
 .txta-gov textarea:focus{
-    box-shadow: 0px 0.2px 3px 0px #d45252 !important;
+    box-shadow: 0px 0.2px 3px 0px #d45252;
 }
 
 .txta-gov textarea.dform_fielderror:focus{
-    box-shadow: 0 0 0px 3px #FFBF47 !important;
-    border-color: #d45252 !important;
+    box-shadow: 0 0 0px 3px #FFBF47;
+    border-color: #d45252;
 }
 
 .txta-gov .dform_fielderror{
-    box-shadow: /*0 0 1px 1px #d45252*/ none !important;
-    border: solid 2px #d45252 !important;
+    box-shadow: /*0 0 1px 1px #d45252*/ none;
+    border: solid 2px #d45252;
     outline: none;
 }
 
 .txta-gov .dform_validationMessage{
-    padding-bottom: 6px !important;
-    font-size: 1rem !important;
-    font-weight: bold !important;
+    padding-bottom: 6px;
+    font-size: 1rem;
+    font-weight: bold;
 }
 .txta-gov textarea[readonly] {
-    border-color: #DDD !important;
+    border-color: #DDD;
     background: #DDD;
 }
 /*txta-length----------------------------------*/
