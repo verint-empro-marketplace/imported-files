@@ -323,7 +323,7 @@ gov checkbox Start
 /*gov checkbox end
 -----------------------------------------------*/
 
-.btn-gov, #dform_container button, .btn-back, .btn-gov:hover, .btn-gov:focus, .btn-back:hover, .btn-back:focus{
+.btn-gov, .btn-back, .btn-gov:hover, .btn-gov:focus, .btn-back:hover, .btn-back:focus{
     background-color: #fff !important;
     border: 2px solid #00823b !important;
     border-radius: 4.5rem !important;
@@ -343,7 +343,7 @@ gov checkbox Start
     font-size: 0.8rem !important;
 }
 
-.btn-gov:hover, #dform_container button, .btn-gov:focus, .btn-back:hover, .btn-back:focus{
+.btn-gov:hover, .btn-gov:focus, .btn-back:hover, .btn-back:focus{
     background-color: #000 !important;
     border-color: #000 !important;
     color: #fff !important;
