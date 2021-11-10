@@ -198,6 +198,17 @@ div.icon-place {
   border-width: 0 5px 0 0;
 }
 
+.width-fit-content{
+    width: fit-content !important;
+    width: intrinsic !important;
+    width: -moz-max-content !important;
+}
+
+.paragraph-normal, .p-n{
+    font-size: 1rem !important;
+    line-height: 1.17 !important;
+}
+
 .icon-place::before {
     padding-right: 0px;
     background-image: url(https://www.emprocloud.com/demo/images/icons/info-icon.png);
