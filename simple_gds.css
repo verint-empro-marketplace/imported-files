@@ -150,6 +150,25 @@ div.icon-place {
     padding: 5px;
 }
 
+.dform_widget_type_html .info-notice{
+    padding: 0px 0px 0px 55px;
+}
+.info-notice-icon {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 38px;
+  width: 38px;
+  background-color: #00529b;/*uncheck background*/
+  border-radius: 50%;
+  margin-left: 5px;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
 .info-notice {
     position: relative;
     background-color: #BDE5F8;
