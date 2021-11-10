@@ -179,6 +179,25 @@ div.icon-place {
     box-sizing: border-box;
 }
 
+.info-notice-icon-a {
+  position: absolute;
+  left: 17px;
+  top: 13px;
+  width: 0px;
+  height: 18px;
+  border: solid white;
+  border-width: 0 5px 0 0;
+}
+.info-notice-icon-b {
+  position: absolute;
+  left: 17px;
+  top: 5px;
+  width: 0px;
+  height: 5px;
+  border: solid white;
+  border-width: 0 5px 0 0;
+}
+
 .icon-place::before {
     padding-right: 0px;
     background-image: url(https://www.emprocloud.com/demo/images/icons/info-icon.png);
