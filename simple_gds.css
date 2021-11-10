@@ -323,7 +323,7 @@ gov checkbox Start
 /*gov checkbox end
 -----------------------------------------------*/
 
-.btn-gov, #dform_container .button, .btn-back, .btn-gov:hover, .btn-gov:focus, .btn-back:hover, .btn-back:focus{
+.btn-gov, .btn-back, .btn-gov:hover, .btn-gov:focus, .btn-back:hover, .btn-back:focus{
     background-color: #fff !important;
     border: 2px solid #00823b !important;
     border-radius: 4.5rem !important;
@@ -341,36 +341,9 @@ gov checkbox Start
     vertical-align: middle !important;
     box-shadow: none !important;
     font-size: 0.8rem !important;
-}
-.btn-continue, #dform_container .button, .btn-continue:hover, .btn-continue:focus{
-    background-color: #fff !important;
-    border: 2px solid #00823b !important;
-    border-radius: 4.5rem !important;
-    color: #00823b !important;
-    cursor: pointer !important;
-    font-family: "Roboto",sans-serif !important;
-    margin: 0 0 .75rem !important;
-    padding: .625rem 1.5rem !important;
-    text-align: center !important;
-    text-decoration: none !important;
-    text-transform: uppercase !important;
-    -webkit-transition: background-color .1s ease-out,border-color .1s ease-out,color .1s ease-out !important;
-    -o-transition: background-color .1s ease-out,border-color .1s ease-out,color .1s ease-out !important;
-    transition: background-color .1s ease-out,border-color .1s ease-out,color .1s ease-out !important;
-    vertical-align: middle !important;
-    box-shadow: none !important;
-    font-size: 0.8rem !important;
-    background-color: #00823b !important;
-    border-color: #00823b !important;
-    color: #fff !important;
 }
 
-.btn-gov:hover, #dform_container .button, .btn-gov:focus, .btn-back:hover, .btn-back:focus{
-    background-color: #000 !important;
-    border-color: #000 !important;
-    color: #fff !important;
-}
-.btn-continue:hover, #dform_container .button, .btn-continue:focus{
+.btn-gov:hover, .btn-gov:focus, .btn-back:hover, .btn-back:focus{
     background-color: #000 !important;
     border-color: #000 !important;
     color: #fff !important;
