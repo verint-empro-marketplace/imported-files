@@ -207,6 +207,7 @@ div.icon-place {
 .paragraph-normal, .p-n{
     font-size: 1rem !important;
     line-height: 1.17 !important;
+    padding: 0px 10px 0px 0px;
 }
 
 .icon-place::before {
