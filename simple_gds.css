@@ -233,6 +233,22 @@ div.icon-place {
     width: 77%;
 }
 
+/* error message on the right side of text field */
+#dform_container .dform_fielderror {
+    box-shadow: 0 0 5px #d45252;
+    border: solid 1px #b03535;
+    outline: none;
+    margin-top: -35px;
+}
+
+#dform_container .dform_validationMessage {
+    color: #a52a2a;
+    padding-bottom: 10px;
+    display: none;
+    margin-left: 200px;
+}
+/* error message on the right side of text field - end */
+
 /* Funnelback changes */
 .fnlb_link{
    display: none;
