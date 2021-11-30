@@ -4,111 +4,53 @@ txt (and text like fields) Start
 -----------------------------------------------
 */
 
-.txt-gov > div > label{
+#dform_container input > div > label{
   font-size: 1rem;
   line-height: 1.2 !important;
   font-weight:bold!important;
   margin-top: 5px;
 }
 
-.txt-gov > div .helptext{
+#dform_container input > div .helptext{
     font-size: 1rem;
     margin-top: 5px;*/
 }
 
-.txt-gov input{
+#dform_container input input{
     border: 2px solid black !important;
 }
-.txt-gov input:focus{
+#dform_container input:focus{
     box-shadow: 0px 0.2px 3px 0px #d45252 !important;
 }
 
-.txt-gov  input:focus:not([readonly]){
+#dform_container input  input:focus:not([readonly]){
     border-color: #FFBF47 !important;
 }
 
-.txt-gov  input.dform_fielderror:focus{
+#dform_container input.dform_fielderror:focus{
     box-shadow: 0 0 0px 3px #FFBF47 !important;
     border-color: #d45252 !important;
 }
 
-.txt-gov  .dform_fielderror{
+#dform_container input  .dform_fielderror{
     box-shadow: /*0 0 1px 1px #d45252*/ none !important;
     border: solid 2px #d45252 !important;
     outline: none;
 }
 
-.txt-gov  .dform_validationMessage{
+#dform_container input  .dform_validationMessage{
     padding-bottom: 6px !important;
     font-size: 1rem !important;
     font-weight: bold !important;
 }
-.txt-gov input[readonly]{
+#dform_container input[readonly]{
     border-color: #DDD !important;
     background: #DDD;
 }
 /txt (and text like fields) end
 -----------------------------------------------*/
 
-/*
------------------------------------------------
-txta Start
------------------------------------------------
-*/
 
-.txta-gov > div > label {
-  font-size: 1rem;
-  line-height: 1.2 !important;
-  font-weight:bold!important;
-}
-
-.txta-gov > div .helptext {
-    font-size: 1rem;
-    /*margin-bottom: 18px;
-    margin-top: 5px;*/
-}
-
-.txta-gov textarea{
-    border: 2px solid black !important;
-    font-family: "Open sans", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
-}
-
-.txta-gov textarea:focus:not([readonly]){
-    /*box-shadow: 0 0 0 3px #FFBF47 !important;*/
-    border-color: #FFBF47 !important;
-}
-.txta-gov textarea:focus{
-    box-shadow: 0px 0.2px 3px 0px #d45252 !important;
-}
-
-.txta-gov textarea.dform_fielderror:focus{
-    box-shadow: 0 0 0px 3px #FFBF47 !important;
-    border-color: #d45252 !important;
-}
-
-.txta-gov .dform_fielderror{
-    box-shadow: /*0 0 1px 1px #d45252*/ none !important;
-    border: solid 2px #d45252 !important;
-    outline: none;
-}
-
-.txta-gov .dform_validationMessage{
-    padding-bottom: 6px !important;
-    font-size: 1rem !important;
-    font-weight: bold !important;
-}
-.txta-gov textarea[readonly] {
-    border-color: #DDD !important;
-    background: #DDD;
-}
-/*txta-length----------------------------------*/
-
-.txta-length-message{
-    width: 100%;
-    height: 22px;
-    position: relative;
-    top: -6px;
-}
 
 .btn-gov {
     background-color: #fff !important;
@@ -162,6 +104,62 @@ txta Start
     -o-transition: background-color .1s ease-out,border-color .1s ease-out,color .1s ease-out !important;
     font-size: 0.8rem !important;
 }
+
+/*
+-----------------------------------------------
+sel Start
+-----------------------------------------------
+*/
+
+/*Title*/
+.sel-gov > div > label  {
+  font-size: 1rem;
+  line-height: 1.2 !important;
+  font-weight:bold!important;
+}
+/*Customizes the help text */
+.sel-gov > div .helptext {
+    font-size: 1rem;
+    margin-bottom: 18px;
+    margin-top: 5px;
+}
+/*Make the input more noticable*/
+.sel-gov select{
+    border: 2px solid black !important;
+    /*font-size: 20px !important;*/
+}
+/*style when field is focused - and only when readable*/
+.sel-gov  select:focus:not([readonly]){
+    box-shadow: 0 0 0 3px #FFBF47 !important;
+    /*border-color: black !important;*/
+}
+/*style when field with error is focused*/
+.sel-gov  select.dform_fielderror:focus{
+    box-shadow: 0 0 0 3px #FFBF47 !important;
+    border-color: #d45252 !important;
+}
+/*change border to red when it has an error*/
+.sel-gov  .dform_fielderror{
+    box-shadow: /*0 0 1px 1px #d45252*/ none !important;
+    border: solid 2px #d45252 !important;
+    outline: none;
+}
+/*The error text when field is invalid*/
+.sel-gov  .dform_validationMessage{
+    padding-bottom: 24px !important;
+    font-size: 1rem !important;
+    font-weight: bold !important;
+}
+
+
+/*sel-fill-------------------------------------*/
+
+.sel-fill select{
+    width:100% !important;
+}
+
+/*sel end
+-----------------------------------------------*/
 
 /* info-notice bar */
 div.icon-place {
