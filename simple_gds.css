@@ -4,46 +4,46 @@ txt (and text like fields) Start
 -----------------------------------------------
 */
 
-#dform_container input > div > label{
+.txt-gov > div > label{
   font-size: 1rem;
   line-height: 1.2 !important;
   font-weight:bold!important;
   margin-top: 5px;
 }
 
-#dform_container input > div .helptext{
+.txt-gov > div .helptext{
     font-size: 1rem;
     margin-top: 5px;*/
 }
 
-#dform_container input input{
+.txt-gov input{
     border: 2px solid black !important;
 }
-#dform_container input:focus{
+.txt-gov input:focus{
     box-shadow: 0px 0.2px 3px 0px #d45252 !important;
 }
 
-#dform_container input  input:focus:not([readonly]){
+.txt-gov  input:focus:not([readonly]){
     border-color: #FFBF47 !important;
 }
 
-#dform_container input.dform_fielderror:focus{
+.txt-gov  input.dform_fielderror:focus{
     box-shadow: 0 0 0px 3px #FFBF47 !important;
     border-color: #d45252 !important;
 }
 
-#dform_container input  .dform_fielderror{
+.txt-gov  .dform_fielderror{
     box-shadow: /*0 0 1px 1px #d45252*/ none !important;
     border: solid 2px #d45252 !important;
     outline: none;
 }
 
-#dform_container input  .dform_validationMessage{
+.txt-gov  .dform_validationMessage{
     padding-bottom: 6px !important;
     font-size: 1rem !important;
     font-weight: bold !important;
 }
-#dform_container input[readonly]{
+.txt-gov input[readonly]{
     border-color: #DDD !important;
     background: #DDD;
 }
