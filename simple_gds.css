@@ -303,6 +303,6 @@ div.icon-place {
     cursor: pointer;
 }
 
-#dform_container input{
-    border: #fff;
+#dform_container input[type='file']{
+    border: 0px;
 }
