@@ -210,13 +210,19 @@ sel Start
 
 .btn-gov-secondary {
     background-color: #fff !important;
-    border: 2px solid grey !important;
+    background: #BDE5F8 !important;
+    border: 2px solid #00529B !important;
     border-radius: 4.5rem !important;
     margin: 0 0 .75rem !important;
     padding: .625rem 1.5rem !important;
     text-transform: uppercase !important;
     -o-transition: background-color .1s ease-out,border-color .1s ease-out,color .1s ease-out !important;
     font-size: 0.8rem !important;
+}
+
+#dform_container .helptext {
+    color: #585859;
+    font-style: none !important;
 }
 
 /* info-notice bar */
