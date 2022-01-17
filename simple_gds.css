@@ -79,7 +79,7 @@ txta Start
 
 .txta-gov textarea:focus:not([readonly]){
     /*box-shadow: 0 0 0 3px #FFBF47 !important;*/
-    border-color: #d45252 !important;
+    border-color: #f9e914 !important;
 }
 .txta-gov textarea:focus{
     box-shadow: 0px 0.2px 3px 0px #d45252 !important;
@@ -139,7 +139,7 @@ sel Start
 }
 /*style when field is focused - and only when readable*/
 .sel-gov  select:focus:not([readonly]){
-    box-shadow: 0 0 0 3px #d45252 !important;
+    box-shadow: 0 0 0 3px #f9e914 !important;
     /*border-color: black !important;*/
 }
 /*style when field with error is focused*/
