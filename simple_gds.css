@@ -24,11 +24,11 @@ txt (and text like fields) Start
 }
 
 .txt-gov  input:focus:not([readonly]){
-    border-color: #f9e914 !important;
+    border-color: #d45252 !important;
 }
 
-.txt-gov  input:focus:optional{
-    border-color: #d45252 !important;
+.txt-gov  input:optional:focus {
+    border-color: #f9e914 !important;
 }
 
 .txt-gov  input.dform_fielderror:focus{
