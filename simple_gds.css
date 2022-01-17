@@ -28,7 +28,7 @@ txt (and text like fields) Start
 }
 
 .txt-gov  input.dform_fielderror:focus{
-    box-shadow: 0 0 0px 3px #FFBF47 !important;
+    box-shadow: 0 0 0px 3px #d45252 !important;
     border-color: #d45252 !important;
 }
 
@@ -82,7 +82,7 @@ txta Start
 }
 
 .txta-gov textarea.dform_fielderror:focus{
-    box-shadow: 0 0 0px 3px #FFBF47 !important;
+    box-shadow: 0 0 0px 3px #d45252 !important;
     border-color: #d45252 !important;
 }
 
@@ -140,7 +140,7 @@ sel Start
 }
 /*style when field with error is focused*/
 .sel-gov  select.dform_fielderror:focus{
-    box-shadow: 0 0 0 3px #FFBF47 !important;
+    box-shadow: 0 0 0 3px #d45252 !important;
     border-color: #d45252 !important;
 }
 /*change border to red when it has an error*/
