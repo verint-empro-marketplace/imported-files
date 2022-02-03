@@ -192,7 +192,6 @@ sel Start
     padding: .625rem 1.5rem !important;
     text-align: center !important;
     text-decoration: none !important;
-    text-transform: uppercase !important;
     -webkit-transition: background-color .1s ease-out,border-color .1s ease-out,color .1s ease-out !important;
     -o-transition: background-color .1s ease-out,border-color .1s ease-out,color .1s ease-out !important;
     transition: background-color .1s ease-out,border-color .1s ease-out,color .1s ease-out !important;
