@@ -229,7 +229,7 @@ sel Start
     margin: 0 0 .75rem !important;
     padding: .625rem 1.5rem !important;
     -o-transition: background-color .1s ease-out,border-color .1s ease-out,color .1s ease-out !important;
-    font-size: 0.8rem !important;
+    font-size: 1.2rem !important;
 }
 
 #dform_container .helptext {
