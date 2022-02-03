@@ -182,10 +182,10 @@ sel Start
 
 .btn-gov {
     background-color: #fff !important;
-    border: 2px solid ##000000 !important;
+    border: 2px solid #00672f !important;
     border-radius: 4.5rem !important;
     color: #fff !important;
-    background: #000000 !important;
+    background: #00672f !important;
     cursor: pointer !important;
     font-family: "Roboto",sans-serif;
     margin-right: 20px !important;
@@ -210,9 +210,9 @@ sel Start
 }
 
 .btn-back {
-	background-color: #FFFFFF !important;
-	border-color: #00823b !important;
-	color: #00823b !important;
+	background-color: #000000 !important;
+	border-color: #000000 !important;
+	color: #FFFFFF !important;
 	text-decoration: none !important;
 	border: 2px solid #00823b !important;
    	border-radius: 4.5rem !important;
