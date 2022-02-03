@@ -182,10 +182,10 @@ sel Start
 
 .btn-gov {
     background-color: #fff !important;
-    border: 2px solid #00672f !important;
+    border: 2px solid ##000000 !important;
     border-radius: 4.5rem !important;
     color: #fff !important;
-    background: #00672f !important;
+    background: #000000 !important;
     cursor: pointer !important;
     font-family: "Roboto",sans-serif;
     margin-right: 20px !important;
