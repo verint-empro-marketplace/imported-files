@@ -314,9 +314,10 @@ div.icon-place {
 #dform_container input[type='file']:after {
     content: url(https://verint-empro-marketplace.github.io/upload_files_btn_blue.PNG);
     position: relative;
-    height: 38px;
-    margin-top: -32px;
+    height: 40px;
+    margin-top: -25px;
     margin-right: -25px;
+    margin-bottom: 5px;
     width: 113%;
     float: right;
     cursor: pointer;
