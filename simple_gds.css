@@ -325,3 +325,7 @@ div.icon-place {
 #dform_container input[type='file']{
     border: 0px;
 }
+
+.locationsearch_resultsholder > span > button{
+    margin-left: 20px
+}
