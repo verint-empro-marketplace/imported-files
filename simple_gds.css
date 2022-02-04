@@ -197,7 +197,7 @@ sel Start
     transition: background-color .1s ease-out,border-color .1s ease-out,color .1s ease-out !important;
     vertical-align: middle !important;
     box-shadow: none !important;
-    font-size: 0.8rem !important;
+    font-size: 1rem !important;
 }
 
 .btn-gov:hover{
