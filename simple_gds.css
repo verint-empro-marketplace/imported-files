@@ -330,6 +330,7 @@ div.icon-place {
     margin-left: 20px;
 }
 
-.locationsearch_resultsholder > span {
-    padding: 20px;
+.locationsearch_resultsholder > span > select{
+    margin-right: 20px;
 }
+
