@@ -329,3 +329,7 @@ div.icon-place {
 .locationsearch_resultsholder > span > button{
     margin-left: 20px;
 }
+
+.locationsearch_resultsholder > span {
+    padding: 20px;
+}
