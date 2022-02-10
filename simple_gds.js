@@ -8,6 +8,14 @@ function defineDefaultStyle(){
 	$(formName()).trigger('_style_defultsProvided',[recommended]);
 }
 
+function defaultNewStyle(elements){
+
+    if (elements == "all" || elements == "recommended"){
+        defineDefaultStyle();
+        return;
+    }
+}
+
 function applyNewStyle(){
 	var hasDefaultsInArguments = (typeof arguments[0] !== "undefined" && Array.isArray(arguments[0]));
     if (hasDefaultsInArguments){
