@@ -82,7 +82,7 @@ var updateStyleFunctions = {
     			if (!(Number.isInteger(number) && number > 0 && number < 32)){
     				number = 3;
     			}
-    			element.find('.file-gov-text').text('Select up to '+number+' files');
+    			element.find('.file-gov-text').text('Select up to '+number+' more file/s');
     			element.find('.dform_filenames').off('DOMNodeInserted DOMNodeRemoved').on('DOMNodeInserted DOMNodeRemoved', function(event) {
     				var current = $(this).children('span').length;
 				if (event.type == 'DOMNodeInserted'){
