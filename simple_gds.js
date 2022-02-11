@@ -59,8 +59,8 @@ var updateStyleFunctions = {
 	'file-gov': function(element){
 		$("[type='file']").attr('title', 'File upload');
 		element.find('> div > label').removeAttr("for");
-        	var el = element.find('input').not(":has(.file-gov-icon-a)");
-        	el.after('<span class="file-gov-icon"><span class="file-gov-icon-a"></span><span class="file-gov-icon-b"></span><label class="file-gov-text">Select Files...</label></span>');
+        	var el = element.find('input').not(":has(.file-gov-text)");
+        	el.after('<span class="file-gov-icon"><label class="file-gov-text">Select Files...</label></span>');
         	el.parent().css('position', 'relative');
         	el.find("input").insertAfter(el.find(".file-gov-icon"));
         	element.find('.helptext').each(function(){
@@ -88,7 +88,7 @@ var updateStyleFunctions = {
 				if (event.type == 'DOMNodeInserted'){
     					if(current >= number){
     						$(this).parent().find('input').addClass('visibility-hidden');
-    						$(this).parent().find('.file-gov-text').text('Storage Full');
+    						$(this).parent().find('.file-gov-text').text('Maximum number of files uploaded');
 						$(formName()).trigger('_style_fileUploaded',[number,number,0])
     					}else{
     						$(this).parent().find('.file-gov-text').text('Select up to '+(number-current)+' more');
@@ -97,9 +97,9 @@ var updateStyleFunctions = {
     				} else {
 					$(this).parent().find('input').removeClass('visibility-hidden');
 						if(current-1 == 0){
-							$(this).parent().find('.file-gov-text').text('Select up to '+number+' files');
+							$(this).parent().find('.file-gov-text').text('Select up to '+number+' more file');
 						} else {
-							$(this).parent().find('.file-gov-text').text('Select up to '+(number-(current-1))+' more');
+							$(this).parent().find('.file-gov-text').text('Select up to '+(number-(current-1))+' more files');
 						}
 					$(formName()).trigger('_style_fileUploaded',[0,number,(number-(current-1))]);
     				}
