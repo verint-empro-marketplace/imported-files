@@ -91,7 +91,7 @@ var updateStyleFunctions = {
     						$(this).parent().find('.file-gov-text').text('Maximum number of files uploaded');
 						$(formName()).trigger('_style_fileUploaded',[number,number,0])
     					}else{
-    						$(this).parent().find('.file-gov-text').text('Select up to '+(number-current)+' more');
+    						$(this).parent().find('.file-gov-text').text('Select up to '+(number-current)+' more file/s');
 						$(formName()).trigger('_style_fileUploaded',[current,number,number-current])
     					}
     				} else {
