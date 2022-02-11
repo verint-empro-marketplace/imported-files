@@ -162,6 +162,7 @@ sel Start
     box-shadow: /*0 0 1px 1px #d45252*/ none !important;
     border: solid 2px #d45252 !important;
     outline: none;
+    max-width: 416px !important;
 }
 /*The error text when field is invalid*/
 .sel-gov  .dform_validationMessage{
