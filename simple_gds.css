@@ -429,3 +429,7 @@ div.icon-place {
     visibility: hidden !important;
     height: 0px !important;
 }
+
+.label,label {
+	width: auto;
+}
