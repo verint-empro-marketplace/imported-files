@@ -171,6 +171,32 @@ sel Start
     font-weight: bold !important;
 }
 
+/*Adjust select2 font styles */
+.select2-no-results{
+    font-family: "Open sans", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
+    font-size: 0.8rem;
+}
+
+.select2-input{
+    font-family: "Open sans", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
+    font-size: 0.8rem;
+}
+
+.select2-match{
+    font-family: "Open sans", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
+    font-size: 0.8rem;
+}
+
+.select2-chosen{
+    font-family: "Open sans", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
+    font-size: 0.8rem;
+}
+
+.select2-result-label{
+    font-family: "Open sans", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
+    font-size: 0.8rem;
+}
+
 
 /*sel-fill-------------------------------------*/
 
@@ -434,27 +460,3 @@ div.icon-place {
 	width: auto !important;
 }
 
-.select2-no-results{
-    font-family: "Open sans", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
-    font-size: 1rem;
-}
-
-.select2-input{
-    font-family: "Open sans", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
-    font-size: 1rem;
-}
-
-.select2-match{
-    font-family: "Open sans", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
-    font-size: 1rem;
-}
-
-.select2-chosen{
-    font-family: "Open sans", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
-    font-size: 1rem;
-}
-
-.select2-result-label{
-    font-family: "Open sans", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
-    font-size: 1rem;
-}
