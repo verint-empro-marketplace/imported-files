@@ -88,7 +88,7 @@ var updateStyleFunctions = {
 				if (event.type == 'DOMNodeInserted'){
     					if(current >= number){
     						$(this).parent().find('input').addClass('visibility-hidden');
-    						$(this).parent().find('.file-gov-text').text('Maximum file upload has been reach');
+    						$(this).parent().find('.file-gov-text').text('Maximum file upload has been reached');
 						$(formName()).trigger('_style_fileUploaded',[number,number,0])
     					}else{
     						$(this).parent().find('.file-gov-text').text('Upload file');
