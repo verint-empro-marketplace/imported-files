@@ -82,24 +82,24 @@ var updateStyleFunctions = {
     			if (!(Number.isInteger(number) && number > 0 && number < 32)){
     				number = 3;
     			}
-    			element.find('.file-gov-text').text('Select up to '+number+' more file/s');
+    			element.find('.file-gov-text').text('Upload file');
     			element.find('.dform_filenames').off('DOMNodeInserted DOMNodeRemoved').on('DOMNodeInserted DOMNodeRemoved', function(event) {
     				var current = $(this).children('span').length;
 				if (event.type == 'DOMNodeInserted'){
     					if(current >= number){
     						$(this).parent().find('input').addClass('visibility-hidden');
-    						$(this).parent().find('.file-gov-text').text('Maximum number of files uploaded');
+    						$(this).parent().find('.file-gov-text').text('Maximum file upload has been reach');
 						$(formName()).trigger('_style_fileUploaded',[number,number,0])
     					}else{
-    						$(this).parent().find('.file-gov-text').text('Select up to '+(number-current)+' more file/s');
+    						$(this).parent().find('.file-gov-text').text('Upload file');
 						$(formName()).trigger('_style_fileUploaded',[current,number,number-current])
     					}
     				} else {
 					$(this).parent().find('input').removeClass('visibility-hidden');
 						if(current-1 == 0){
-							$(this).parent().find('.file-gov-text').text('Select up to '+number+' more file');
+							$(this).parent().find('.file-gov-text').text('Upload file');
 						} else {
-							$(this).parent().find('.file-gov-text').text('Select up to '+(number-(current-1))+' more files');
+							$(this).parent().find('.file-gov-text').text('Upload file');
 						}
 					$(formName()).trigger('_style_fileUploaded',[0,number,(number-(current-1))]);
     				}
