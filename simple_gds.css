@@ -51,7 +51,11 @@ txt (and text like fields) Start
     border-color: #DDD !important;
     background: #DDD;
 }
-/txt (and text like fields) end
+
+.dform_page .header2{
+    text-transform: initial !important;
+}
+/*txt (and text like fields) end
 -----------------------------------------------*/
 
 /*
