@@ -88,7 +88,13 @@ var updateStyleFunctions = {
 				if (event.type == 'DOMNodeInserted'){
     					if(current >= number){
     						$(this).parent().find('input').addClass('visibility-hidden');
-    						$(this).parent().find('.file-gov-text').text('Maximum file upload has been reached');
+    						
+    						$("[type='file']").attr('title', 'File upload');
+                		    element.find('> div > label').removeAttr("for");
+                        	var el = element.find('input').not(":has(.file-gov-text)");
+                        	el.find("input").insertAfter(el.find(".file-gov-icon"));
+                        	element.find('.helptext').text('Maximum file upload has been reached');
+    						
 						$(formName()).trigger('_style_fileUploaded',[number,number,0])
     					}else{
     						$(this).parent().find('.file-gov-text').text('Upload file');
@@ -96,6 +102,13 @@ var updateStyleFunctions = {
     					}
     				} else {
 					$(this).parent().find('input').removeClass('visibility-hidden');
+					
+					$("[type='file']").attr('title', 'File upload');
+                		    element.find('> div > label').removeAttr("for");
+                        	var el = element.find('input').not(":has(.file-gov-text)");
+                        	el.find("input").insertAfter(el.find(".file-gov-icon"));
+                        	element.find('.helptext').text('Upload up to 5 files jpg,png,tiff');
+					
 						if(current-1 == 0){
 							$(this).parent().find('.file-gov-text').text('Upload file');
 						} else {
