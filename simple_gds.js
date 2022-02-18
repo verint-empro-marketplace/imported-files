@@ -98,7 +98,7 @@ var updateStyleFunctions = {
 						$(formName()).trigger('_style_fileUploaded',[number,number,0]);
 						setTimeout(function(){
 							$("#file-upload-narrated-section").text('Maximum file upload has been reached');
-						}, 1000);
+						}, 4000);
     					}else{
     						$(this).parent().find('.file-gov-text').text('Upload file');
 						$(formName()).trigger('_style_fileUploaded',[current,number,number-current])
