@@ -104,7 +104,7 @@ var updateStyleFunctions = {
 						$(formName()).trigger('_style_fileUploaded',[current,number,number-current]);
 						setTimeout(function(){
 							$("#file-upload-narrated-section").text('File has been added');
-						}, 2000);
+						}, 1000);
     					}
     				} else {
 					$(this).parent().find('input').removeClass('visibility-hidden');
