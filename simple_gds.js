@@ -98,13 +98,21 @@ var updateStyleFunctions = {
 						$(formName()).trigger('_style_fileUploaded',[number,number,0]);
 						setTimeout(function(){
 							$("#file-upload-narrated-section").text('Maximum file upload has been reached');
-						}, 4000);
+							$("#file-upload-narrated-section").setAttribute("role", "alert");
+							setTimeout(function(){
+								$("#file-upload-narrated-section").text('');
+							}, 3000);
+						}, 2000);
     					}else{
     						$(this).parent().find('.file-gov-text').text('Upload file');
 						$(formName()).trigger('_style_fileUploaded',[current,number,number-current]);
 						setTimeout(function(){
 							$("#file-upload-narrated-section").text('File has been added');
-						}, 4000);
+							$("#file-upload-narrated-section").setAttribute("role", "alert");
+							setTimeout(function(){
+								$("#file-upload-narrated-section").text('');
+							}, 3000);
+						}, 2000);
     					}
     				} else {
 					$(this).parent().find('input').removeClass('visibility-hidden');
@@ -123,7 +131,11 @@ var updateStyleFunctions = {
 					$(formName()).trigger('_style_fileUploaded',[0,number,(number-(current-1))]);
 					setTimeout(function(){
 						$("#file-upload-narrated-section").text('File has been deleted');
-					}, 4000);
+						$("#file-upload-narrated-section").setAttribute("role", "alert");
+							setTimeout(function(){
+								$("#file-upload-narrated-section").text('');
+							}, 3000);
+					}, 2000);
     				}
     			});
     		}
