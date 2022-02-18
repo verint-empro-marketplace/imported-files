@@ -95,7 +95,10 @@ var updateStyleFunctions = {
                         	el.find("input").insertAfter(el.find(".file-gov-icon"));
                         	element.find('.helptext').text('Maximum file upload has been reached');
     						
-						$(formName()).trigger('_style_fileUploaded',[number,number,0])
+						$(formName()).trigger('_style_fileUploaded',[number,number,0]);
+						setTimeout(function(){
+							$("#file-upload-narrated-section").text('Maximum file upload has been reached');
+						}, 1000);
     					}else{
     						$(this).parent().find('.file-gov-text').text('Upload file');
 						$(formName()).trigger('_style_fileUploaded',[current,number,number-current])
