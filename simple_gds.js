@@ -98,7 +98,7 @@ var updateStyleFunctions = {
 						$(formName()).trigger('_style_fileUploaded',[number,number,0]);
 						setTimeout(function(){
 							$("#file-upload-narrated-section").text('Maximum file upload has been reached');
-							$("#file-upload-narrated-section").setAttribute("role", "alert");
+							$("#file-upload-narrated-section").attr("role", "alert");
 							setTimeout(function(){
 								$("#file-upload-narrated-section").text('');
 							}, 3000);
@@ -108,7 +108,7 @@ var updateStyleFunctions = {
 						$(formName()).trigger('_style_fileUploaded',[current,number,number-current]);
 						setTimeout(function(){
 							$("#file-upload-narrated-section").text('File has been added');
-							$("#file-upload-narrated-section").setAttribute("role", "alert");
+							$("#file-upload-narrated-section").attr("role", "alert");
 							setTimeout(function(){
 								$("#file-upload-narrated-section").text('');
 							}, 3000);
@@ -131,7 +131,7 @@ var updateStyleFunctions = {
 					$(formName()).trigger('_style_fileUploaded',[0,number,(number-(current-1))]);
 					setTimeout(function(){
 						$("#file-upload-narrated-section").text('File has been deleted');
-						$("#file-upload-narrated-section").setAttribute("role", "alert");
+						$("#file-upload-narrated-section").attr("role", "alert");
 							setTimeout(function(){
 								$("#file-upload-narrated-section").text('');
 							}, 3000);
