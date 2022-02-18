@@ -101,7 +101,10 @@ var updateStyleFunctions = {
 						}, 4000);
     					}else{
     						$(this).parent().find('.file-gov-text').text('Upload file');
-						$(formName()).trigger('_style_fileUploaded',[current,number,number-current])
+						$(formName()).trigger('_style_fileUploaded',[current,number,number-current]);
+						setTimeout(function(){
+							$("#file-upload-narrated-section").text('File has been added');
+						}, 2000);
     					}
     				} else {
 					$(this).parent().find('input').removeClass('visibility-hidden');
