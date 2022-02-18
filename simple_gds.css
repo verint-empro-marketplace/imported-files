@@ -463,3 +463,7 @@ div.icon-place {
 	width: auto !important;
 }
 
+/*Narrated-section----------------------------*/
+.narrated-section{
+    opacity:0;
+}
