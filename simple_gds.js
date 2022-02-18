@@ -122,7 +122,7 @@ var updateStyleFunctions = {
 						}
 					$(formName()).trigger('_style_fileUploaded',[0,number,(number-(current-1))]);
 					setTimeout(function(){
-						$("#file-upload-narrated-section").text('File has been added');
+						$("#file-upload-narrated-section").text('File has been deleted');
 					}, 4000);
     				}
     			});
