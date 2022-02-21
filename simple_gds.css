@@ -368,7 +368,7 @@ div.icon-place {
     cursor: pointer;
     opacity: 0;
     width: 100% !important;
-    margin-bottom: 2px !important;
+    margin-bottom: 20px !important;
 }
 
 .file-gov .dform_filenames span{
