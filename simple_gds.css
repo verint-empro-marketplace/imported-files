@@ -181,6 +181,32 @@ sel Start
     width:100% !important;
 }
 
+/*Adjust select2 font styles */
+.select2-no-results{
+    font-family: "Open sans", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+}
+
+.select2-input{
+    font-family: "Open sans", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+}
+
+.select2-match{
+    font-family: "Open sans", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+}
+
+.select2-chosen{
+    font-family: "Open sans", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+}
+
+.select2-result-label{
+    font-family: "Open sans", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+}
+
 /*sel end
 -----------------------------------------------*/
 
