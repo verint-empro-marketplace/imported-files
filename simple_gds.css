@@ -76,7 +76,7 @@ txt (and text like fields) Start
     border: 2px solid black !important;
 }
 .txt-gov-optional input:focus{
-    box-shadow: 0px 0.2px 3px 0px #000000 !important;
+    box-shadow: 0px 0.2px 3px 0px #f9e914 !important;
 }
 
 .txt-gov-optional  input:focus:not([readonly]){
@@ -88,8 +88,8 @@ txt (and text like fields) Start
 }
 
 .txt-gov-optional  input.dform_fielderror:focus{
-    box-shadow: 0 0 0px 3px #000000 !important;
-    border-color: #000000 !important;
+    box-shadow: 0 0 0px 3px #f9e914 !important;
+    border-color: #f9e914 !important;
 }
 
 .txt-gov-optional  .dform_fielderror{
