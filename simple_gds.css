@@ -518,3 +518,8 @@ div.icon-place {
 .narrated-section{
     opacity:0;
 }
+
+/*Search Widget------------------------------*/
+.searchwidget{
+    border:none !important;
+}
