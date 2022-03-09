@@ -523,3 +523,8 @@ div.icon-place {
 .searchwidget{
     border:none !important;
 }
+
+/*Customer search----------------------------*/
+#dform_container .searchwidget select {
+        max-width: 70% !important;
+}
