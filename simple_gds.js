@@ -23,7 +23,7 @@ function applyNewStyle(){
     }
 
     var elementsToUpdate = [
-        ['.file-gov'], 
+        ['.file-gov'], ['.search-no-results'], 
         ['.file-gov[class*="file-limit-"]','file-limit'],
         ['[data-type="text"] div:first-child .dform_hidden','txt-hidden'],
     ];
