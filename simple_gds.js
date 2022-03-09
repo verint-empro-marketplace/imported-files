@@ -56,6 +56,12 @@ function updateStyle(elements, optionalName){
 
 var updateStyleFunctions = {
 	
+	'search-no-results': function(element){
+        element.find('select').css('margin-right','0.25rem')
+		var el = element.find('.dform_widget_search_closeresults');
+		el.addClass('btn-gov-secondary');
+		el.text('Search again');
+	},
 	'file-gov': function(element){
 		$("[type='file']").attr('title', 'File upload');
 		element.find('> div > label').removeAttr("for");
