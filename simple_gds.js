@@ -23,7 +23,7 @@ function applyNewStyle(){
     }
 
     var elementsToUpdate = [
-        ['.file-gov'], ['.search-no-results'], 
+        ['.file-gov'],
         ['.file-gov[class*="file-limit-"]','file-limit'],
         ['[data-type="text"] div:first-child .dform_hidden','txt-hidden'],
     ];
@@ -55,15 +55,7 @@ function updateStyle(elements, optionalName){
 }
 
 var updateStyleFunctions = {
-	
-	'search-no-results': function(element){
-		console.log('search no result start');
-        element.find('select').css('margin-right','0.25rem')
-		var el = element.find('.dform_widget_search_closeresults');
-		el.addClass('btn-gov-secondary');
-		el.text('Search again');
-		console.log('search no result done');
-	},
+
 	'file-gov': function(element){
 		$("[type='file']").attr('title', 'File upload');
 		element.find('> div > label').removeAttr("for");
