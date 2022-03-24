@@ -52,8 +52,11 @@ function do_KDF_Ready_Individual(event, kdf) {
 
     $('#dform_widget_cs_customer_search_resultholder').on('hide', function () {
         clearCustomerInformation();
-	var params = ['but_individual_not_found', 'bset_your_details_next_updateaddress', 'area_customer_information', 'area_your_details_next_updateaddress'];
-	hideSections(params);
+	    var params = ['area_customer_information', 'area_your_details_next_updateaddress'];
+	    hideSections(params);
+	    
+	    var params_widgets = ['bset_your_details_next_updateaddress', 'but_individual_not_found'];
+	    hideWidgets(params_widgets);
     });
     
     $('#dform_widget_button_but_submit_report').click(function () {
@@ -97,8 +100,11 @@ function do_KDF_Ready_Individual(event, kdf) {
     });
     
     if (KDF.kdf().access === 'citizen') {
-	var params = [ 'area_yd_customer_details', 'bset_yd_edit', 'area_property_search_yd', 'area_yd_property_details', 'bset_next_yd'];
+	    var params = [ 'area_yd_customer_details', 'area_property_search_yd', 'area_yd_property_details'];
         showSections(params); 
+        
+        var params_widgets = [ 'bset_yd_edit', 'but_next_update_yd'];
+        showWidgets(params_widgets); 
     }
 }//end do_KDF_Ready_Individual
 
@@ -111,7 +117,7 @@ function do_KDF_Custom_Individual(event, kdf, response, action) {
 		var actionedBySource = response.actionedby.replace(individualTemplateIdentifier, '');
 		
 		if (action === 'person-retrieve-new' && actionedBySource === 'KDF_Ready') {
-			KDF.showWidget('but_cust_info_update_address');
+			KDF.showWidget('bset_your_details_next_updateaddress');
 			//Ensure the First Name and Last Name are read-only, aunthenticated citizen
 			if (KDF.kdf().access === 'citizen') {
 				KDF.hideWidget('ahtm_manually_entered_address_info');
@@ -165,19 +171,19 @@ function do_KDF_objectdataLoaded_Individual(event, kdf, response, type, id) {
         
         KDF.setVal('txt_customer_id', id);
 
-        KDF.showWidget('but_cust_info_update_address');
+        KDF.showWidget('bset_your_details_next_updateaddress');
         KDF.showSection('area_customer_information');
         KDF.showSection('area_your_details_next_updateaddress');
         
         KDF.setVal('txt_address_number_yd', response["profile-AddressNumber"]);
-	KDF.setVal('txt_street_name_yd', response["profile-AddressLine1"]);
-	KDF.setVal('txt_city_yd', response["profile-City"]);
+	    KDF.setVal('txt_street_name_yd', response["profile-AddressLine1"]);
+	    KDF.setVal('txt_city_yd', response["profile-City"]);
 		
-	//set default value for placeholder fields used in update individual
-	KDF.setVal('txt_logic_streetnumber', response["profile-AddressNumber"]);
-	KDF.setVal('txt_logic_streetname', response["profile-AddressLine1"]);
-	KDF.setVal('txt_logic_town', response["profile-City"]);
-	KDF.setVal('txt_logic_postcode', response["profile-Postcode"]);
+	    //set default value for placeholder fields used in update individual
+	    KDF.setVal('txt_logic_streetnumber', response["profile-AddressNumber"]);
+	    KDF.setVal('txt_logic_streetname', response["profile-AddressLine1"]);
+	    KDF.setVal('txt_logic_town', response["profile-City"]);
+	    KDF.setVal('txt_logic_postcode', response["profile-Postcode"]);
     }
 
 }//end do_KDF_objectdataLoaded_Individual
@@ -197,7 +203,7 @@ function do_KDF_fieldChange_Individual(event, kdf, field) {
 function custDetailsCheck() {
     
     if (KDF.getVal('txt_firstname') !== KDF.getVal('txt_logic_firstname') || KDF.getVal('txt_lastname') !== KDF.getVal('txt_logic_lastname') ||
-        KDF.getVal('eml_email') !== KDF.getVal('txt_logic_email') || KDF.getVal('tel_contactnum') !== KDF.getVal('txt_logic_phone')) {
+        KDF.getVal('eml_email') !== KDF.getVal('txt_logic_email') || KDF.getVal('txt_contact_number') !== KDF.getVal('txt_logic_phone')) {
         return true;
     } else {
         return false;
@@ -227,8 +233,11 @@ function custAddresssCheck() {
 })(jQuery);
 
 function showCustomerSearchYdWidgets(){
-    var params = [ 'area_yd_customer_details', 'area_yd_property_details', 'bset_your_details_next_updateaddress', 'bset_yd_edit', 'bset_next_yd'];
-    showSections(params);	
+    var params = [ 'area_yd_customer_details', 'area_yd_property_details'];
+    showSections(params);
+    
+    var params_widgets = ['bset_your_details_next_updateaddress', 'bset_yd_edit', 'but_next_update_yd'];
+    showWidgets(params_widgets);
 }
 
 function doCreateCustomerFlow(){
