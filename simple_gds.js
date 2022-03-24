@@ -4,8 +4,11 @@ function defineDefaultStyle(){
     ];
 
     defaultNewStyle(recommended);
-
-	$(formName()).trigger('_style_defultsProvided',[recommended]);
+    $(formName()).trigger('_style_defultsProvided',[recommended]);
+	
+    //change button search again in customer search
+    $('.dform_widget_search_closeresults').addClass('btn-gov-secondary').css("font-family", "Arial").text('Search again');
+    $('#dform_widget_cs_customer_search_id').css("margin-right","0.75rem").css("width","80%");
 }
 
 function defaultNewStyle(elements){
