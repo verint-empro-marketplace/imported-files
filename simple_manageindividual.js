@@ -15,7 +15,6 @@ function do_KDF_Ready_Individual(event, kdf) {
 	if (KDF.kdf().access === 'agent' && KDF.getVal('rad_viewmode') !== 'R' && KDF.getVal('rad_viewmode') !== 'U') {
 		KDF.hideSection('area_customer_information');
 		KDF.hideSection('area_your_details_next_updateaddress');
-		KDF.showWidget('but_cust_info_update_address');
 
 		$('#dform_widget_eml_email').prop('required', true);
 		
@@ -53,7 +52,7 @@ function do_KDF_Ready_Individual(event, kdf) {
 
     $('#dform_widget_cs_customer_search_resultholder').on('hide', function () {
         clearCustomerInformation();
-	var params = ['but_individual_not_found', 'but_cust_info_update_address', 'area_customer_information', 'area_your_details_next_updateaddress'];
+	var params = ['but_individual_not_found', 'bset_your_details_next_updateaddress', 'area_customer_information', 'area_your_details_next_updateaddress'];
 	hideSections(params);
     });
     
