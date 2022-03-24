@@ -36,12 +36,8 @@ function do_KDF_Ready_Individual(event, kdf) {
     //manual enter address yd
     $('#dform_widget_button_but_update_address_manually').off('click').on('click', function () {
         manual_change_address = true;
-        KDF.setVal('txt_p_uprn','');
-        KDF.setVal('txt_cust_info_postcode','');
-         
-         KDF.setVal('txt_address_number_yd','');
-         KDF.setVal('txt_street_name_yd','');
-         KDF.setVal('txt_city_yd','');
+	var params = [ 'txt_p_uprn', 'txt_address_number_yd', 'txt_street_name_yd', 'txt_city_yd'];
+        clearValue(params);	
          
          $("#dform_widget_txt_address_number_yd").attr("readonly", false);
          $("#dform_widget_txt_street_name_yd").attr("readonly", false);
@@ -57,10 +53,8 @@ function do_KDF_Ready_Individual(event, kdf) {
 
     $('#dform_widget_cs_customer_search_resultholder').on('hide', function () {
         clearCustomerInformation();
-        KDF.hideWidget('but_individual_not_found');
-        KDF.hideWidget('but_cust_info_update_address');
-        KDF.hideSection('area_customer_information');
-        KDF.hideSection('area_your_details_next_updateaddress');
+	var params = ['but_individual_not_found', 'but_cust_info_update_address', 'area_customer_information', 'area_your_details_next_updateaddress'];
+	hideSections(params);
     });
     
     $('#dform_widget_button_but_submit_report').click(function () {
@@ -104,12 +98,8 @@ function do_KDF_Ready_Individual(event, kdf) {
     });
     
     if (KDF.kdf().access === 'citizen') {
-
-        KDF.showSection("area_yd_customer_details");
-        KDF.showSection("bset_yd_edit");
-        KDF.showSection("area_property_search_yd");
-        KDF.showSection("area_yd_property_details");
-        KDF.showWidget("but_next_update_yd");
+	var params = [ 'area_yd_customer_details', 'bset_yd_edit', 'area_property_search_yd', 'area_yd_property_details', 'bset_next_yd'];
+        showSections(params); 
     }
 }//end do_KDF_Ready_Individual
 
@@ -238,15 +228,8 @@ function custAddresssCheck() {
 })(jQuery);
 
 function showCustomerSearchYdWidgets(){
-        
-    KDF.showSection("txta_cust_info_address");
-    KDF.showSection("area_yd_customer_details");
-    KDF.showSection("area_yd_property_details");	
-	
-    KDF.showWidget("bset_your_details_next_updateaddress");
-    KDF.showWidget("bset_yd_edit");
-    KDF.showWidget("but_next_update_yd");
-    
+    var params = [ 'area_yd_customer_details', 'area_yd_property_details', 'bset_your_details_next_updateaddress', 'bset_yd_edit', 'bset_next_yd'];
+    showSections(params);	
 }
 
 function doCreateCustomerFlow(){
