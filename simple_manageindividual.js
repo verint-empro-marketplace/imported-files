@@ -241,7 +241,8 @@ function showCustomerSearchYdWidgets(){
         
     KDF.showSection("txta_cust_info_address");
     KDF.showSection("area_yd_customer_details");
-    KDF.showSection("area_yd_property_details");
+    KDF.showSection("area_yd_property_details");	
+	
     KDF.showWidget("bset_your_details_next_updateaddress");
     KDF.showWidget("bset_yd_edit");
     KDF.showWidget("but_next_update_yd");
@@ -251,18 +252,10 @@ function showCustomerSearchYdWidgets(){
 function doCreateCustomerFlow(){
     create_customer_flow = true;
         
-    showCustomerSearchYdWidgets();
-    KDF.setVal('txt_customer_id','');
-    
-    KDF.setVal('txt_firstname','');
-    KDF.setVal('txt_lastname','');
-    KDF.setVal('eml_email','');
-    KDF.setVal('txt_contact_number','');
-    
-    KDF.setVal('txt_address_number_yd','');
-    KDF.setVal('txt_street_name_yd','');
-    KDF.setVal('txt_city_yd','');
-    
+    showCustomerSearchYdWidgets();    
+    var params = [ 'txt_customer_id', 'txt_firstname', 'txt_lastname', 'eml_email', 'txt_contact_number', 'txt_address_number_yd', 'txt_street_name_yd', 'txt_city_yd'];
+    clearValue(params);		
+	
     KDF.showSection('area_property_search_yd');
     
     var options = document.getElementById("dform_widget_cs_customer_search_id").options;
@@ -272,41 +265,41 @@ function doCreateCustomerFlow(){
 function setDefaultAddress(response){
     KDF.setVal('txt_address_number_yd', response.data["profile-AddressNumber"]);
     KDF.setVal('txt_street_name_yd', response.data["profile-AddressLine1"]);
-	KDF.setVal('txt_city_yd', response.data["profile-City"]);
+    KDF.setVal('txt_city_yd', response.data["profile-City"]);
 }
 
 function clearCustomerInformation() {
-    KDF.setVal('txt_firstname', '');
-    KDF.setVal('txt_lastname', '');
-    KDF.setVal('eml_email', '');
-    KDF.setVal('tel_contactnum', '');
-    KDF.setVal('txta_cust_info_address', '');
-    KDF.setVal('txt_cust_info_address_number', '');
-	KDF.setVal('txt_cust_info_street', '');
-	KDF.setVal('txt_cust_info_city', '');
+    var params = [ 'txt_firstname', 'txt_lastname', 'eml_email', 'txt_contact_number'];
+    clearValue(params);
 }
 
-function showWidgets (widgetArr){
-    $.each(widgetArr, function( index, value ) {
-        KDF.showWidget(value);
-      });
+function showWidgets (params){
+  for (i=0; i<params.length; i++) {
+    KDF.showWidget(params[i]);
+  }
 }
 
-function hideWidgets (widgetArr){
-    $.each(widgetArr, function( index, value ) {
-        KDF.hideWidget(value);
-      });
+function hideWidgets (params){	
+  for (i=0; i<params.length; i++) {
+    KDF.hideWidget(params[i]);
+  }
 }
 
-function hideSections (sectionArr){
-    $.each(sectionArr, function( index, value ) {
-        KDF.hideSection(value);
-      });
+function hideSections (params){
+  for (i=0; i<params.length; i++) {
+    KDF.hideSection(params[i]);
+  }
 }
 
-function showSections (sectionArr){
-    $.each(sectionArr, function( index, value ) {
-        KDF.showSection(value);
-      });
+function showSections (params){
+  for (i=0; i<params.length; i++) {
+    KDF.showSection(params[i]);
+  }
+}
+
+function clearValue (params){
+  for (i=0; i<params.length; i++) {
+    KDF.setVal(params[i],'');
+  }
 }
 /*END MANAGE INDIVIDUAL*/
