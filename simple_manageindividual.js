@@ -96,14 +96,13 @@ function do_KDF_Ready_Individual(event, kdf) {
                 KDF.gotoNextPage();
             }
         }
-        
     });
     
     if (KDF.kdf().access === 'citizen') {
 	    var params = [ 'area_yd_customer_details', 'area_property_search_yd', 'area_yd_property_details'];
         showSections(params); 
         
-        var params_widgets = [ 'bset_yd_edit', 'but_next_update_yd'];
+        var params_widgets = [ 'but_next_update_yd'];
         showWidgets(params_widgets); 
     }
 }//end do_KDF_Ready_Individual
@@ -161,10 +160,6 @@ function do_KDF_Custom_Individual(event, kdf, response, action) {
 }//end do_KDF_Custom_Individual()
 
 function do_KDF_objectdataLoaded_Individual(event, kdf, response, type, id) {
-    
-    //change button search again in customer search
-    $('.dform_widget_search_closeresults').addClass('btn-gov-secondary').css("font-family", "Arial").text('Search again');
-    $('#dform_widget_cs_customer_search_id').css("margin-right","0.75rem").css("width","80%");
     
     if (type === 'customer' && kdf.widgetresponse.actionedby === 'cs_customer_search') {
         create_customer_flow = false;
@@ -236,7 +231,7 @@ function showCustomerSearchYdWidgets(){
     var params = [ 'area_yd_customer_details', 'area_yd_property_details'];
     showSections(params);
     
-    var params_widgets = ['bset_your_details_next_updateaddress', 'bset_yd_edit', 'but_next_update_yd'];
+    var params_widgets = ['bset_your_details_next_updateaddress', 'but_next_update_yd'];
     showWidgets(params_widgets);
 }
 
