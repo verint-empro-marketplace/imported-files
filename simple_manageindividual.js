@@ -291,7 +291,7 @@ function clearValue (params){
 
 function clearValueHtml (params){
   for (i=0; i<params.length; i++) {
-    document.getElementById(params[i]).value = ''
+    document.getElementById(params[i]).value = '';
   }
 }	
 
