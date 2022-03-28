@@ -293,6 +293,7 @@ function clearValueHtml (params){
   for (i=0; i<params.length; i++) {
     document.getElementById(params[i]).value = ''
   }
+}	
 
 function disableWidgets (params){
   for (i=0; i<params.length; i++) {
