@@ -288,4 +288,10 @@ function clearValue (params){
     KDF.setVal(params[i],'');
   }
 }
+
+function clearValueHtml (params){
+  for (i=0; i<params.length; i++) {
+    document.getElementById(params[i]).value = ''
+  }
+}
 /*END MANAGE INDIVIDUAL*/
