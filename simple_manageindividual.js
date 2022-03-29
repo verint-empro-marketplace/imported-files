@@ -52,11 +52,9 @@ function do_KDF_Ready_Individual(event, kdf) {
 
     $('#dform_widget_cs_customer_search_resultholder').on('hide', function () {
         clearCustomerInformation();
-	    var params = ['area_customer_information', 'area_your_details_next_updateaddress'];
-	    hideSections(params);
-	    
-	    var params_widgets = ['bset_your_details_next_updateaddress', 'but_individual_not_found'];
-	    hideWidgets(params_widgets);
+	hideSections(['area_customer_information', 'area_your_details_next_updateaddress']);
+	hideWidgets(['bset_your_details_next_updateaddress', 'but_individual_not_found']);
+	clearValueHtml(['dform_widget_cs_txt_firstname','dform_widget_cs_txt_lastname','dform_widget_cs_txt_emailaddress','dform_widget_cs_txt_phonenumber']);    
     });
     
     $('#dform_widget_button_but_submit_report').click(function () {
