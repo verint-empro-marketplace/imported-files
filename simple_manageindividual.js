@@ -66,7 +66,6 @@ function do_KDF_Ready_Individual(event, kdf) {
 					'txt_c_surname': KDF.getVal('txt_lastname'),
 					'tel_c_telephone': KDF.getVal('txt_contact_number'),
 					'eml_c_email': KDF.getVal('eml_email'),
-					'tel_c_mobile': KDF.getVal('txt_contact_number'),
 					'txt_c_addressnumber': KDF.getVal('txt_address_number_yd'),
 					'txt_c_addressline1': KDF.getVal('txt_street_name_yd'),
 					'txt_c_town': KDF.getVal('txt_city_yd'),
