@@ -28,7 +28,7 @@ function do_KDF_Ready_Individual(event, kdf) {
 		}
 		
 		if (typeof KDF.getParams().customerid !== 'undefined' && KDF.getParams().customerid !== '') {
-			KDF.customdata('person-retrieve', individualTemplateIdentifier + 'KDF_Ready', true, true, { 'person_search_results': KDF.getParams().customerid });
+			KDF.customdata('person-retrieve-new', individualTemplateIdentifier + 'KDF_Ready', true, true, { 'person_search_results': KDF.getParams().customerid });
 		}
 	}
 
@@ -112,7 +112,7 @@ function do_KDF_Custom_Individual(event, kdf, response, action) {
 	if (isIndividualTemplate) {		
 		var actionedBySource = response.actionedby.replace(individualTemplateIdentifier, '');
 		
-		if (action === 'person-retrieve' && actionedBySource === 'KDF_Ready') {
+		if (action === 'person-retrieve-new' && actionedBySource === 'KDF_Ready') {
 			KDF.showWidget('bset_your_details_next_updateaddress');
 			//Ensure the First Name and Last Name are read-only, aunthenticated citizen
 			if (KDF.kdf().access === 'citizen') {
@@ -128,21 +128,21 @@ function do_KDF_Custom_Individual(event, kdf, response, action) {
 			KDF.showSection('area_customer_information');
 			KDF.showSection('area_your_details_next_updateaddress');
 		}
-		else if (action === 'person-retrieve' && actionedBySource == 'update-individual') {
+		else if (action === 'person-retrieve-new' && actionedBySource == 'update-individual') {
 			KDF.gotoNextPage();
 
 		}
-		else if (action === 'person-retrieve' && actionedBySource == 'create-individual') {
+		else if (action === 'person-retrieve-new' && actionedBySource == 'create-individual') {
 			KDF.setCustomerID(KDF.getVal('txt_customer_id'), true, false); /*set Reporter*/
 			setDefaultAddress(response);
 			KDF.gotoNextPage();
 
 		}
-		else if (action === 'person-retrieve' && actionedBySource == 'search-individual') {
+		else if (action === 'person-retrieve-new' && actionedBySource == 'search-individual') {
 			KDF.setVal('txt_cust_info_uprn', KDF.getVal('txt_logic_uprn'));
 		}
 		else if (action === 'update-individual-details') {
-			KDF.customdata('person-retrieve', individualTemplateIdentifier + 'update-individual', true, true, { 'person_search_results': KDF.getVal('txt_customer_id') });
+			KDF.customdata('person-retrieve-new', individualTemplateIdentifier + 'update-individual', true, true, { 'person_search_results': KDF.getVal('txt_customer_id') });
 		}
 		else if (action == 'create-individual') {
 			if (response.data.txt_customerID !== undefined) {
@@ -150,7 +150,7 @@ function do_KDF_Custom_Individual(event, kdf, response, action) {
 				KDF.setVal('txt_customer_id', response.data.txt_customerID);
 				KDF.setCustomerID(response.data.txt_customerID, true, false); /*set Reporter*/
 				KDF.setVal('le_associated_obj_id',response.data.txt_customerID);
-				KDF.customdata('person-retrieve', individualTemplateIdentifier + 'create-individual', true, true, { 'person_search_results': KDF.getVal('txt_customer_id') });
+				KDF.customdata('person-retrieve-new', individualTemplateIdentifier + 'create-individual', true, true, { 'person_search_results': KDF.getVal('txt_customer_id') });
 			}
 		}
 	}
