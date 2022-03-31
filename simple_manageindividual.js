@@ -173,7 +173,7 @@ function do_KDF_objectdataLoaded_Individual(event, kdf, response, type, id) {
 	    KDF.setVal('txt_city_yd', response["profile-City"]);
 	    KDF.setVal('txt_postcode_yd', response["profile-Postcode"]);
 	    
-	    hideWidgets(['txt_address_number_yd','txt_city_yd','txt_street_name_yd']);
+	    hideWidgets(['txt_address_number_yd','txt_city_yd','txt_street_name_yd','but_yd_edit_address']);
 	    KDF.setVal('txta_address_yd',KDF.getVal('txt_address_number_yd')+', '+KDF.getVal('txt_street_name_yd')+', '+KDF.getVal('txt_city_yd')+', '+KDF.getVal('txt_postcode_yd'));
 		
 	    //set default value for placeholder fields used in update individual
