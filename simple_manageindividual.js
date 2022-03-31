@@ -53,7 +53,7 @@ function do_KDF_Ready_Individual(event, kdf) {
     $('#dform_widget_cs_customer_search_resultholder').on('hide', function () {
         clearCustomerInformation();
 	hideSections(['area_customer_information', 'area_your_details_next_updateaddress']);
-	hideWidgets(['bset_your_details_next_updateaddress', 'but_individual_not_found']);
+	hideWidgets(['bset_your_details_next_updateaddress', 'but_individual_not_found', 'txta_address_yd']);
 	clearValueHtml(['dform_widget_cs_txt_firstname','dform_widget_cs_txt_lastname','dform_widget_cs_txt_emailaddress','dform_widget_cs_txt_phonenumber']);    
     });
     
