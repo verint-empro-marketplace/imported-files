@@ -141,10 +141,10 @@ function do_KDF_Custom_Individual(event, kdf, response, action) {
 		else if (action === 'person-retrieve-new' && actionedBySource == 'search-individual') {
 			KDF.setVal('txt_cust_info_uprn', KDF.getVal('txt_logic_uprn'));
 		}
-		else if (action === 'update-individual-new') {
+		else if (action === 'update-individual-details') {
 			KDF.customdata('person-retrieve-new', individualTemplateIdentifier + 'update-individual', true, true, { 'person_search_results': KDF.getVal('txt_customer_id') });
 		}
-		else if (action == 'create-individual-new') {
+		else if (action == 'create-individual') {
 			if (response.data.txt_customerID !== undefined) {
 				
 				KDF.setVal('txt_customer_id', response.data.txt_customerID);
