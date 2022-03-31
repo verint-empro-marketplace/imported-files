@@ -61,7 +61,7 @@ function do_KDF_Ready_Individual(event, kdf) {
         
         if(create_customer_flow === true && KDF.kdf().access === 'agent'){
             
-            KDF.customdata('create-individual-new', individualTemplateIdentifier + 'create', true, true, {
+            KDF.customdata('create-individual', individualTemplateIdentifier + 'create', true, true, {
 					'txt_c_forename': KDF.getVal('txt_firstname'),
 					'txt_c_surname': KDF.getVal('txt_lastname'),
 					'tel_c_telephone': KDF.getVal('txt_contact_number'),
@@ -76,7 +76,7 @@ function do_KDF_Ready_Individual(event, kdf) {
         else{
             if((custAddresssCheck() === true || custDetailsCheck() === true) && KDF.kdf().access === 'agent'){
                 
-                KDF.customdata('update-individual-new', individualTemplateIdentifier + 'create', true, true, {
+                KDF.customdata('update-individual-details', individualTemplateIdentifier + 'create', true, true, {
 					'customerID': KDF.getVal('txt_customer_id'),
 					'txt_first_name': KDF.getVal('txt_firstname'),
 					'txt_last_name': KDF.getVal('txt_lastname'),
