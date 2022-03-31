@@ -519,7 +519,7 @@ div.icon-place {
   width: 28px;
   background-color: white;/*uncheck background*/
   border-radius: 75%;
-  box-shadow: inset 0 0 0 3px #007aff !important;
+  box-shadow: inset 0 0 0 3px #00529B !important;
 }
 
 .rad-check:after {
@@ -538,7 +538,7 @@ div.icon-place {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: #007aff !important;
+  background: #BDE5F8 !important;
 }
 
 .rad-gov > div > fieldset .helptext {
