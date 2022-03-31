@@ -503,7 +503,8 @@ div.icon-place {
 
 .rad-gov > div > fieldset > span  input {
   position: absolute;
-  left: -200px !important;
+  opacity: 0;
+  left: 0px !important;
   width:100% !important;
   height:100% !important;
   z-index:1 !important;
