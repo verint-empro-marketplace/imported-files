@@ -1,6 +1,6 @@
 function defineDefaultStyle(){
     var recommended = [
-        'file'
+        'rad','file'
     ];
 
     defaultNewStyle(recommended);
@@ -26,6 +26,7 @@ function applyNewStyle(){
     }
 
     var elementsToUpdate = [
+	['.rad-gov'],    
         ['.file-gov'],
         ['.file-gov[class*="file-limit-"]','file-limit'],
         ['[data-type="text"] div:first-child .dform_hidden','txt-hidden'],
@@ -58,7 +59,10 @@ function updateStyle(elements, optionalName){
 }
 
 var updateStyleFunctions = {
-
+	'rad-gov': function(element){
+		var el = element.find('> div > fieldset > span').not(":has(span)");
+        el.append('<span class="rad-check"></span>');
+	},
 	'file-gov': function(element){
 		$("[type='file']").attr('title', 'File upload');
 		element.find('> div > label').removeAttr("for");
