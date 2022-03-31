@@ -165,7 +165,7 @@ function do_KDF_objectdataLoaded_Individual(event, kdf, response, type, id) {
         
         KDF.setVal('txt_customer_id', id);
 
-	showWidgets(['txta_address_yd','bset_your_details_next_updateaddress']);
+	showWidgets(['txta_address_yd','bset_your_details_next_updateaddress','but_cust_info_update_address']);
 	showSections(['area_customer_information','area_your_details_next_updateaddress','']);    
         
         KDF.setVal('txt_address_number_yd', response["profile-AddressNumber"]);
