@@ -170,6 +170,11 @@ function do_KDF_objectdataLoaded_Individual(event, kdf, response, type, id) {
         KDF.setVal('txt_address_number_yd', response["profile-AddressNumber"]);
 	    KDF.setVal('txt_street_name_yd', response["profile-AddressLine1"]);
 	    KDF.setVal('txt_city_yd', response["profile-City"]);
+	    KDF.setVal('txt_postcode_yd', response["profile-Postcode"]);
+	    
+	    hideWidgets(['txt_address_number_yd','txt_city_yd','txt_street_name_yd']);
+	    KDF.setVal('txta_address_yd',KDF.getVal('txt_address_number_yd')+', '+KDF.getVal('txt_address_number_yd')+', '+KDF.getVal('txt_city_yd')+', '+KDF.getVal('txt_postcode_yd'));
+	    KDF.showWidget('txta_address_yd');
 		
 	    //set default value for placeholder fields used in update individual
 	    KDF.setVal('txt_logic_streetnumber', response["profile-AddressNumber"]);
@@ -295,6 +300,12 @@ function clearValueHtml (params){
 function disableWidgets (params){
   for (i=0; i<params.length; i++) {
     $(params[i]).prop('readonly', true);
+  }		
+}
+
+function enableWidgets (params){
+  for (i=0; i<params.length; i++) {
+    $(params[i]).prop('readonly', false);
   }		
 }
 /*END MANAGE INDIVIDUAL*/
