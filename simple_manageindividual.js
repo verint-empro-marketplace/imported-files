@@ -48,6 +48,11 @@ function do_KDF_Ready_Individual(event, kdf) {
 
     $('#dform_widget_cs_customer_search_resultholder').on('show', function () {
         KDF.showWidget('but_individual_not_found');
+	
+	var firstSelected = document.getElementById("dform_widget_cs_customer_search_id").options[0];
+	if(firstSelected != null && firstSelected.text == ''){
+	    firstSelected.text = 'Please select...';
+	}	
     });
 
     $('#dform_widget_cs_customer_search_resultholder').on('hide', function () {
