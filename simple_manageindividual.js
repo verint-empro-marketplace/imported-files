@@ -74,7 +74,7 @@ function do_KDF_Ready_Individual(event, kdf) {
 					'eml_c_email': KDF.getVal('eml_email'),
 					'txt_c_addressnumber': KDF.getVal('txt_address_number_yd'),
 					'txt_c_addressline1': KDF.getVal('txt_street_name_yd'),
-		    			'txt_c_addressline2':KDF.getVal('txt_city_yd'),
+		    		'txt_c_addressline2':KDF.getVal('txt_city_yd'),
 					'txt_c_town': KDF.getVal('txt_city_yd'),
 					'txt_c_postcode': KDF.getVal('txt_c_postcode'),
 					'txt_c_uprn': KDF.getVal('txt_c_uprn')
@@ -132,6 +132,7 @@ function do_KDF_Custom_Individual(event, kdf, response, action) {
 			
 			setDefaultAddress(response);
 			
+			showWidgets(['txta_address_yd','bset_your_details_next_updateaddress','but_cust_info_update_address']);
 			KDF.showSection('area_customer_information');
 			KDF.showSection('area_your_details_next_updateaddress');
 		}
@@ -261,6 +262,8 @@ function setDefaultAddress(response){
     KDF.setVal('txt_address_number_yd', response.data["profile-AddressNumber"]);
     KDF.setVal('txt_street_name_yd', response.data["profile-AddressLine1"]);
     KDF.setVal('txt_city_yd', response.data["profile-City"]);
+    KDF.setVal('txt_postcode_yd', response.data["profile-Postcode"]);
+    KDF.setVal('txta_address_yd',KDF.getVal('txt_address_number_yd')+', '+KDF.getVal('txt_street_name_yd')+', '+KDF.getVal('txt_city_yd')+', '+KDF.getVal('txt_postcode_yd'));
 }
 
 function clearCustomerInformation() {
