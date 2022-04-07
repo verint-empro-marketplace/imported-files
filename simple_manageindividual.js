@@ -74,8 +74,7 @@ function do_KDF_Ready_Individual(event, kdf) {
 					'eml_c_email': KDF.getVal('eml_email'),
 					'txt_c_addressnumber': KDF.getVal('txt_address_number_yd'),
 					'txt_c_addressline1': KDF.getVal('txt_street_name_yd'),
-		    		'txt_c_addressline2':KDF.getVal('txt_city_yd'),
-					'txt_c_town': KDF.getVal('txt_city_yd'),
+		    			'txt_c_town': KDF.getVal('txt_city_yd'),
 					'txt_c_postcode': KDF.getVal('txt_c_postcode'),
 					'txt_c_uprn': KDF.getVal('txt_c_uprn')
 				});	
