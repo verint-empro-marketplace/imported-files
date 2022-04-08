@@ -273,6 +273,7 @@ function validateProperty(param){
     }
     else{
         KDF.showError(property_error_msg);
+    }
 }
 
 function clearCustomerInformation() {
