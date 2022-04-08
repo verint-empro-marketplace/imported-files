@@ -265,6 +265,16 @@ function setDefaultAddress(response){
     KDF.setVal('txta_address_yd',KDF.getVal('txt_address_number_yd')+', '+KDF.getVal('txt_street_name_yd')+', '+KDF.getVal('txt_city_yd')+', '+KDF.getVal('txt_postcode_yd'));
 }
 
+function validateProperty(param){
+    var property_error_msg = 'Please provide property details';
+    
+    if(KDF.getVal(param) != ''){
+        KDF.gotoNextPage();    
+    }
+    else{
+        KDF.showError(property_error_msg);
+}
+
 function clearCustomerInformation() {
     var params = [ 'txt_firstname', 'txt_lastname', 'eml_email', 'txt_contact_number'];
     clearValue(params);
