@@ -182,8 +182,7 @@ function do_KDF_objectdataLoaded_Individual(event, kdf, response, type, id) {
 	    KDF.setVal('txt_postcode_yd', response["profile-Postcode"]);
 	    
 	    hideWidgets(['txt_address_number_yd','txt_city_yd','txt_street_name_yd','but_yd_edit_address']);
-	    KDF.setVal('txta_address_yd',KDF.getVal('txt_address_number_yd')+', '+KDF.getVal('txt_street_name_yd')+', '+KDF.getVal('txt_city_yd')+', '+KDF.getVal('txt_postcode_yd'));
-		
+	    KDF.setVal('txta_address_yd',validateFullAddress(['txt_address_number_yd','txt_street_name_yd','txt_city_yd','txt_postcode_yd']));			
 	    //set default value for placeholder fields used in update individual
 	    KDF.setVal('txt_logic_streetnumber', response["profile-AddressNumber"]);
 	    KDF.setVal('txt_logic_streetname', response["profile-AddressLine1"]);
@@ -265,7 +264,19 @@ function setDefaultAddress(response){
     KDF.setVal('txt_street_name_yd', response.data["profile-AddressLine1"]);
     KDF.setVal('txt_city_yd', response.data["profile-City"]);
     KDF.setVal('txt_postcode_yd', response.data["profile-Postcode"]);
-    KDF.setVal('txta_address_yd',KDF.getVal('txt_address_number_yd')+', '+KDF.getVal('txt_street_name_yd')+', '+KDF.getVal('txt_city_yd')+', '+KDF.getVal('txt_postcode_yd'));
+    KDF.setVal('txta_address_yd',validateFullAddress(['txt_address_number_yd','txt_street_name_yd','txt_city_yd','txt_postcode_yd']));	
+}
+
+function validateFullAddress(params){
+  var fullAddress = '';    
+  for (i=0; i<params.length; i++) {
+    console.log(params[i] + ' : '+KDF.getVal(params[i]));
+    if(KDF.getVal(params[i]) != ''){
+        if(i > 0){fullAddress += ', '};
+        fullAddress += KDF.getVal(params[i]);
+    }
+  }
+  return fullAddress;
 }
 
 function validateProperty(param){
