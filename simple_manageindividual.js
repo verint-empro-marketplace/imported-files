@@ -96,6 +96,8 @@ function do_KDF_Ready_Individual(event, kdf) {
 				});     
             }
             else{
+		KDF.setVal('le_associated_obj_type','C1'); 
+		KDF.setVal('le_associated_obj_id',response.data.txt_customerID);    
                 KDF.gotoNextPage();
             }
         }
