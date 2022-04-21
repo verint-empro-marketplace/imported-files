@@ -342,4 +342,22 @@ function enableWidgets (params){
     $(params[i]).prop('readonly', false);
   }		
 }
+
+function toggleNavigation(){
+	KDF.hideNav();
+
+	// Show save controls for agent
+	if(KDF.kdf().viewmode=== 'U' || KDF.kdf().viewmode=== 'R' && KDF.kdf().access=== 'agent') {
+	$("#dform_controls").show();
+		KDF.showNav();
+	}
+	elseif (KDF.kdf().form.readonly=== true && KDF.kdf().access=== 'citizen') {
+		KDF.showNav();
+	}
+
+	// Hide all button controls on the form on Read mode for Agent and Citizen
+	if((KDF.kdf().access=== 'agent' && KDF.kdf().viewmode=== 'R') ||(KDF.kdf().access=== 'citizen' && KDF.kdf().form.readonly=== true)) {
+		$('#dform_'+KDF.kdf().form.name).find('button').hide();
+	}
+}
 /*END MANAGE INDIVIDUAL*/
