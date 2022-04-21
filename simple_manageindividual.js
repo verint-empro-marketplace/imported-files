@@ -95,8 +95,7 @@ function do_KDF_Ready_Individual(event, kdf) {
 					'email':KDF.getVal('eml_email')
 				});     
             }
-            else{
-		KDF.setVal('le_associated_obj_type','C1');  
+            else{  
                 KDF.gotoNextPage();
             }
         }
