@@ -298,6 +298,7 @@ sel Start
 	text-decoration: none !important;
 	border: 2px solid #000000 !important;
    	border-radius: 4.5rem !important;
+    	font-size: 1rem !important;
 }
 .btn-back:focus{
     box-shadow: inset 0 0 0px 5px #000000 !important;
@@ -405,6 +406,8 @@ div.icon-place {
 }
 .file-gov > div .helptext{
   font-size: 1rem;
+  position: relative;
+  top: -90px;
 }
 .file-gov{
     font-size: 1rem;
@@ -633,9 +636,66 @@ div.icon-place {
 /*Search Widget------------------------------*/
 .searchwidget{
     border:none !important;
+    position: relative;
+    right: 10px;
 }
 
 /*Customer search----------------------------*/
 #dform_container .searchwidget select {
         max-width: 70% !important;
+}
+
+#dform_container fieldset.area>legend, #dform_container fieldset.box>legend , #dform_container fieldset.searchwidget>legend {
+	font-size: 1.5em;
+	font-weight: normal;
+	position: relative !important;
+	right: 5px !important;
+}
+
+.dform_fileupload_progressbar {
+    display:none;
+}
+
+#dform_container .helptext{
+    font-style: normal;
+}
+
+#dform_container {
+    font-size: 16px;
+}
+
+.select2-container .select2-choice{
+    display: block;
+    height: 30px;
+    overflow: hidden;
+    border: 2px solid black;
+    white-space: nowrap !important;
+    line-height: 30px;
+    text-decoration: none !important;
+    border-radius: 0px;
+    width: auto !important;
+    max-width: 400px !important;
+}
+
+.select2-input{
+    max-width:100% !important;
+}
+
+.select2-search{
+    max-width:100% !important;
+}
+
+.select2-with-searchbox{
+    max-width:400px !important;
+    
+}
+
+.select2-chosen{
+    font-weight: normal !important;
+}
+
+#dform_container input, #dform_container select, #dform_container textarea {
+    font-size: 1rem;
+    padding: 8px;
+    border: 2px solid #111;
 }
