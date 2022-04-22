@@ -248,7 +248,7 @@
             });
 
             $('#' + id + '_resultsholder .search_resetresults').off('click').on('click', function(e) {
-                reset_widget(id);
+                widget_instance.reset();
             });
 
             $('#' + id + '_results ').off('change').on('change', function(e) {
@@ -332,21 +332,17 @@
             return h;
 		},
 		reset: function() {
-			reset_widget(this.options.id);
+			KDF.hideMessages();
+            $('#'+ this.options.id +'_searchholder').show();
+            $('#'+ this.options.id +'_resultsholder').hide();
+            $('#'+ this.options.id +'_noresults').hide();
+            $('#' + this.options.id + '_results').empty();
+            $( '#dform_'+ KDF.kdf().name ).trigger('_KDFWidget_searchReset', [ KDF.kdf(), this.options.id ] );
 		},
 		_destroy: function() {
 			this.element.removeClass(this.widgetFullName || this.widgetBaseClass);
 		}
 	};
-	
-	function reset_widget(id){
-	  KDF.hideMessages();
-      $('#'+ id +'_searchholder').show();
-      $('#'+ id +'_resultsholder').hide();
-      $('#'+ id +'_noresults').hide();
-      $('#' + id + '_results').empty();
-      $( '#dform_'+ KDF.kdf().name ).trigger('_KDFWidget_searchReset', [ KDF.kdf(), id ] );
-	}
 	
 	if (!$.Widget.prototype._destroy) {
 		$.extend(definition, {
