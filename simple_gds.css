@@ -162,10 +162,12 @@ txta Start
     font-size: 1rem !important;
     font-weight: bold !important;
 }
+
 .txta-gov textarea[readonly] {
     border-color: #DDD !important;
     background: #DDD;
 }
+
 /*txta-length----------------------------------*/
 
 .txta-length-message{
@@ -685,8 +687,7 @@ div.icon-place {
 }
 
 .select2-with-searchbox{
-    max-width:400px !important;
-    
+    max-width:400px !important;   
 }
 
 .select2-chosen{
