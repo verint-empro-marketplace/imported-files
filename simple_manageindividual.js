@@ -131,6 +131,12 @@ function do_KDF_Custom_Individual(event, kdf, response, action) {
 			
 			setDefaultAddress(response);
 			
+			KDF.setVal('txt_profile_address',response.data['profile-Address']);
+			KDF.customdata('widget-property-search', individualTemplateIdentifier + 'search-property', true, true, {
+					'addressnumber': response.data['profile-AddressNumber'],
+					'streetname': response.data['profile-AddressLine1']
+				}); 
+			
 			showWidgets(['txta_address_yd','bset_your_details_next_updateaddress','but_cust_info_update_address']);
 			KDF.showSection('area_customer_information');
 			KDF.showSection('area_your_details_next_updateaddress');
@@ -162,6 +168,12 @@ function do_KDF_Custom_Individual(event, kdf, response, action) {
 				}
 				KDF.customdata('person-retrieve-new', individualTemplateIdentifier + 'create-individual', true, true, { 'person_search_results': KDF.getVal('txt_customer_id') });
 			}
+		}
+		else if(action == 'widget-property-search'){
+		    KDF.setVal('txt_property_id',response.data['first_result_value']);
+		    KDF.showWidget('rad_existing_address');
+		    KDF.hideSection('area_property_search');
+		    $('#dform_widget_rad_existing_address1').next().html(KDF.getVal('txt_profile_address'));
 		}
 	}
 }//end do_KDF_Custom_Individual()
