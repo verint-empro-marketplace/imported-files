@@ -80,7 +80,7 @@ function do_KDF_Ready_Individual(event, kdf) {
 				});	
         }
         else{
-            if((custAddresssCheck() === true || custDetailsCheck() === true) && KDF.kdf().access === 'agent'){
+            if((custAddresssCheck() === true || custDetailsCheck() === true) && KDF.kdf().access === 'agent' && (KDF.getVal('txt_created_by') != 'citizen' && KDF.kdf().viewmode != 'U')){
                 
                 KDF.customdata('update-individual-details', individualTemplateIdentifier + 'create', true, true, {
 					'customerID': KDF.getVal('txt_customer_id'),
