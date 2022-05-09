@@ -1,34 +1,31 @@
 #dform_container #dform_navigation li {
-    color: #333333;
-    font-size: 1.1em;
-    font-weight: normal;
-    padding: 5px 5px 5px 10px;
-    margin-top: 6px;
-    border: solid 1px #ddd;
-    text-decoration: none;
-    cursor: pointer;
-    background: -moz-linear-gradient(top, #f6f6f6 0%, #efefef 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f6f6f6), color-stop(100%, #efefef));
-    background: -webkit-linear-gradient(top, #f6f6f6 0%, #efefef 100%);
-    background: -o-linear-gradient(top, #f6f6f6 0%, #efefef 100%);
-    background: -ms-linear-gradient(top, #f6f6f6 0%, #efefef 100%);
-    background: linear-gradient(to bottom, #f6f6f6 0%, #efefef 100%);
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    -o-border-radius: 2px;
-    -ms-border-radius: 2px;
-    -khtml-border-radius: 2px;
-    border-radius: 2px;
-    -webkit-transition: 0.2s linear all;
-    -moz-transition: 0.2s linear all;
-    -ms-transition: 0.2s linear all;
-    -o-transition: 0.2s linear all;
-    transition: 0.2s linear all;
-    margin-bottom: 1px;
-    width: auto;
 	display:inline;
 }
 
-#dform_container .container > .two {
-    width: none;
+#dform_container #dform_pagenav {
+    width: 100%;
+}
+#dform_container  #dform_pageholder {
+    width: 100%;
+}
+#dform_container #dform_navigation {
+     float: right;
+}
+
+#dform_container .dform_pageValid span,
+#dform_container .dform_pageInvalid span,
+#dform_container .dform_pageInvalidCustom span{
+    background-image: none;
+}
+#dform_container #dform_navigation li.dform_pageValid:before {
+    content:url('/dformresources/content/valid.png');
+    margin-right: 5px;
+}
+#dform_container #dform_navigation li.dform_pageInvalid:before {
+    content:url('/dformresources/content/invalid.png');
+    margin-right: 5px;
+}
+#dform_container #dform_navigation li.dform_pageInvalidCustom:before {
+    content:url('/dformresources/content/warning.png');
+    margin-right: 5px;
 }
