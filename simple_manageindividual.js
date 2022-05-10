@@ -74,7 +74,7 @@ function do_KDF_Ready_Individual(event, kdf) {
 					'eml_c_email': KDF.getVal('eml_email'),
 					'txt_c_addressnumber': KDF.getVal('txt_address_number_yd'),
 					'txt_c_addressline1': KDF.getVal('txt_street_name_yd'),
-		    			'txt_c_town': KDF.getVal('txt_city_yd'),
+		    		'txt_c_town': KDF.getVal('txt_city_yd'),
 					'txt_c_postcode': KDF.getVal('txt_c_postcode'),
 					'txt_c_uprn': KDF.getVal('txt_c_uprn')
 				});	
@@ -169,11 +169,17 @@ function do_KDF_Custom_Individual(event, kdf, response, action) {
 				KDF.customdata('person-retrieve-new', individualTemplateIdentifier + 'create-individual', true, true, { 'person_search_results': KDF.getVal('txt_customer_id') });
 			}
 		}
-		else if(action == 'widget-property-search'){
+		else if(action === 'widget-property-search'){
 		    KDF.setVal('txt_property_id',response.data['first_result_value']);
 		    KDF.showWidget('rad_existing_address');
 		    KDF.hideSection('area_property_search');
 		    $('#dform_widget_rad_existing_address1').next().html(KDF.getVal('txt_profile_address'));
+		}
+		else if(action === 'retrieve-property'){
+		    //will be used as default address when creating new customer
+		    KDF.setVal('txt_addressnum',response.data['addressNumber']);
+	        KDF.setVal('txt_street_name',response.data['streetName']);
+	        KDF.setVal('txt_city',response.data['town']);
 		}
 	}
 }//end do_KDF_Custom_Individual()
@@ -269,6 +275,28 @@ function doCreateCustomerFlow(){
     
     var options = document.getElementById("dform_widget_cs_customer_search_id").options;
     options[0].selected = true;
+    
+    //use the same address
+    if(KDF.getVal('txta_address') != '' && getIncidentPropertyId() != ''){
+        KDF.hideSection('area_property_search_yd');
+        KDF.showWidget('rad_yd_same_address');
+        
+        $('#dform_widget_rad_yd_same_address1').next().html(KDF.getVal('txta_address'));
+        
+        KDF.setVal('txt_address_number_yd',KDF.getVal('txt_addressnum'));
+	    KDF.setVal('txt_street_name_yd',KDF.getVal('txt_street_name'));
+	    KDF.setVal('txt_city_yd',KDF.getVal('txt_city'));
+    }
+}
+
+function getIncidentPropertyId(){
+    var propertyId = '';
+    
+    if(KDF.getVal('le_associated_obj_type') === 'D3'){
+        propertyId = KDF.getVal('le_associated_obj_id');
+    }
+    
+    return propertyId;
 }
 
 function setDefaultAddress(response){
@@ -282,7 +310,6 @@ function setDefaultAddress(response){
 function validateFullAddress(params){
   var fullAddress = '';    
   for (i=0; i<params.length; i++) {
-    console.log(params[i] + ' : '+KDF.getVal(params[i]));
     if(KDF.getVal(params[i]) != ''){
         if(i > 0){fullAddress += ', '};
         fullAddress += KDF.getVal(params[i]);
