@@ -52,6 +52,7 @@ function do_KDF_Ready_Individual(event, kdf) {
 	var firstSelected = document.getElementById("dform_widget_cs_customer_search_id").options[0];
 	if(firstSelected != null && firstSelected.text == ''){
 	    firstSelected.text = 'Please select...';
+	    firstSelected.hidden = true;	
 	}	
     });
 
