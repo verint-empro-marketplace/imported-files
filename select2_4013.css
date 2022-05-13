@@ -8,13 +8,14 @@
     box-sizing: border-box;
     cursor: pointer;
     display: block;
-    height: 28px;
+    height: 40px;
     user-select: none;
     -webkit-user-select: none; }
     .select2-container .select2-selection--single .select2-selection__rendered {
       display: block;
       padding-left: 8px;
       padding-right: 20px;
+	  padding-top: 3px;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap; }
@@ -132,15 +133,15 @@
   }
   .select2-container--default .select2-selection--single .select2-selection__rendered {
     color: #444;
-    line-height: 28px; }
+    line-height: 40px; }
   .select2-container--default .select2-selection--single .select2-selection__clear {
     cursor: pointer;
     float: right;
     font-weight: bold; }
   .select2-container--default .select2-selection--single .select2-selection__placeholder {
-    color: #999; }
+    color: #333333; }
   .select2-container--default .select2-selection--single .select2-selection__arrow {
-    height: 26px;
+    height: 35px;
     position: absolute;
     top: 1px;
     right: 1px;
@@ -202,7 +203,7 @@
     margin-top: 5px;
     padding: 0 5px; }
   .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
-    color: #999;
+    color: #333333;
     cursor: pointer;
     display: inline-block;
     font-weight: bold;
@@ -258,7 +259,7 @@
   padding: 0; }
 
 .select2-container--default .select2-results__option[aria-disabled=true] {
-  color: #999; }
+  color: #333333; }
 
 .select2-container--default .select2-results__option[aria-selected=true] {
   background-color: #ddd; }
@@ -305,14 +306,14 @@
     border: 1px solid #5897fb; }
   .select2-container--classic .select2-selection--single .select2-selection__rendered {
     color: #444;
-    line-height: 28px; }
+    line-height: 40px; }
   .select2-container--classic .select2-selection--single .select2-selection__clear {
     cursor: pointer;
     float: right;
     font-weight: bold;
     margin-right: 10px; }
   .select2-container--classic .select2-selection--single .select2-selection__placeholder {
-    color: #999; }
+    color: #333333; }
   .select2-container--classic .select2-selection--single .select2-selection__arrow {
     background-color: #ddd;
     border: none;
