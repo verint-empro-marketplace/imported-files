@@ -400,46 +400,4 @@ function toggleNavigation(){
 		$('#dform_'+KDF.kdf().form.name).find('button').hide();
 	}
 }
-
-//not typically configured
-function processShowHide(data, config = cfg_pagevisibility){
-    var customPageSet = false;
-    $.each(config, function (idx, val){
-         if ($.inArray(data, val.values) > -1){ 
-             KDF.showPage(val.page);
-             if(skip_first_page == true){
-                 KDF.gotoPage(val.page);
-             }
-             customPageSet = true;
-         }
-         else {
-             KDF.hidePage(val.page);
-         }
-    });
-    if (customPageSet===false && skip_first_page == true){
-        KDF.showPage('ss_report_issue');
-        KDF.gotoPage('ss_report_issue');
-        KDF.hideWidget('but_back_report_an_issue');
-    }
-}
-
-//Custom validation function used by the widgets.  Checks to ensure at least one search field is populated before performing a search
-function validateFields(id, data){
-    KDF.hideMessages();
-
-    var hasValue = false;
-    for(var key in data) {
-        if (data.hasOwnProperty(key)){
-            if(data[key]!== ""){
-                hasValue = true;
-            }
-        }
-    }
-    if(!hasValue){
-        //If no fields are displayed - display a warning.  Additional functionality can be added
-        // here if you want to prevent the user from continuing or displaying more prominent UI alerts
-        KDF.showWarning('Please enter at least one search term');
-    }
-    return hasValue;
-}
 /*END MANAGE INDIVIDUAL*/
