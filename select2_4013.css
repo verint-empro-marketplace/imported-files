@@ -56,7 +56,9 @@
   position: absolute;
   left: -100000px;
   width: 100%;
-  z-index: 1051; }
+  z-index: 1051; 
+  font-family: "Open sans", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif !important;	
+}
 
 .select2-results {
   display: block; }
