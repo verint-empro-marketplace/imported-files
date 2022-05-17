@@ -164,6 +164,19 @@ function formName(){
 	}
 }
 
+function setOptionText(name,text){
+    var select = document.getElementById("dform_widget_"+name+"_id");
+	
+	if(select.options.length < 1){
+	    //no results found
+    	var opt = document.createElement('option');
+    	opt.text = text;
+        opt.value = 'hidden';
+        opt.hidden=true;
+        select.appendChild(opt);    
+	}
+}
+
 Number.isInteger = Number.isInteger || function(value) {
     return typeof value === "number" && 
            isFinite(value) && 
