@@ -1,5 +1,17 @@
-#dform_container #dform_navigation li {
-	display:inline;
+#dform_container #dform_navigation li,
+#dform_container #dform_navigation li:hover,
+#dform_container #dform_navigation li.selected,
+#dform_container #dform_navigation li.selected:hover {
+    border: none;
+    border-left: 1px solid #DDD;
+    padding: 0 10px 0 10px;
+    float: left;
+    background: none;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    text-shadow: none;
+    color: #333333;
 }
 
 #dform_container #dform_pagenav {
