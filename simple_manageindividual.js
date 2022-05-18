@@ -330,6 +330,16 @@ function validateProperty(param){
     }
 }
 
+function hideIndividualSearchYd(){
+    hideSections(['area_yd_customer_details','area_yd_additional_details']);
+}
+
+function hidePropertySearchYd(){
+    KDF.hideSection("area_yd_property_details");
+    KDF.hideWidget("bset_your_details_next_updateaddress");
+    KDF.hideWidget("but_yd_edit_address");
+}
+
 function clearCustomerInformation() {
     var params = [ 'txt_firstname', 'txt_lastname', 'eml_email', 'txt_contact_number'];
     clearValue(params);
