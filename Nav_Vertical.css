@@ -15,6 +15,7 @@
     text-decoration: underline;
 }
 
+#dform_container #dform_navigation li:hover,
 #dform_container #dform_navigation li.selected,
 #dform_container #dform_navigation li.selected:hover {
     font-weight: bold !important;
