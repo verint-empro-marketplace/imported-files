@@ -76,8 +76,8 @@ function do_KDF_Ready_Individual(event, kdf) {
 					'txt_c_addressnumber': KDF.getVal('txt_address_number_yd'),
 					'txt_c_addressline1': KDF.getVal('txt_street_name_yd'),
 		    		'txt_c_city': KDF.getVal('txt_city_yd'),
-					'txt_c_zipcode': KDF.getVal('txt_c_zipcode'),
-					'txt_c_uprn': KDF.getVal('txt_c_uprn')
+		    		'txt_c_statecode': KDF.getVal('sel_statecode_yd'),
+					'txt_c_zipcode': KDF.getVal('txt_zipcode_yd')
 				});	
         }
         else{
@@ -91,8 +91,8 @@ function do_KDF_Ready_Individual(event, kdf) {
 					'num_p_streetnumber': KDF.getVal('txt_address_number_yd'),
 					'txt_p_streetname': KDF.getVal('txt_street_name_yd'),
 					'txt_p_city': KDF.getVal('txt_city_yd'),
-					'txt_p_zipcode': KDF.getVal('txt_cust_info_zipcode'),
-					'txt_p_uprn': KDF.getVal('txt_p_uprn'),
+					'txt_p_zipcode': KDF.getVal('txt_zipcode_yd'),
+					'txt_p_statecode': KDF.getVal('sel_statecode_yd'),
 					'email':KDF.getVal('eml_email')
 				});     
             }
@@ -237,7 +237,7 @@ function custDetailsCheck() {
 function custAddresssCheck() {
 
     if (KDF.getVal('txt_address_number_yd') !== KDF.getVal('txt_logic_streetnumber') || KDF.getVal('txt_street_name_yd') !== KDF.getVal('txt_logic_streetname') ||
-        KDF.getVal('txt_city_yd') !== KDF.getVal('txt_logic_city')) {
+        KDF.getVal('txt_city_yd') !== KDF.getVal('txt_logic_city') || KDF.getVal('sel_statecode_yd') !== KDF.getVal('txt_logic_statecode')) {
         return true;
     } else {
         return false;
