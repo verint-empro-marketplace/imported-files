@@ -181,6 +181,8 @@ function do_KDF_Custom_Individual(event, kdf, response, action) {
 		    KDF.setVal('txt_addressnum',response.data['addressNumber']);
 	        KDF.setVal('txt_street_name',response.data['streetName']);
 	        KDF.setVal('txt_city',response.data['city']);
+		    KDF.setVal('txt_zipcode',response.data['zipcode']);
+		    KDF.setVal('sel_statecode',response.data['stateCode']);
 		}
 	}
 }//end do_KDF_Custom_Individual()
@@ -287,6 +289,8 @@ function doCreateCustomerFlow(){
         KDF.setVal('txt_address_number_yd',KDF.getVal('txt_addressnum'));
 	    KDF.setVal('txt_street_name_yd',KDF.getVal('txt_street_name'));
 	    KDF.setVal('txt_city_yd',KDF.getVal('txt_city'));
+	    KDF.setVal('txt_zipcode_yd',KDF.getVal('txt_zipcode'));
+	    KDF.setVal('sel_statecode_yd',KDF.getVal('sel_statecode'));
     }
 }
 
