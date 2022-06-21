@@ -108,6 +108,10 @@ function do_KDF_Ready_Individual(event, kdf) {
         
         var params_widgets = [ 'but_next_update_yd'];
         showWidgets(params_widgets); 
+		
+		if (KDF.kdf().authenticated) {
+			KDF.customdata('person-retrieve-new', individualTemplateIdentifier + 'KDF_Ready', true, true, { 'person_search_results': KDF.kdf().profileData.customerid });
+		}
     }
 }//end do_KDF_Ready_Individual
 
@@ -123,11 +127,15 @@ function do_KDF_Custom_Individual(event, kdf, response, action) {
 			KDF.showWidget('bset_your_details_next_updateaddress');
 			//Ensure the First Name and Last Name are read-only, aunthenticated citizen
 			if (KDF.kdf().access === 'citizen') {
+			    KDF.showWidget('txta_address_yd');
 				KDF.hideWidget('ahtm_manually_entered_address_info');
 				KDF.showSection('area_your_details_addressdetails');
 
 				$("#dform_widget_txt_firstname").attr("readonly", true);
 				$("#dform_widget_txt_lastname").attr("readonly", true);
+				$("#dform_widget_eml_email").attr("readonly", true);
+				$("#dform_widget_txt_contact_number").attr("readonly", true);
+				
 			}
 			
 			setDefaultAddress(response);
@@ -196,14 +204,9 @@ function do_KDF_objectdataLoaded_Individual(event, kdf, response, type, id) {
 
 	showWidgets(['txta_address_yd','bset_your_details_next_updateaddress','but_cust_info_update_address']);
 	showSections(['area_customer_information','area_your_details_next_updateaddress','']);    
-        
-        KDF.setVal('txt_address_number_yd', response["profile-AddressNumber"]);
-	    KDF.setVal('txt_street_name_yd', response["profile-AddressLine1"]);
-	    KDF.setVal('txt_city_yd', response["profile-City"]);
-	    KDF.setVal('txt_zipcode_yd', response["profile-Zipcode"]);
 	    
 	    hideWidgets(['txt_address_number_yd','txt_city_yd','txt_street_name_yd','but_yd_edit_address', 'rad_yd_same_address']);
-	    KDF.setVal('txta_address_yd',validateFullAddress(['txt_address_number_yd','txt_street_name_yd','txt_city_yd','txt_zipcode_yd']));			
+	    			
 	    //set default value for placeholder fields used in update individual
 	    KDF.setVal('txt_logic_streetnumber', response["profile-AddressNumber"]);
 	    KDF.setVal('txt_logic_streetname', response["profile-AddressLine1"]);
@@ -324,6 +327,7 @@ function validateFullAddress(params){
 }
 
 function validateProperty(param){
+
     var property_error_msg = 'Please provide property details';
     
     if(KDF.getVal(param) != ''){
