@@ -200,14 +200,9 @@ function do_KDF_objectdataLoaded_Individual(event, kdf, response, type, id) {
 
 	showWidgets(['txta_address_yd','bset_your_details_next_updateaddress','but_cust_info_update_address']);
 	showSections(['area_customer_information','area_your_details_next_updateaddress','']);    
-        
-        KDF.setVal('txt_address_number_yd', response["profile-AddressNumber"]);
-	    KDF.setVal('txt_street_name_yd', response["profile-AddressLine1"]);
-	    KDF.setVal('txt_city_yd', response["profile-City"]);
-	    KDF.setVal('txt_postcode_yd', response["profile-Postcode"]);
 	    
 	    hideWidgets(['txt_address_number_yd','txt_city_yd','txt_street_name_yd','but_yd_edit_address', 'rad_yd_same_address']);
-	    KDF.setVal('txta_address_yd',validateFullAddress(['txt_address_number_yd','txt_street_name_yd','txt_city_yd','txt_postcode_yd']));			
+			
 	    //set default value for placeholder fields used in update individual
 	    KDF.setVal('txt_logic_streetnumber', response["profile-AddressNumber"]);
 	    KDF.setVal('txt_logic_streetname', response["profile-AddressLine1"]);
