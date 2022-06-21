@@ -107,7 +107,11 @@ function do_KDF_Ready_Individual(event, kdf) {
         showSections(params); 
         
         var params_widgets = [ 'but_next_update_yd'];
-        showWidgets(params_widgets); 
+        showWidgets(params_widgets);
+	
+	if (KDF.kdf().authenticated) {
+		KDF.customdata('person-retrieve-new', individualTemplateIdentifier + 'KDF_Ready', true, true, { 'person_search_results': KDF.kdf().profileData.customerid });
+	}
     }
 }//end do_KDF_Ready_Individual
 
@@ -128,6 +132,8 @@ function do_KDF_Custom_Individual(event, kdf, response, action) {
 
 				$("#dform_widget_txt_firstname").attr("readonly", true);
 				$("#dform_widget_txt_lastname").attr("readonly", true);
+				$("#dform_widget_eml_email").attr("readonly", true);
+				$("#dform_widget_txt_contact_number").attr("readonly", true);
 			}
 			
 			setDefaultAddress(response);
