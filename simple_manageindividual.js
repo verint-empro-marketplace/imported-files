@@ -127,6 +127,7 @@ function do_KDF_Custom_Individual(event, kdf, response, action) {
 			KDF.showWidget('bset_your_details_next_updateaddress');
 			//Ensure the First Name and Last Name are read-only, aunthenticated citizen
 			if (KDF.kdf().access === 'citizen') {
+				KDF.showWidget('txta_address_yd');
 				KDF.hideWidget('ahtm_manually_entered_address_info');
 				KDF.showSection('area_your_details_addressdetails');
 
