@@ -257,6 +257,29 @@ function custAddresssCheck() {
     });
 })(jQuery);
 
+function hideManualEnterAddress(is_noresult_property){
+    hideWidgets(['txt_addressnum','txt_street_name','txt_city']);   
+    clearValue(['txt_addressnum','txt_street_name','txt_city','txta_address']);
+    clearValueHtml(['location_search_property_addressnumber','location_search_property_streetname','location_search_property_postcode']);
+    if(is_noresult_property == false){
+        KDF.hideWidget('but_edit_address');    
+    }
+}
+
+function hideManualEnterAddressYd(is_noresult_property_yd){
+    hideWidgets(['txt_address_number_yd','txt_street_name_yd','txt_city_yd']);
+    clearValue(['txt_address_number_yd','txt_street_name_yd','txt_city_yd','txta_address_yd']);
+    clearValueHtml(['location-search-citizen_addressnumber','location-search-citizen_streetname','location-search-citizen_postcode']);
+    if(is_noresult_property_yd == false){
+        KDF.hideWidget('but_yd_edit_address');
+    }
+}
+
+hideWidgets(['txt_address_number_yd','txt_street_name_yd','txt_city_yd']);
+            clearValue(['txt_address_number_yd','txt_street_name_yd','txt_city_yd','txta_address_yd']);
+            clearValueHtml(['location-search-citizen_addressnumber','location-search-citizen_streetname','location-search-citizen_postcode']);
+            KDF.hideWidget('but_yd_edit_address');
+
 function showCustomerSearchYdWidgets(){
     var params = [ 'area_yd_customer_details', 'area_yd_additional_details', 'area_yd_property_details'];
     showSections(params);
@@ -334,12 +357,12 @@ function validateProperty(param){
 
 function hideIndividualSearchYd(){
     hideSections(['area_yd_customer_details','area_yd_additional_details']);
+    hideWidgets(["ahtm_no_result_yd","rad_yd_same_address"]);
 }
 
 function hidePropertySearchYd(){
     KDF.hideSection("area_yd_property_details");
-    KDF.hideWidget("bset_your_details_next_updateaddress");
-    KDF.hideWidget("but_yd_edit_address");
+    hideWidgets(["bset_your_details_next_updateaddress","but_yd_edit_address","ahtm_no_result_yd"]);
 }
 
 function clearCustomerInformation() {
@@ -378,9 +401,13 @@ function clearValue (params){
 }
 
 function clearValueHtml (params){
-  for (i=0; i<params.length; i++) {
-    document.getElementById(params[i]).value = '';
-  }
+    if(params != null){
+        for (i=0; i<params.length; i++) {
+          if(params[i] != null){
+            $('#'+params[i]).val('');
+          }
+        }    
+    }
 }	
 
 function disableWidgets (params){
