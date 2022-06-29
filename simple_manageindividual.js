@@ -298,6 +298,7 @@ function doCreateCustomerFlow(){
     KDF.showSection('area_property_search_yd');
     hideWidgets(['txta_address_yd','bset_your_details_next_updateaddress']);
     KDF.hideSection('area_yd_property_details');
+    KDF.hideWidget('ahtm_no_result_yd');
     
     var options = document.getElementById("dform_widget_cs_customer_search_id").options;
     options[0].selected = true;
