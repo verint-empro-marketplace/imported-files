@@ -301,7 +301,7 @@ function doCreateCustomerFlow(){
     KDF.hideWidget('ahtm_no_result_yd');
     
     var options = document.getElementById("dform_widget_cs_customer_search_id").options;
-    options[0].selected = true;
+    if(options)options[0].selected = true;
     
     //use the same address
     if(KDF.getVal('txta_address') != '' && getIncidentPropertyId() != ''){
