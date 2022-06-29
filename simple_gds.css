@@ -379,6 +379,51 @@ div.icon-place {
   border-width: 0 5px 0 0;
 }
 
+.warning-notice {
+    position: relative;
+    background-color: #FFBABA;
+    padding: 10px 10px 10px 55px;
+    border: solid #b10e1e;
+    border-width: 5px ;
+    margin-bottom: 15px;
+}
+.dform_widget_type_html .warning-notice{
+    padding: 0px 0px 0px 55px;
+}
+.warning-notice-icon {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 38px;
+  width: 38px;
+  background-color: #b10e1e;
+  border-radius: 50%;
+  margin-left: 5px;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.warning-notice-icon-a {
+  position: absolute;
+  left: 17px;
+  top: 6px;
+  width: 0px;
+  height: 19px;
+  border: solid white;
+  border-width: 0 5px 0 0;
+}
+.warning-notice-icon-b {
+  position: absolute;
+  left: 17px;
+  top: 28px;
+  width: 0px;
+  height: 5px;
+  border: solid white;
+  border-width: 0 5px 0 0;
+}
+
 .width-fit-content{
     width: fit-content !important;
     width: intrinsic !important;
