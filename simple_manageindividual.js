@@ -42,8 +42,8 @@ function do_KDF_Ready_Individual(event, kdf) {
          $("#dform_widget_txt_street_name_yd").attr("readonly", false);
          $("#dform_widget_txt_city_yd").attr("readonly", false);
          
-         var options = document.getElementById("location-search-citizen_results").options;
-         options[0].selected = true;
+         $("#location-search-citizen_results")[0].selectedIndex = 0;
+         
     }); 
 
     $('#dform_widget_cs_customer_search_resultholder').on('show', function () {
@@ -300,8 +300,7 @@ function doCreateCustomerFlow(){
     KDF.hideSection('area_yd_property_details');
     KDF.hideWidget('ahtm_no_result_yd');
     
-    var options = document.getElementById("dform_widget_cs_customer_search_id").options;
-    if(options)options[0].selected = true;
+    $("#dform_widget_cs_customer_search_id")[0].selectedIndex = 0;
     
     //use the same address
     if(KDF.getVal('txta_address') != '' && getIncidentPropertyId() != ''){
