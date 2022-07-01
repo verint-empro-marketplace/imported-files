@@ -181,7 +181,7 @@ function do_KDF_Custom_Individual(event, kdf, response, action) {
 		    KDF.setVal('txt_property_id',response.data['first_result_value']);
 		    KDF.showWidget('rad_existing_address');
 		    KDF.hideSection('area_property_search');
-		    $('#dform_widget_rad_existing_address1').next().html(KDF.getVal('txt_profile_address'));
+		    $('#dform_widget_rad_existing_address1').next().html('Yes - '+KDF.getVal('txt_profile_address'));
 		}
 		else if(action === 'retrieve-property'){
 		    //will be used as default address when creating new customer
@@ -307,7 +307,7 @@ function doCreateCustomerFlow(){
         KDF.hideSection('area_property_search_yd');
         KDF.showWidget('rad_yd_same_address');
         
-        $('#dform_widget_rad_yd_same_address1').next().html(KDF.getVal('txta_address'));
+        $('#dform_widget_rad_yd_same_address1').next().html('Yes - '+KDF.getVal('txta_address'));
         
         KDF.setVal('txt_address_number_yd',KDF.getVal('txt_addressnum'));
 	    KDF.setVal('txt_street_name_yd',KDF.getVal('txt_street_name'));
