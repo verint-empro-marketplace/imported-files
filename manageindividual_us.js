@@ -182,7 +182,7 @@ function do_KDF_Custom_Individual(event, kdf, response, action) {
 		    KDF.setVal('txt_property_id',response.data['first_result_value']);
 		    KDF.showWidget('rad_existing_address');
 		    KDF.hideSection('area_property_search');
-		    $('#dform_widget_rad_existing_address1').next().html(KDF.getVal('txt_profile_address'));
+		    $('#dform_widget_rad_existing_address1').next().html('Yes - '+KDF.getVal('txt_profile_address'));
 		}
 		else if(action === 'retrieve-property'){
 		    //will be used as default address when creating new customer
@@ -279,15 +279,14 @@ function doCreateCustomerFlow(){
     hideWidgets(['txta_address_yd','bset_your_details_next_updateaddress']);
     KDF.hideSection('area_yd_property_details');
     
-    var options = document.getElementById("dform_widget_cs_customer_search_id").options;
-    options[0].selected = true;
+    $("#dform_widget_cs_customer_search_id")[0].selectedIndex = 0;
     
     //use the same address
     if(KDF.getVal('txta_address') != '' && getIncidentPropertyId() != ''){
         KDF.hideSection('area_property_search_yd');
         KDF.showWidget('rad_yd_same_address');
         
-        $('#dform_widget_rad_yd_same_address1').next().html(KDF.getVal('txta_address'));
+        $('#dform_widget_rad_yd_same_address1').next().html('Yes - '+KDF.getVal('txta_address'));
         
         KDF.setVal('txt_address_number_yd',KDF.getVal('txt_addressnum'));
 	    KDF.setVal('txt_street_name_yd',KDF.getVal('txt_street_name'));
@@ -351,6 +350,26 @@ function hidePropertySearchYd(){
 function clearCustomerInformation() {
     var params = [ 'txt_firstname', 'txt_lastname', 'eml_email', 'txt_contact_number'];
     clearValue(params);
+}
+
+function hideManualEnterAddress(is_noresult_property){
+    
+    hideWidgets(['txt_addressnum','txt_street_name','txt_city','sel_statecode']);   
+    clearValue(['txt_addressnum','txt_street_name','txt_city','txta_address']);
+    clearValueHtml(['location_search_property_addressnumber','location_search_property_streetname','location_search_property_zipcode']);
+    if(is_noresult_property == false){
+        KDF.hideWidget('but_edit_address');    
+    }
+}
+
+function hideManualEnterAddressYd(is_noresult_property_yd){
+    
+    hideWidgets(['txt_address_number_yd','txt_street_name_yd','txt_city_yd','sel_statecode_yd']);
+    clearValue(['txt_address_number_yd','txt_street_name_yd','txt_city_yd','txta_address_yd']);
+    clearValueHtml(['location-search-citizen_addressnumber','location-search-citizen_streetname','location-search-citizen_zipcode']);
+    if(is_noresult_property_yd == false){
+        KDF.hideWidget('but_yd_edit_address');
+    }
 }
 
 function showWidgets (params){
@@ -419,3 +438,4 @@ function toggleNavigation(){
 	}
 }
 /*END MANAGE INDIVIDUAL*/
+
