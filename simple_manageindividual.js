@@ -59,7 +59,7 @@ function do_KDF_Ready_Individual(event, kdf) {
     $('#dform_widget_cs_customer_search_resultholder').on('hide', function () {
         clearCustomerInformation();
 	hideSections(['area_customer_information', 'area_your_details_next_updateaddress','area_property_search_yd']);
-	hideWidgets(['bset_your_details_next_updateaddress', 'but_individual_not_found', 'txta_address_yd']);
+	hideWidgets(['bset_your_details_next_updateaddress', 'but_individual_not_found', 'but_update_customer', 'txta_address_yd']);
 	KDF.setVal('txta_address_yd','');
 	clearValueHtml(['dform_widget_cs_txt_firstname','dform_widget_cs_txt_lastname','dform_widget_cs_txt_emailaddress','dform_widget_cs_txt_phonenumber']);    
     });
@@ -199,10 +199,11 @@ function do_KDF_objectdataLoaded_Individual(event, kdf, response, type, id) {
         
         KDF.setVal('txt_customer_id', id);
 
-	showWidgets(['txta_address_yd','bset_your_details_next_updateaddress','but_cust_info_update_address']);
-	showSections(['area_customer_information','area_your_details_next_updateaddress','']);    
+	    showWidgets(['txta_address_yd','bset_your_details_next_updateaddress','but_cust_info_update_address', 'but_update_customer']);
+	    showSections(['area_customer_information','area_your_details_next_updateaddress','']);    
 	    
 	    hideWidgets(['txt_address_number_yd','txt_city_yd','txt_street_name_yd','but_yd_edit_address', 'rad_yd_same_address']);
+		disableWidgets(['#dform_widget_txt_firstname','#dform_widget_txt_lastname','#dform_widget_eml_email','#dform_widget_txt_contact_number']);
 			
 	    //set default value for placeholder fields used in update individual
 	    KDF.setVal('txt_logic_streetnumber', response["profile-AddressNumber"]);
@@ -299,6 +300,8 @@ function doCreateCustomerFlow(){
     hideWidgets(['txta_address_yd','bset_your_details_next_updateaddress']);
     KDF.hideSection('area_yd_property_details');
     KDF.hideWidget('ahtm_no_result_yd');
+    
+    enableWidgets(['#dform_widget_txt_firstname','#dform_widget_txt_lastname','#dform_widget_eml_email','#dform_widget_txt_contact_number']);
     
     $("#dform_widget_cs_customer_search_id")[0].selectedIndex = 0;
     
