@@ -276,11 +276,6 @@ function hideManualEnterAddressYd(is_noresult_property_yd){
     }
 }
 
-hideWidgets(['txt_address_number_yd','txt_street_name_yd','txt_city_yd']);
-            clearValue(['txt_address_number_yd','txt_street_name_yd','txt_city_yd','txta_address_yd']);
-            clearValueHtml(['location-search-citizen_addressnumber','location-search-citizen_streetname','location-search-citizen_postcode']);
-            KDF.hideWidget('but_yd_edit_address');
-
 function showCustomerSearchYdWidgets(){
     var params = [ 'area_yd_customer_details', 'area_yd_additional_details', 'area_yd_property_details'];
     showSections(params);
