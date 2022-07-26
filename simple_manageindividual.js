@@ -30,6 +30,10 @@ function do_KDF_Ready_Individual(event, kdf) {
 		if (typeof KDF.getParams().customerid !== 'undefined' && KDF.getParams().customerid !== '') {
 			KDF.customdata('person-retrieve-new', individualTemplateIdentifier + 'KDF_Ready', true, true, { 'person_search_results': KDF.getParams().customerid });
 		}
+		else{
+			//prevents flickering issue when displaying same address rad button
+			KDF.showSection('area_property_search');	
+		}	
 	}
 
     //manual enter address yd
