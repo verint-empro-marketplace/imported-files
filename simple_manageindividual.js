@@ -307,7 +307,7 @@ function doCreateCustomerFlow(){
     //use the same address
     if(KDF.getVal('txta_address') != '' && getIncidentPropertyId() != ''){
         KDF.hideSection('area_property_search_yd');
-        KDF.showWidget('rad_yd_same_address');
+        showWidgets(['rad_yd_same_address','but_update_customer']);
         
         $('#dform_widget_rad_yd_same_address1').next().html('Yes - '+KDF.getVal('txta_address'));
         
