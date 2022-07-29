@@ -117,6 +117,8 @@ function do_KDF_Ready_Individual(event, kdf) {
 		KDF.customdata('person-retrieve-new', individualTemplateIdentifier + 'KDF_Ready', true, true, { 'person_search_results': KDF.kdf().profileData.customerid });
 	}
     }
+	
+    toggleNavigation();		
 }//end do_KDF_Ready_Individual
 
 function do_KDF_Custom_Individual(event, kdf, response, action) {	
