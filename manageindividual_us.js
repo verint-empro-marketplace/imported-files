@@ -414,10 +414,14 @@ function clearValue (params){
 }
 
 function clearValueHtml (params){
-  for (i=0; i<params.length; i++) {
-    document.getElementById(params[i]).value = '';
-  }
-}	
+    if(params != null){
+        for (i=0; i<params.length; i++) {
+          if(params[i] != null){
+            $('#'+params[i]).val('');
+          }
+        }    
+    }
+}
 
 function disableWidgets (params){
   for (i=0; i<params.length; i++) {
