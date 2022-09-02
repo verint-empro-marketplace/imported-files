@@ -109,7 +109,7 @@ function do_KDF_Ready_Individual(event, kdf) {
     });
     
     if (KDF.kdf().access === 'citizen') {
-	    var params = [ 'area_yd_customer_details', 'area_yd_additional_details', 'area_property_search_yd', 'area_yd_property_details'];
+	    var params = [ 'area_yd_customer_details', 'area_yd_additional_details', 'area_property_search_yd', 'area_yd_property_details', 'area_property_search'];
         showSections(params); 
         
         var params_widgets = [ 'but_next_update_yd'];
