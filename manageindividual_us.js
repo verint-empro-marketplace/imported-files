@@ -138,6 +138,7 @@ function do_KDF_Custom_Individual(event, kdf, response, action) {
 			    KDF.showWidget('txta_address_yd');
 				KDF.hideWidget('ahtm_manually_entered_address_info');
 				KDF.showSection('area_your_details_addressdetails');
+				KDF.hideSection('area_property_search_yd');
 
 				$("#dform_widget_txt_firstname").attr("readonly", true);
 				$("#dform_widget_txt_lastname").attr("readonly", true);
