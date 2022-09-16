@@ -116,6 +116,9 @@ function do_KDF_Ready_Individual(event, kdf) {
 	if (KDF.kdf().authenticated) {
 		KDF.customdata('person-retrieve-new', individualTemplateIdentifier + 'KDF_Ready', true, true, { 'person_search_results': KDF.kdf().profileData.customerid });
 	}
+	else{
+		KDF.hideSection('area_property_search_yd');    
+	}
     }
 	
     toggleNavigation();		
