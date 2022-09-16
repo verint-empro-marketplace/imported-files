@@ -144,6 +144,10 @@ function do_KDF_Custom_Individual(event, kdf, response, action) {
 				$("#dform_widget_txt_lastname").attr("readonly", true);
 				$("#dform_widget_eml_email").attr("readonly", true);
 				$("#dform_widget_txt_contact_number").attr("readonly", true);
+				
+				if(KDF.getVal('txta_address_yd')!==''){
+					KDF.hideSection('area_property_search_yd');
+				}	
 			}
 			
 			setDefaultAddress(response);
