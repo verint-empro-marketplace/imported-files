@@ -18,9 +18,10 @@
 #dform_container #dform_navigation li:hover,
 #dform_container #dform_navigation li.selected,
 #dform_container #dform_navigation li.selected:hover {
-    font-weight: bold !important;
+    font-weight: initial !important;
     border: none !important;
     border-left: 1px solid #DDD !important;
+    color: #DDD;
 }
 
 #dform_container #dform_pagenav {
