@@ -10,15 +10,6 @@ function do_KDF_Ready_Individual(event, kdf) {
 
 		$('#dform_widget_eml_email').prop('required', true);
 		
-		//auto search for customer
-		if($("#dform_widget_txt_firstname").val().length >0 || $("#dform_widget_txt_lastname").val().length > 0){
-    		$("#dform_widget_cs_txt_firstname").val($("#dform_widget_txt_firstname").val());
-    		$("#dform_widget_cs_txt_lastname").val($("#dform_widget_txt_lastname").val());
-    		$("#dform_widget_cs_customer_search_searchbutton").click();
-    		$("#dform_widget_cs_txt_firstname").val();
-    		$("#dform_widget_cs_txt_lastname").val();
-		}
-		
 		if (typeof KDF.getParams().customerid !== 'undefined' && KDF.getParams().customerid !== '') {
 			KDF.customdata('person-retrieve-new', individualTemplateIdentifier + 'KDF_Ready', true, true, { 'person_search_results': KDF.getParams().customerid });
 		}
@@ -28,7 +19,7 @@ function do_KDF_Ready_Individual(event, kdf) {
 		}	
 	}
 	
-	//Get serviceid parameter from URL
+    //Get serviceid parameter from URL
     var service_id = parseInt(KDF.kdf().params.le_eventcode, 10);
     var values = [];
     var service_dropdown_value;
