@@ -26,7 +26,48 @@ function do_KDF_Ready_Individual(event, kdf) {
 		}	
 	}
 	
-	if(KDF.getVal('txt_created_by') == ''){
+	//Get serviceid parameter from URL
+    var service_id = parseInt(KDF.kdf().params.le_eventcode, 10);
+    var values = [];
+    var service_dropdown_value;
+    
+    //Get all of the value on each select element on case dropdown, save it to values array
+    $("#dform_widget_le_eventcode").children().each(function(){
+        service_dropdown_value = $(this).val();
+        if (service_dropdown_value !== ''){
+            values.push(parseInt(service_dropdown_value,10));
+        }
+    });
+
+    //Check whether given serviceid params is on the values array
+    //If so, set the selected element as 'selected', update the header title (with case name), and hide the dropdown
+    if(!Number.isNaN(service_id) && values.findIndex(x => x == service_id) > -1){
+        
+        $("#dform_widget_le_eventcode").hide();
+        $("#dform_widget_le_eventcode").val(service_id).prop('selected',true);
+        
+        var final_header_page = $("#dform_widget_le_eventcode option:selected").text();
+        
+        $("#dform_page_report_non_emerg").find(".header2").text(final_header_page);
+        $("label[for =dform_widget_le_eventcode]").hide();
+        KDF.hideWidget('le_eventcode');
+    }
+    
+    //Setting tabindex=0 for headings --> this to fix accessibility issues in heading for not being narrated by NVDA
+    $("#dform_widget_header_hrd_addresssearch").attr("tabindex","0");
+    $("#dform_widget_header_hrd_address_details").attr("tabindex","0");
+    $("#dform_widget_header_hrd_report_summary").attr("tabindex","0");
+    $("label[for='dform_widget_le_eventcode']").attr("tabindex","0");
+    
+    
+    //Instantiate select2 widget for search inside the service dropdown
+    $("#dform_widget_le_eventcode").select2({
+        width: '31.5%',
+        dropdownAutoWidth: true,
+        placeholder:'Please select...',
+    });
+	
+    if(KDF.getVal('txt_created_by') == ''){
         KDF.setVal('txt_created_by',KDF.kdf().access);
     }
     //view mode 
