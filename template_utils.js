@@ -25,6 +25,28 @@ function do_KDF_Ready_Individual(event, kdf) {
 			KDF.showSection('area_property_search');	
 		}	
 	}
+	
+	if(KDF.getVal('txt_created_by') == ''){
+        KDF.setVal('txt_created_by',KDF.kdf().access);
+    }
+    //view mode 
+    if(KDF.kdf().viewmode == 'R'){
+	    KDF.showNav();
+	    showWidgets(['txta_address_yd','txt_firstname','txt_lastname','eml_email','txt_contact_number']);
+	    showSections(['area_yd_customer_details','area_yd_additional_details']);
+	    toggleNavigation();
+	}
+	
+	//edit mode
+	if(KDF.kdf().viewmode == 'U'){
+	    KDF.showNav();
+	    showWidgets(['txta_address_yd','txt_firstname','txt_lastname','eml_email','txt_contact_number']);
+	    showSections(['area_yd_customer_details','area_yd_additional_details']);
+	    
+	    if(KDF.getVal('txt_created_by') == "citizen"){
+	        showWidgets(['but_next_update_yd','bset_your_details_next_updateaddress','but_cust_info_update_address']);
+	    }
+	}
 }
 
 function do_KDF_Custom_Individual(event, kdf, response, action){
