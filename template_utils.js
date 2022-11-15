@@ -1,3 +1,71 @@
+function do_KDF_Custom_Individual(event, kdf, response, action){
+	var isIndividualTemplate = false;
+	
+	if (response.actionedby.indexOf(individualTemplateIdentifier) === 0) {isIndividualTemplate = true;}
+	
+	if (isIndividualTemplate) {		
+		var actionedBySource = response.actionedby.replace(individualTemplateIdentifier, '');
+		
+		if (action === 'person-retrieve-new' && actionedBySource === 'KDF_Ready') {
+			KDF.showWidget('bset_your_details_next_updateaddress');
+			//Ensure the First Name and Last Name are read-only, aunthenticated citizen
+			if (KDF.kdf().access === 'citizen') {
+				KDF.showWidget('txta_address_yd');
+				KDF.hideWidget('ahtm_manually_entered_address_info');
+				KDF.showSection('area_your_details_addressdetails');
+
+				$("#dform_widget_txt_firstname").attr("readonly", true);
+				$("#dform_widget_txt_lastname").attr("readonly", true);
+				$("#dform_widget_eml_email").attr("readonly", true);
+				$("#dform_widget_txt_contact_number").attr("readonly", true);
+				
+				if(response.data['profile-Address'] !== ''){
+					KDF.hideSection('area_property_search_yd');
+				}	
+			}
+			
+			setDefaultAddress(response);
+			
+			KDF.setVal('txt_profile_address',response.data['profile-Address']);
+			KDF.customdata('widget-property-search', individualTemplateIdentifier + 'search-property', true, true, {
+					'addressnumber': response.data['profile-AddressNumber'],
+					'streetname': response.data['profile-AddressLine1']
+				}); 
+			
+			showWidgets(['txta_address_yd','bset_your_details_next_updateaddress','but_cust_info_update_address']);
+			KDF.showSection('area_customer_information');
+			KDF.showSection('area_your_details_next_updateaddress');
+			
+			showWidgets(['txta_address_yd','bset_your_details_next_updateaddress','but_cust_info_update_address', 'but_update_customer']);
+	        showSections(['area_customer_information','area_your_details_next_updateaddress','']);    
+	    
+	        hideWidgets(['txt_address_number_yd','txt_city_yd','txt_street_name_yd','but_yd_edit_address', 'rad_yd_same_address']);
+		    disableWidgets(['#dform_widget_txt_firstname','#dform_widget_txt_lastname','#dform_widget_eml_email','#dform_widget_txt_contact_number']);
+			
+	        //set default value for placeholder fields used in update individual
+	        KDF.setVal('txt_logic_streetnumber', response["profile-AddressNumber"]);
+	        KDF.setVal('txt_logic_streetname', response["profile-AddressLine1"]);
+	        KDF.setVal('txt_logic_town', response["profile-City"]);
+	        KDF.setVal('txt_logic_postcode', response["profile-Postcode"]);
+		}
+		else if (action === 'person-retrieve-new' && actionedBySource == 'search-individual') {
+			KDF.setVal('txt_cust_info_uprn', KDF.getVal('txt_logic_uprn'));
+		}
+		else if(action === 'widget-property-search'){
+		    KDF.setVal('txt_property_id',response.data['first_result_value']);
+		    KDF.showWidget('rad_existing_address');
+		    KDF.hideSection('area_property_search');
+		    $('#dform_widget_rad_existing_address1').next().html('Yes - '+KDF.getVal('txt_profile_address'));
+		}
+		else if(action === 'retrieve-property'){
+		    //will be used as default address when creating new customer
+		    KDF.setVal('txt_addressnum',response.data['addressNumber']);
+	        KDF.setVal('txt_street_name',response.data['streetName']);
+	        KDF.setVal('txt_city',response.data['town']);
+		}
+	}	
+}	
+
 function getIncidentPropertyId(){
     var propertyId = '';
     
