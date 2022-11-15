@@ -1,3 +1,5 @@
+var individualTemplateIdentifier = 'individual_template_';
+
 function do_KDF_Ready_Individual(event, kdf) {
 	var form_name = kdf.name;
 	KDF.showSection('area_customer_information');
