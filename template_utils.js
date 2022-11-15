@@ -1,3 +1,32 @@
+function do_KDF_Ready_Individual(event, kdf) {
+	var form_name = kdf.name;
+	KDF.showSection('area_customer_information');
+	
+	if (KDF.kdf().access === 'agent' && KDF.getVal('rad_viewmode') !== 'R' && KDF.getVal('rad_viewmode') !== 'U') {
+		KDF.hideSection('area_customer_information');
+		KDF.hideSection('area_your_details_next_updateaddress');
+
+		$('#dform_widget_eml_email').prop('required', true);
+		
+		//auto search for customer
+		if($("#dform_widget_txt_firstname").val().length >0 || $("#dform_widget_txt_lastname").val().length > 0){
+    		$("#dform_widget_cs_txt_firstname").val($("#dform_widget_txt_firstname").val());
+    		$("#dform_widget_cs_txt_lastname").val($("#dform_widget_txt_lastname").val());
+    		$("#dform_widget_cs_customer_search_searchbutton").click();
+    		$("#dform_widget_cs_txt_firstname").val();
+    		$("#dform_widget_cs_txt_lastname").val();
+		}
+		
+		if (typeof KDF.getParams().customerid !== 'undefined' && KDF.getParams().customerid !== '') {
+			KDF.customdata('person-retrieve-new', individualTemplateIdentifier + 'KDF_Ready', true, true, { 'person_search_results': KDF.getParams().customerid });
+		}
+		else{
+			//prevents flickering issue when displaying same address rad button
+			KDF.showSection('area_property_search');	
+		}	
+	}
+}
+
 function do_KDF_Custom_Individual(event, kdf, response, action){
 	var isIndividualTemplate = false;
 	
