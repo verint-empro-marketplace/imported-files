@@ -18,19 +18,6 @@ function do_KDF_Ready_Individual(event, kdf) {
 			KDF.showSection('area_property_search');	
 		}	
 	}
-	
-    //Get serviceid parameter from URL
-    var service_id = parseInt(KDF.kdf().params.le_eventcode, 10);
-    var values = [];
-    var service_dropdown_value;
-    
-    //Get all of the value on each select element on case dropdown, save it to values array
-    $("#dform_widget_le_eventcode").children().each(function(){
-        service_dropdown_value = $(this).val();
-        if (service_dropdown_value !== ''){
-            values.push(parseInt(service_dropdown_value,10));
-        }
-    });
     
     //Setting tabindex=0 for headings --> this to fix accessibility issues in heading for not being narrated by NVDA
     $("#dform_widget_header_hrd_addresssearch").attr("tabindex","0");
