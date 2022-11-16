@@ -31,27 +31,12 @@ function do_KDF_Ready_Individual(event, kdf) {
             values.push(parseInt(service_dropdown_value,10));
         }
     });
-
-    //Check whether given serviceid params is on the values array
-    //If so, set the selected element as 'selected', update the header title (with case name), and hide the dropdown
-    if(!Number.isNaN(service_id) && values.findIndex(x => x == service_id) > -1){
-        
-        $("#dform_widget_le_eventcode").hide();
-        $("#dform_widget_le_eventcode").val(service_id).prop('selected',true);
-        
-        var final_header_page = $("#dform_widget_le_eventcode option:selected").text();
-        
-        $("#dform_page_report_non_emerg").find(".header2").text(final_header_page);
-        $("label[for =dform_widget_le_eventcode]").hide();
-        KDF.hideWidget('le_eventcode');
-    }
     
     //Setting tabindex=0 for headings --> this to fix accessibility issues in heading for not being narrated by NVDA
     $("#dform_widget_header_hrd_addresssearch").attr("tabindex","0");
     $("#dform_widget_header_hrd_address_details").attr("tabindex","0");
     $("#dform_widget_header_hrd_report_summary").attr("tabindex","0");
     $("label[for='dform_widget_le_eventcode']").attr("tabindex","0");
-    
     
     //Instantiate select2 widget for search inside the service dropdown
     $("#dform_widget_le_eventcode").select2({
