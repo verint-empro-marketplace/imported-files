@@ -65,16 +65,21 @@ function do_KDF_Custom_Individual(event, kdf, response, action){
 		
 		if (action === 'person-retrieve-new' && actionedBySource === 'KDF_Ready') {
 			KDF.showWidget('bset_your_details_next_updateaddress');
-			//Ensure the First Name and Last Name are read-only, aunthenticated citizen
 			if (KDF.kdf().access === 'citizen') {
-				KDF.showWidget('txta_address_yd');
+				//aunthenticated citizen
+				if(response.data.txt_customerID !== ''){
+					KDF.showWidget('txta_address_yd');
+				}
+				else{
+					$("#dform_widget_txt_firstname").attr("readonly", false);
+					$("#dform_widget_txt_lastname").attr("readonly", false);
+					$("#dform_widget_eml_email").attr("readonly", false);
+					$("#dform_widget_txt_contact_number").attr("readonly", false);	
+					
+					KDF.hideWidget('txta_address_yd');
+				}	
 				KDF.hideWidget('ahtm_manually_entered_address_info');
 				KDF.showSection('area_your_details_addressdetails');
-
-				$("#dform_widget_txt_firstname").attr("readonly", true);
-				$("#dform_widget_txt_lastname").attr("readonly", true);
-				$("#dform_widget_eml_email").attr("readonly", true);
-				$("#dform_widget_txt_contact_number").attr("readonly", true);
 				
 				if(response.data['profile-Address'] !== ''){
 					KDF.hideSection('area_property_search_yd');
