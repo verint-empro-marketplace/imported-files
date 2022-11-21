@@ -15,7 +15,17 @@ function do_KDF_Ready_Individual(event, kdf) {
 		}
 		else{
 			//prevents flickering issue when displaying same address rad button
-			KDF.showSection('area_property_search');	
+			KDF.showSection('area_property_search');
+			
+			if (KDF.kdf().access === 'citizen') {
+				//non aunthenticated citizen	
+				$("#dform_widget_txt_firstname").attr("readonly", false);
+				$("#dform_widget_txt_lastname").attr("readonly", false);
+				$("#dform_widget_eml_email").attr("readonly", false);
+				$("#dform_widget_txt_contact_number").attr("readonly", false);	
+					
+				KDF.hideWidget('txta_address_yd');
+			}
 		}	
 	}
     
@@ -66,24 +76,8 @@ function do_KDF_Custom_Individual(event, kdf, response, action){
 		if (action === 'person-retrieve-new' && actionedBySource === 'KDF_Ready') {
 			KDF.showWidget('bset_your_details_next_updateaddress');
 			if (KDF.kdf().access === 'citizen') {
-				//aunthenticated citizen
-				if(response.data.txt_customerID !== ''){
-					KDF.showWidget('txta_address_yd');
-				}
-				else{
-					$("#dform_widget_txt_firstname").attr("readonly", false);
-					$("#dform_widget_txt_lastname").attr("readonly", false);
-					$("#dform_widget_eml_email").attr("readonly", false);
-					$("#dform_widget_txt_contact_number").attr("readonly", false);	
-					
-					KDF.hideWidget('txta_address_yd');
-				}	
-				KDF.hideWidget('ahtm_manually_entered_address_info');
-				KDF.showSection('area_your_details_addressdetails');
-				
-				if(response.data['profile-Address'] !== ''){
-					KDF.hideSection('area_property_search_yd');
-				}	
+				//aunthenticated citizen	
+				KDF.showSection('area_your_details_addressdetails');	
 			}
 			
 			setDefaultAddress(response);
