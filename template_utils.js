@@ -16,17 +16,18 @@ function do_KDF_Ready_Individual(event, kdf) {
 		else{
 			//prevents flickering issue when displaying same address rad button
 			KDF.showSection('area_property_search');
-			
-			if (KDF.kdf().access === 'citizen') {
-				//non aunthenticated citizen	
-				$("#dform_widget_txt_firstname").attr("readonly", false);
-				$("#dform_widget_txt_lastname").attr("readonly", false);
-				$("#dform_widget_eml_email").attr("readonly", false);
-				$("#dform_widget_txt_contact_number").attr("readonly", false);	
-					
-				KDF.hideWidget('txta_address_yd');
-			}
 		}	
+	}
+	else if (KDF.kdf().access === 'citizen' && KDF.getVal('rad_viewmode') !== 'R' && KDF.getVal('rad_viewmode') !== 'U') {	
+		if (typeof KDF.getParams().customerid === 'undefined' && KDF.getParams().customerid === '') {
+			//non aunthenticated citizen	
+			$("#dform_widget_txt_firstname").attr("readonly", false);
+			$("#dform_widget_txt_lastname").attr("readonly", false);
+			$("#dform_widget_eml_email").attr("readonly", false);
+			$("#dform_widget_txt_contact_number").attr("readonly", false);	
+					
+			KDF.hideWidget('txta_address_yd');
+		}
 	}
     
     //Setting tabindex=0 for headings --> this to fix accessibility issues in heading for not being narrated by NVDA
