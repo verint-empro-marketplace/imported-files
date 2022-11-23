@@ -19,6 +19,7 @@ function do_KDF_Ready_Individual(event, kdf) {
 		}	
 	}
 	else if (KDF.kdf().access === 'citizen' && KDF.getVal('rad_viewmode') !== 'R' && KDF.getVal('rad_viewmode') !== 'U') {	
+		KDF.showSection('area_property_search');
 		if (typeof KDF.getParams().customerid === 'undefined' || KDF.getParams().customerid === '') {
 			//non aunthenticated citizen	
 			$("#dform_widget_txt_firstname").attr("readonly", false);
