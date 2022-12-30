@@ -1,5 +1,3 @@
-
-
 /* BEGIN MANAGE INDIVIDUAL*/
 //The purpose of this file is to isolate the specific JS functions required to handle the individual pages and function in the Verint individual template.
 
@@ -10,6 +8,15 @@ var yd_cs_search_again_clicked = false;
 var individualTemplateIdentifier = 'individual_template_';
 
 function do_KDF_Ready_Individual(event, kdf) {
+	
+	if (KDF.kdf().access == 'citizen'){
+		if (!KDF.kdf().authenticated)	{
+			$("#dform_widget_txt_firstname").attr("readonly", false);
+			$("#dform_widget_txt_lastname").attr("readonly", false);
+			$("#dform_widget_eml_email").attr("readonly", false);
+			$("#dform_widget_txt_contact_number").attr("readonly", false);
+		}
+	}
 
 	var form_name = kdf.name;
 	KDF.showSection('area_customer_information');
@@ -31,6 +38,7 @@ function do_KDF_Ready_Individual(event, kdf) {
 		
 		if (typeof KDF.getParams().customerid !== 'undefined' && KDF.getParams().customerid !== '') {
 			KDF.customdata('person-retrieve-new', individualTemplateIdentifier + 'KDF_Ready', true, true, { 'person_search_results': KDF.getParams().customerid });
+			KDF.showWidget('but_update_customer');
 		}
 		else{
 			//prevents flickering issue when displaying same address rad button
@@ -118,18 +126,22 @@ function do_KDF_Ready_Individual(event, kdf) {
 		if (KDF.kdf().authenticated) {
 			KDF.customdata('person-retrieve-new', individualTemplateIdentifier + 'KDF_Ready', true, true, { 'person_search_results': KDF.kdf().profileData.customerid });
 		}
-	    	else{
-			KDF.hideSection('area_property_search_yd');    
-		}
     }
 	
     toggleNavigation();
+	
+	$('#dform_widget_button_but_homepage').hide();
 }//end do_KDF_Ready_Individual
 
 function do_KDF_Custom_Individual(event, kdf, response, action) {	
 	var isIndividualTemplate = false;
 	
 	if (response.actionedby.indexOf(individualTemplateIdentifier) === 0) {isIndividualTemplate = true;}
+	
+	if (action == 'reverse-geocode-arcgis') {
+	   $('.dform_gis_reversegeo').html('<span>'+response.data.description+'</span><img src="https://tulsadev.form.uspreview.empro.verintcloudservices.com/dformresources/content/rgeo.png" alt="pin" />')
+	   KDF.setVal('txt_location', response.data.description);
+	}
 	
 	if (isIndividualTemplate) {		
 		var actionedBySource = response.actionedby.replace(individualTemplateIdentifier, '');
@@ -146,10 +158,6 @@ function do_KDF_Custom_Individual(event, kdf, response, action) {
 				$("#dform_widget_txt_lastname").attr("readonly", true);
 				$("#dform_widget_eml_email").attr("readonly", true);
 				$("#dform_widget_txt_contact_number").attr("readonly", true);
-				
-				if(response.data['profile-Address'] !== ''){
-					KDF.hideSection('area_property_search_yd');
-				}
 				
 			}
 			
@@ -236,6 +244,8 @@ function do_KDF_optionSelected_Individual(event, kdf, field, label, val) {
     
     if(field==='cs_customer_search_id'){
         showCustomerSearchYdWidgets();
+    } else if (field==='le_eventcode'){
+	   KDF.setVal('le_title', $("#dform_widget_le_eventcode option:selected").text());
     }
 } //end do_KDF_optionSelected_Individual
 
@@ -311,6 +321,7 @@ function doCreateCustomerFlow(){
 	    KDF.setVal('txt_city_yd',KDF.getVal('txt_city'));
 	    KDF.setVal('txt_zipcode_yd',KDF.getVal('txt_zipcode'));
 	    KDF.setVal('sel_statecode_yd',KDF.getVal('sel_statecode'));
+	    KDF.setVal('txta_address_yd',KDF.getVal('txta_address'));
     }
 }
 
