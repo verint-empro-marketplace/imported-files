@@ -236,6 +236,11 @@ function do_KDF_objectdataLoaded_Individual(event, kdf, response, type, id) {
 	    KDF.setVal('txt_logic_streetname', response["profile-AddressLine1"]);
 	    KDF.setVal('txt_logic_city', response["profile-City"]);
 	    KDF.setVal('txt_logic_zipcode', response["profile-Zipcode"]);
+	    
+	    KDF.setVal('txt_address_number_yd', response["profile-AddressNumber"]);
+        KDF.setVal('txt_street_name_yd', response["profile-AddressLine1"]);
+        KDF.setVal('txt_city_yd', response["profile-City"]);
+        KDF.setVal('txt_zipcode_yd', response["profile-Zipcode"]);
     }
 
 }//end do_KDF_objectdataLoaded_Individual
