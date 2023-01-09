@@ -82,8 +82,6 @@ function do_KDF_Custom_Individual(event, kdf, response, action){
 				KDF.showSection('area_your_details_addressdetails');	
 			}
 			
-			setDefaultAddress(response);
-			
 			KDF.setVal('txt_profile_address',response.data['profile-Address']);
 			KDF.customdata('widget-property-search', individualTemplateIdentifier + 'search-property', true, true, {
 					'addressnumber': response.data['profile-AddressNumber'],
