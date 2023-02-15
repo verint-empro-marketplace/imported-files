@@ -29,6 +29,9 @@ function do_KDF_Ready_Individual(event, kdf) {
 					
 			KDF.hideWidget('txta_address_yd');
 		}
+		else{
+			KDF.customdata('person-retrieve-new', individualTemplateIdentifier + 'KDF_Ready', true, true, { 'person_search_results': KDF.kdf().profileData.customerid });
+		}
 	}
     
     //Setting tabindex=0 for headings --> this to fix accessibility issues in heading for not being narrated by NVDA
