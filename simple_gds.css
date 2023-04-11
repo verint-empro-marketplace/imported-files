@@ -439,6 +439,7 @@ div.icon-place {
 
 #dform_container select {
      border: 2px solid black !important;
+     margin-right: 10px;	
 }
 
 .locationsearch_resultsholder > span:not(:last-child) {
