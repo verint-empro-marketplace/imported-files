@@ -316,6 +316,7 @@ sel Start
     padding: .625rem 1.5rem !important;
     -o-transition: background-color .1s ease-out,border-color .1s ease-out,color .1s ease-out !important;
     font-size: 1rem !important;
+    display: inline-block; /* fix search again in mobile view */
 }
 
 #dform_container .helptext {
