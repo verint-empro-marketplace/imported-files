@@ -273,6 +273,7 @@ sel Start
     cursor: pointer !important;
     font-family: "Roboto",sans-serif;
     margin-right: 20px !important;
+    margin-bottom: 10px !important;
     padding: .625rem 1.5rem !important;
     text-align: center !important;
     text-decoration: none !important;
