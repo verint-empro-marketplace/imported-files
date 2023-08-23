@@ -8,7 +8,7 @@ txt (and text like fields) Start
   font-size: 1rem;
   line-height: 1.2 !important;
   font-weight:bold!important;
-  margin-top: 5px;
+  margin-top: 0 !important;
 }
 
 .txt-gov > div .helptext{
@@ -533,6 +533,10 @@ div.icon-place {
     height: 0px !important;
     margin: 0px !important;
     border: 0px !important;
+}
+
+input#dform_widget_file_upload {
+    cursor: pointer;
 }
 
 /*Span for each radio button*/
