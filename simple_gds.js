@@ -9,6 +9,19 @@ function defineDefaultStyle(){
     //change button search again in customer search
     $('.dform_widget_search_closeresults').addClass('btn-gov-secondary').css("font-family", "Arial").text('Search again');
     $('#dform_widget_cs_customer_search_id').css("margin-right","0.75rem").css("width","80%");
+
+    //Updating multi-checkboxes and check boxes to apply styling
+    $("[data-type='multicheckbox']").addClass('mchk-gov')
+    var multicheckbox = $("[data-type='multicheckbox']").find('> div > fieldset > span').not(":has(span)");
+    multicheckbox.append('<span class="mchk-check"></span>');
+	
+    $("[data-type='checkbox']").addClass('chk-gov');
+    var checkbox = $("[data-type='checkbox']").find('> div').not(":has(span)");
+    checkbox.append('<span class="chk-check"></span>');
+	
+    //Updating check boxes
+    $('.mchk-gov > div > fieldset > span input').attr('data-ignore', '1');
+    $('.chk-gov > div input').attr('data-ignore', '1');
 }
 
 function defaultNewStyle(elements){
