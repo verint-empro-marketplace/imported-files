@@ -752,3 +752,173 @@ input#dform_widget_file_upload {
     padding: 8px;
     border: 2px solid #111;
 }
+
+-----------------------------------------------
+	Multi-Checkbox - Start
+-----------------------------------------------
+*/
+#dform_container .mchk-gov > div > fieldset .helptext {
+    margin-bottom: 16px;
+}
+
+#dform_container .mchk-gov label {
+    font-weight: normal;
+    margin-right: 10px;
+    margin-left: 3px;
+    display: inline;
+	cursor: pointer;
+}
+
+#dform_container .mchk-gov .mchk-check {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 28px;
+    width: 28px;
+    background-color: white;
+    border-radius: 15%;
+    box-shadow: inset 0 0 0 3px #000 !important
+}
+
+#dform_container .mchk-gov .mchk-check:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+#dform_container .mchk-gov > div > fieldset {
+    margin: 0;
+    padding-bottom: 0;
+}
+
+#dform_container p {
+	word-break: break-word;
+}
+
+#dform_container .mchk-gov fieldset.checkboxgroup,
+#dform_container .mchk-gov .checkboxgroup {
+    border: none;
+    padding-left: 0px;
+}
+
+#dform_container .mchk-gov > div > fieldset > span {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    font-size: 1rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#dform_container .mchk-gov > div > fieldset > span .mchk-check:after {
+    left: 11px;
+    top: 5px;
+    width: 5px;
+    height: 11px;
+    border: solid #000;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#dform_container .mchk-gov > div > fieldset > span input {
+    position: absolute;
+    opacity: 0;
+    left: 0px;
+    width:33px !important;
+	height:25px !important;
+    z-index: 1;
+    cursor: pointer;
+}
+
+#dform_container .mchk-gov > div > fieldset > span input:checked ~ .mchk-check:after {
+    display: block;
+}
+
+.mchk-gov .dform_validationMessage {
+    padding-bottom: 24px !important;
+    font-size: 1rem !important;
+    font-weight: bold !important;
+}
+/*
+-----------------------------------------------
+	Multi-Checkbox - End
+-----------------------------------------------
+*/
+
+/*
+-----------------------------------------------
+	Checkbox - Start
+-----------------------------------------------
+*/
+#dform_container .chk-gov label {
+	margin-left: 35px;
+	float: left;
+	cursor: pointer;
+}
+
+#dform_container .chk-gov .helptext {
+	margin-bottom: 16px;
+}
+
+/* this is the css checkbox */
+#dform_container .chk-gov .chk-check {
+	display: block;
+	height: 28px;
+	width: 28px;
+	position: relative;
+	top: 2px;
+	box-shadow: inset 0 0 0 3px #000 !important;
+	border-radius: 15%;
+	background-color: white;
+}
+
+/* this is the content of the css checkbox */
+#dform_container .chk-gov .chk-check:after {
+	content: "";
+	position: absolute;
+}    
+
+#dform_container .chk-gov > div {
+	display: block;
+	position: relative;
+	padding-bottom: 30px;
+}
+
+#dform_container .chk-gov > div input {
+	position: absolute;
+	opacity: 0;
+	z-index: 1; /* needed to make the input site over the */
+	width:33px !important;
+	height:25px !important;
+	cursor: pointer;
+}
+
+
+/* this is the selected 'tick' in the css checkbox */
+#dform_container .chk-gov > div input:checked ~ .chk-check:after {
+	left: 11px;
+    top: 5px;
+    width: 5px;
+    height: 11px;
+    border: solid #000;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.chk-gov .dform_validationMessage {
+    padding-bottom: 24px !important;
+    font-size: 1rem !important;
+    font-weight: bold !important;
+}
+/*
+-----------------------------------------------
+	Checkbox - End
+-----------------------------------------------
+*/
