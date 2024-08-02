@@ -896,6 +896,7 @@ input#dform_widget_file_upload {
 	width:33px !important;
 	height:25px !important;
 	cursor: pointer;
+	left: 0;
 }
 
 
